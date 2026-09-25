@@ -1,5 +1,0 @@
-Proyecto actualizado: servicios con imágenes locales y visor al hacer clic.
-
-Las imágenes incluidas son referencias vectoriales locales para que el ZIP funcione sin depender de enlaces externos. Para fotografías reales, reemplaza los archivos de img conservando sus nombres.
-
-La búsqueda web priorizó repositorios con licencias reutilizables como Wikimedia Commons; revisa siempre la licencia y atribución de cada foto antes de publicarla.
