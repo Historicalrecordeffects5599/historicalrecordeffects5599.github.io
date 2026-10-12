@@ -28,18 +28,23 @@
   <header class="apple-nav" id="mainNav">
     <div class="nav-container">
       <a href="#hero" class="nav-brand" aria-label="Home">
-        <!-- Logo Image with graceful text fallback -->
         <img src="logo.png" alt="FK" class="nav-logo" id="navLogo" onerror="this.style.display='none'">
         <span class="brand-name">Fatih Kaya</span>
       </a>
 
       <nav class="nav-menu" id="navMenu">
+        <a href="#publication" class="nav-link" data-tr="Yayın" data-en="Publication">Yayın</a>
         <a href="#projects" class="nav-link" data-tr="Projeler" data-en="Projects">Projeler</a>
         <a href="#terminal" class="nav-link" data-tr="Konsol" data-en="Console">Konsol</a>
         <a href="#contact" class="nav-link" data-tr="İletişim" data-en="Contact">İletişim</a>
       </nav>
 
       <div class="nav-actions">
+        <!-- CV Modal Trigger Button in Nav -->
+        <button class="nav-cv-btn" id="navCvBtn" data-tr="CV / Özgeçmiş" data-en="Resume / CV">
+          CV / Özgeçmiş
+        </button>
+
         <!-- Language Switcher -->
         <button class="lang-toggle" id="langToggle" aria-label="Dili Değiştir / Switch Language">
           <span class="lang-opt active" data-value="tr">TR</span>
@@ -60,7 +65,7 @@
 
   <!-- Main Content -->
   <main>
-    <!-- HERO SECTION (AUTHENTIC PORTFOLIO INTRO FROM CV) -->
+    <!-- HERO SECTION -->
     <section class="hero-section" id="hero">
       <div class="hero-container">
         <div class="hero-badge">
@@ -82,12 +87,15 @@
             <span>Seçilmiş Projeler (8)</span>
             <svg class="btn-arrow" viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a href="#contact" class="apple-btn-secondary" data-tr="İletişime Geç" data-en="Get in Touch">
+          <button class="apple-btn-secondary" id="heroCvBtn" data-tr="Özgeçmiş / CV Görüntüle" data-en="View Resume / CV">
+            Özgeçmiş / CV Görüntüle
+          </button>
+          <a href="#contact" class="apple-btn-ghost" data-tr="İletişime Geç" data-en="Get in Touch">
             İletişime Geç
           </a>
         </div>
 
-        <!-- DYNAMIC PROJECT METRICS TICKER (PURE FADE-OUT / FADE-IN TRANSITION) -->
+        <!-- DYNAMIC PROJECT METRICS TICKER -->
         <div class="hero-ticker-wrapper">
           <div class="ticker-header-label">
             <span class="pulse-indicator"></span>
@@ -96,10 +104,9 @@
           </div>
 
           <div class="hero-ticker-card" id="heroTickerCard">
-            <!-- Dynamic slides rendered via JavaScript with pure fade -->
+            <!-- Dynamic slides rendered via JavaScript -->
           </div>
 
-          <!-- Ticker Nav Dots -->
           <div class="ticker-nav-dots" id="tickerNavDots">
             <!-- 8 dots synced -->
           </div>
@@ -114,7 +121,57 @@
       </div>
     </section>
 
-    <!-- CURATED PROJECTS SHOWCASE (STANDARDIZED BENTO GRID WITH PREVIEW BOXES) -->
+    <!-- PEER-REVIEWED PUBLICATION SHOWCASE (SPRINGER 2026) -->
+    <section class="publication-section" id="publication">
+      <div class="pub-container">
+        <div class="pub-card">
+          <div class="card-glow"></div>
+          <div class="pub-badge-row">
+            <span class="pub-tag-springer">SPRINGER NATURE · THE VISUAL COMPUTER</span>
+            <span class="pub-status-tag" data-tr="Hakemli Akademik Makale (2026)" data-en="Peer-Reviewed Paper (2026)">Hakemli Akademik Makale (2026)</span>
+          </div>
+
+          <h3 class="pub-title">
+            "Advancing multimodal emotion analysis: a hybrid deep learning approach with intermediate fusion and multi-task learning"
+          </h3>
+
+          <p class="pub-authors">
+            <strong>Fatih Kaya</strong> et al. · <em>The Visual Computer (Springer, 2026)</em>
+          </p>
+
+          <p class="pub-abstract" data-tr="Görsel ve metinsel ipuçlarını ara katman füzyonu (Intermediate Fusion) ile birleştiren, derin konvolüsyonel öznitelikler (ResNet-50 / ViT / CBAM) ile bağlamsal dil temsillerini (RoBERTa / BiGRU) ortak potada eriten ve çok görevli öğrenmeyle duygu sınıflandırmasını maksimize eden hibrit derin öğrenme mimarisi." data-en="A hybrid deep learning framework uniting visual features (ResNet-50, Vision Transformer, CBAM) and contextual textual representations (RoBERTa, BiGRU) via intermediate tensor fusion, achieving state-of-the-art multimodal emotion intensity estimation under multi-task learning.">
+            Görsel ve metinsel ipuçlarını ara katman füzyonu (Intermediate Fusion) ile birleştiren, derin konvolüsyonel öznitelikler (ResNet-50 / ViT / CBAM) ile bağlamsal dil temsillerini (RoBERTa / BiGRU) ortak potada eriten ve çok görevli öğrenmeyle duygu sınıflandırmasını maksimize eden hibrit derin öğrenme mimarisi.
+          </p>
+
+          <div class="pub-meta-row">
+            <div class="pub-meta-item">
+              <span class="pm-key">DOI</span>
+              <a href="https://doi.org/10.1007/s00371-026-04475-1" target="_blank" rel="noopener noreferrer" class="pm-val doi-link">10.1007/s00371-026-04475-1 ↗</a>
+            </div>
+            <div class="pub-meta-item">
+              <span class="pm-key" data-tr="Yayın Tarihi" data-en="Publication Date">Yayın Tarihi</span>
+              <span class="pm-val">14 Nisan 2026</span>
+            </div>
+            <div class="pub-meta-item">
+              <span class="pm-key" data-tr="Metodoloji" data-en="Methodology">Metodoloji</span>
+              <span class="pm-val">Intermediate Fusion & Multi-Task</span>
+            </div>
+          </div>
+
+          <div class="pub-actions">
+            <a href="https://doi.org/10.1007/s00371-026-04475-1" target="_blank" rel="noopener noreferrer" class="apple-btn-primary">
+              <span data-tr="Springer Üzerinde İncele" data-en="View on Springer">Springer Üzerinde İncele</span>
+              <svg class="btn-arrow" viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="https://github.com/fth2745/Multi-Modal-Fusion" target="_blank" rel="noopener noreferrer" class="apple-btn-secondary">
+              <span data-tr="Kaynak Kod & Model" data-en="Source Code & Model">Kaynak Kod & Model</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURATED PROJECTS SHOWCASE -->
     <section class="projects-section" id="projects">
       <div class="section-header">
         <span class="eyebrow" data-tr="PORTFÖY ÇALIŞMALARI" data-en="PORTFOLIO WORKS">PORTFÖY ÇALIŞMALARI</span>
@@ -123,7 +180,6 @@
           Doğal dil işleme, çoklu modlu füzyon ve yerel sistem mimarileri üzerine açık kaynaklı geliştirmeler.
         </p>
 
-        <!-- Category Filters -->
         <div class="project-filters">
           <button class="filter-btn active" data-filter="all" data-tr="Tümü (8)" data-en="All (8)">Tümü (8)</button>
           <button class="filter-btn" data-filter="nlp" data-tr="Doğal Dil & NLI" data-en="NLP & NLI">Doğal Dil & NLI</button>
@@ -154,7 +210,6 @@
               Cümle çiftleri arasındaki semantik çelişki ve çıkarım ilişkilerini yakalayan hibrit model. DeBERTa, SBERT ve BiLSTM mimarisini müfredat öğrenimi (Curriculum Learning) ile eğitir.
             </p>
 
-            <!-- Interactive Sample Preview Box -->
             <div class="sample-preview-box">
               <div class="preview-row">
                 <span class="p-badge">Premise</span>
@@ -204,7 +259,6 @@
               Stanford SQuAD 2.0 mantığıyla çalışan çıkarımsal soru-cevap motoru. Yalnızca metin aralığını (span) tahmin etmekle kalmaz, sorunun yanıtlanamaz olup olmadığını da sınıflandırır.
             </p>
 
-            <!-- Interactive Sample Preview Box -->
             <div class="sample-preview-box">
               <div class="preview-row">
                 <span class="p-badge">Context</span>
@@ -254,7 +308,6 @@
               Türkçe metinlerin zengin morfolojisi için BERT'in anlamsal kavrayışını BiLSTM'in sıralı bellek gücüyle harmanlayan çok görevli (Multi-Task) varlık tanıma mimarisi.
             </p>
 
-            <!-- Interactive Sample Preview Box -->
             <div class="sample-preview-box">
               <div class="preview-row">
                 <span class="p-badge">Girdi Metni</span>
@@ -304,7 +357,6 @@
               Google'ın çok dilli umt5-small modelini Türkçe metin özetleme görevi için ince ayar (fine-tuning) yaparak Hugging Face Hub üzerinde canlı modele dönüştüren çalışma.
             </p>
 
-            <!-- Interactive Sample Preview Box -->
             <div class="sample-preview-box">
               <div class="preview-row">
                 <span class="p-badge">Ham Doküman</span>
@@ -354,7 +406,6 @@
               Görsel ve metinsel modaliteleri ara katmanda (intermediate fusion) birleştiren ve çok görevli öğrenmeyle (Multi-Task Learning) eşzamanlı etiket sınıflandırması yapan derin mimari.
             </p>
 
-            <!-- Interactive Sample Preview Box -->
             <div class="sample-preview-box">
               <div class="preview-row">
                 <span class="p-badge">Görsel / Metin</span>
@@ -404,7 +455,6 @@
               Bitki hastalıkları teşhisinde %99.13 doğruluk oranı. EfficientNet-B4 ile görsel tespitten, Qwen 2.5 ve RAG mimarisi ile bilimsel reçete ve tedavi üretimine uzanan akıllı karar destek sistemi.
             </p>
 
-            <!-- Interactive Sample Preview Box -->
             <div class="sample-preview-box">
               <div class="preview-row">
                 <span class="p-badge">Görsel Teşhis</span>
@@ -454,7 +504,6 @@
               Türkçe tıp literatürü ve hastane makaleleri üzerinden yüksek doğrulukla soru cevaplayan RAG mimarisi. FAISS vektör indeksi ve üretken Mistral modeli ile halüsinasyonsuz medikal yanıtlar.
             </p>
 
-            <!-- Interactive Sample Preview Box -->
             <div class="sample-preview-box">
               <div class="preview-row">
                 <span class="p-badge">Klinik Soru</span>
@@ -504,7 +553,6 @@
               Windows sistem tepsisinde çalışan ultra hafif donanım monitörü. Dinamik 16x16 ikon çizimi, 0.8s aerodinamik çift yönlü süzülme kartı, 60 FPS donmayan arka plan taraması ve sıfır arka plan yükü.
             </p>
 
-            <!-- Interactive Sample Preview Box -->
             <div class="sample-preview-box">
               <div class="preview-row">
                 <span class="p-badge">Görev Çubuğu İkonu</span>
@@ -560,7 +608,8 @@
             </div>
             <div class="term-quick-bar">
               <button class="t-pill" data-run="projects">projects</button>
-              <button class="t-pill" data-run="stats">stats</button>
+              <button class="t-pill" data-run="about">about</button>
+              <button class="t-pill" data-run="publication">publication</button>
               <button class="t-pill" data-run="stack">stack</button>
               <button class="t-pill" data-run="clear">clear</button>
             </div>
@@ -583,6 +632,7 @@
         </p>
 
         <div class="contact-cards">
+          <!-- Email -->
           <a href="mailto:kya.fth10@gmail.com" class="c-card">
             <div class="c-icon">✉</div>
             <div class="c-meta">
@@ -591,6 +641,7 @@
             </div>
           </a>
 
+          <!-- GitHub -->
           <a href="https://github.com/fth2745" target="_blank" rel="noopener noreferrer" class="c-card">
             <div class="c-icon">
               <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
@@ -603,17 +654,114 @@
             </div>
           </a>
 
+          <!-- LinkedIn -->
           <a href="https://linkedin.com/in/kya-fth10" target="_blank" rel="noopener noreferrer" class="c-card">
-            <div class="c-icon">in</div>
+            <div class="c-icon linkedin-brand-icon">in</div>
             <div class="c-meta">
               <span class="c-label">LinkedIn</span>
-              <span class="c-val">linkedin.com/in/kya-fth10</span>
+              <span class="c-val">in/kya-fth10</span>
+            </div>
+          </a>
+
+          <!-- Medium -->
+          <a href="https://medium.com/@kya.fth10" target="_blank" rel="noopener noreferrer" class="c-card">
+            <div class="c-icon medium-brand-icon">M</div>
+            <div class="c-meta">
+              <span class="c-label">Medium Blog</span>
+              <span class="c-val">@kya.fth10</span>
             </div>
           </a>
         </div>
       </div>
     </section>
   </main>
+
+  <!-- APPLE-STYLE CV MODAL PREVIEW -->
+  <div class="cv-modal-backdrop" id="cvModalBackdrop">
+    <div class="cv-modal-container" role="dialog" aria-modal="true" aria-labelledby="cvModalTitle">
+      <div class="cv-modal-header">
+        <div class="cv-modal-title-group">
+          <h2 id="cvModalTitle">Fatih Kaya</h2>
+          <span class="cv-modal-sub" data-tr="Yazılım Mühendisi · Yapay Zeka & NLP" data-en="Software Engineer · AI & NLP">Yazılım Mühendisi · Yapay Zeka & NLP</span>
+        </div>
+        <div class="cv-modal-actions">
+          <a href="Fatih_Kaya_CV.pdf" download="Fatih_Kaya_CV.pdf" class="cv-download-btn" id="cvDownloadBtn" data-tr="PDF İndir ↓" data-en="Download PDF ↓">
+            PDF İndir ↓
+          </a>
+          <button class="cv-modal-close" id="cvModalClose" aria-label="Kapat">✕</button>
+        </div>
+      </div>
+
+      <div class="cv-modal-body">
+        <!-- Section: Education & Master's -->
+        <div class="cv-block">
+          <h4 class="cv-block-title" data-tr="EĞİTİM & AKADEMİK GEÇMİŞ" data-en="EDUCATION & ACADEMICS">EĞİTİM & AKADEMİK GEÇMİŞ</h4>
+          <div class="cv-item">
+            <div class="cv-item-head">
+              <strong>Malatya Turgut Özal Üniversitesi</strong>
+              <span class="cv-date">Eyl 2025 – Günümüz (3.5 / 4.0)</span>
+            </div>
+            <p class="cv-item-desc" data-tr="Tezli Yüksek Lisans — Yapay Zeka & Doğal Dil İşleme Odaklı Araştırmalar" data-en="Master's with Thesis — AI & Natural Language Processing Focus">
+              Tezli Yüksek Lisans — Yapay Zeka & Doğal Dil İşleme Odaklı Araştırmalar
+            </p>
+          </div>
+          <div class="cv-item">
+            <div class="cv-item-head">
+              <strong>Malatya Turgut Özal Üniversitesi</strong>
+              <span class="cv-date">Eki 2021 – May 2025 (3.12 / 4.0)</span>
+            </div>
+            <p class="cv-item-desc" data-tr="Yazılım Mühendisliği Lisans Derecesi" data-en="B.S. in Software Engineering">
+              Yazılım Mühendisliği Lisans Derecesi
+            </p>
+          </div>
+        </div>
+
+        <!-- Section: Academic Publication -->
+        <div class="cv-block">
+          <h4 class="cv-block-title" data-tr="HAKEMLİ AKADEMİK YAYINLAR" data-en="PEER-REVIEWED PUBLICATIONS">HAKEMLİ AKADEMİK YAYINLAR</h4>
+          <div class="cv-item">
+            <p class="cv-item-desc">
+              <strong>Kaya, F. ve diğerleri (14 Nisan 2026).</strong> "Advancing multimodal emotion analysis: a hybrid deep learning approach with intermediate fusion and multi-task learning". <em>The Visual Computer</em>, Springer. DOI: <a href="https://doi.org/10.1007/s00371-026-04475-1" target="_blank" class="doi-link">10.1007/s00371-026-04475-1</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Section: Research & Grants -->
+        <div class="cv-block">
+          <h4 class="cv-block-title" data-tr="ARAŞTIRMA PROJELERİ & GÖREVLER" data-en="RESEARCH & ROLES">ARAŞTIRMA PROJELERİ & GÖREVLER</h4>
+          <div class="cv-item">
+            <div class="cv-item-head">
+              <strong>TÜBİTAK 2209-A Araştırmacısı</strong>
+              <span class="cv-tag">PyTorch · Biyosinyal ECG/PPG</span>
+            </div>
+            <p class="cv-item-desc" data-tr="VitalDB biyosinyalleri ile invaziv olmayan sürekli kan basıncı tahmini (MAE: 5.22 Sistolik, 3.23 Diyastolik). AAMI uluslararası tıbbi cihaz standartlarını başarıyla geçen derin mimari." data-en="Continuous non-invasive blood pressure estimation on VitalDB ECG/PPG biosignals passing international AAMI medical accuracy standards.">
+              VitalDB biyosinyalleri ile invaziv olmayan sürekli kan basıncı tahmini (MAE: 5.22 Sistolik, 3.23 Diyastolik). AAMI uluslararası tıbbi cihaz standartlarını başarıyla geçen derin mimari.
+            </p>
+          </div>
+          <div class="cv-item">
+            <div class="cv-item-head">
+              <strong>Zirvedeki Beyinler (Tarım ve Ormancılık Bakanlığı İşbirliği)</strong>
+              <span class="cv-date">Temmuz 2024 – Eylül 2024</span>
+            </div>
+            <p class="cv-item-desc" data-tr="Veri Analizi & Makine Öğrenimi Entegrasyonu" data-en="Data Analysis & Machine Learning Integration">
+              Veri Analizi & Makine Öğrenimi Entegrasyonu
+            </p>
+          </div>
+        </div>
+
+        <!-- Section: Technical Stack -->
+        <div class="cv-block">
+          <h4 class="cv-block-title" data-tr="TEMEL YETENEKLER" data-en="CORE TECHNICAL STACK">TEMEL YETENEKLER</h4>
+          <div class="cv-skills-grid">
+            <div class="cv-skill-item"><strong>Yapay Zeka & NLP:</strong> PyTorch, Hugging Face Transformers, DeBERTa, SBERT, umT5, Mistral 7B, Qwen 2.5</div>
+            <div class="cv-skill-item"><strong>Vektör & RAG:</strong> FAISS, Dense Embeddings, Sentence-Transformers, Cross-Encoders</div>
+            <div class="cv-skill-item"><strong>Çoklu Mod (Multimodal):</strong> Intermediate Fusion, ResNet-50, Vision Transformer (ViT), CBAM</div>
+            <div class="cv-skill-item"><strong>Sistem Mühendisliği:</strong> C# .NET 8, Win32 API, LibreHardwareMonitor, Git</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Global Footer -->
   <footer class="apple-footer">
@@ -627,6 +775,8 @@
         <div class="footer-links">
           <a href="https://github.com/fth2745" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="https://linkedin.com/in/kya-fth10" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://medium.com/@kya.fth10" target="_blank" rel="noopener noreferrer">Medium</a>
+          <a href="https://doi.org/10.1007/s00371-026-04475-1" target="_blank" rel="noopener noreferrer">Springer DOI</a>
           <a href="#hero">Yukarı Çık ↑</a>
         </div>
       </div>

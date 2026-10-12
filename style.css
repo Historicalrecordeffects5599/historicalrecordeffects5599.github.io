@@ -1,6 +1,6 @@
 /* ==========================================================================
    FATİH KAYA · PERSONAL PORTFOLIO DESIGN SYSTEM
-   Clean · Poised · Pure Fade Metrics Ticker · Uniform Bento Grid
+   Clean · Poised · Publication Showcase · CV Modal · Bento Grid
    ========================================================================== */
 
 :root {
@@ -154,7 +154,25 @@ body.apple-dark {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
+}
+
+.nav-cv-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--apple-border-light);
+  color: var(--apple-text-primary);
+  padding: 5px 12px;
+  border-radius: 980px;
+  font-family: var(--font-sf);
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-cv-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: #ffffff;
 }
 
 /* Language Toggle Pill */
@@ -241,15 +259,15 @@ body.apple-dark {
 }
 
 /* ==========================================================================
-   HERO SECTION (PORTFOLIO BIOGRAPHY FROM CV)
+   HERO SECTION (BIOGRAPHY FROM CV)
    ========================================================================== */
 .hero-section {
   position: relative;
-  min-height: 94vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: calc(var(--nav-height) + 50px) 24px 60px;
+  padding: calc(var(--nav-height) + 40px) 24px 50px;
   text-align: center;
   overflow: hidden;
   z-index: 1;
@@ -318,14 +336,16 @@ body.apple-dark {
   letter-spacing: -0.012em;
   color: var(--apple-text-secondary);
   max-width: 860px;
-  margin-bottom: 36px;
+  margin-bottom: 34px;
 }
 
 .hero-cta-group {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 44px;
+  gap: 14px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .apple-btn-primary {
@@ -334,7 +354,7 @@ body.apple-dark {
   gap: 8px;
   background: #ffffff;
   color: #000000;
-  padding: 13px 26px;
+  padding: 12px 24px;
   border-radius: 980px;
   font-size: 14px;
   font-weight: 600;
@@ -342,6 +362,8 @@ body.apple-dark {
   text-decoration: none;
   transition: all 0.25s var(--ease-apple);
   box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  border: none;
 }
 
 .apple-btn-primary:hover {
@@ -362,10 +384,30 @@ body.apple-dark {
 .apple-btn-secondary {
   display: inline-flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.08);
   color: var(--apple-text-primary);
+  border: 1px solid var(--apple-border-light);
+  padding: 12px 22px;
+  border-radius: 980px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.apple-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: #ffffff;
+}
+
+.apple-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  color: var(--apple-text-secondary);
   border: 1px solid var(--apple-border);
-  padding: 13px 24px;
+  padding: 12px 20px;
   border-radius: 980px;
   font-size: 14px;
   font-weight: 500;
@@ -373,13 +415,13 @@ body.apple-dark {
   transition: all 0.2s ease;
 }
 
-.apple-btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.12);
+.apple-btn-ghost:hover {
+  color: #ffffff;
   border-color: var(--apple-border-light);
 }
 
 /* ==========================================================================
-   DYNAMIC METRICS TICKER (PURE FADE-OUT / FADE-IN · ZERO JUMPS)
+   DYNAMIC METRICS TICKER (PURE FADE)
    ========================================================================== */
 .hero-ticker-wrapper {
   width: 100%;
@@ -388,7 +430,7 @@ body.apple-dark {
   border: 1px solid var(--apple-border-light);
   border-radius: 20px;
   padding: 16px 24px;
-  margin-bottom: 36px;
+  margin-bottom: 32px;
   backdrop-filter: blur(20px);
   position: relative;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
@@ -430,7 +472,6 @@ body.apple-dark {
   font-weight: 600;
 }
 
-/* Container with pure smooth opacity fade */
 .hero-ticker-card {
   position: relative;
   min-height: 60px;
@@ -510,7 +551,6 @@ body.apple-dark {
   background: var(--apple-border);
 }
 
-/* Ticker Nav Dots */
 .ticker-nav-dots {
   display: flex;
   justify-content: center;
@@ -533,7 +573,6 @@ body.apple-dark {
   width: 32px;
 }
 
-/* Scroll Hint */
 .scroll-indicator {
   display: flex;
   flex-direction: column;
@@ -568,10 +607,148 @@ body.apple-dark {
 }
 
 /* ==========================================================================
-   STANDARDIZED BENTO GRID (8 UNIFORM CARDS WITH PREVIEW BOXES)
+   ACADEMIC PUBLICATION SECTION (SPRINGER 2026 SHOWCASE)
+   ========================================================================== */
+.publication-section {
+  padding: 30px 24px 70px;
+  max-width: 1180px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.pub-container {
+  width: 100%;
+}
+
+.pub-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(16, 16, 24, 0.95), rgba(10, 10, 15, 0.95));
+  border: 1px solid var(--apple-border-light);
+  border-radius: 28px;
+  padding: 40px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.pub-card:hover {
+  border-color: var(--apple-border-hover);
+}
+
+.pub-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.pub-tag-springer {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--apple-amber);
+  background: rgba(255, 214, 10, 0.1);
+  border: 1px solid rgba(255, 214, 10, 0.25);
+  padding: 4px 12px;
+  border-radius: 980px;
+}
+
+.pub-status-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--apple-cyan);
+  background: rgba(0, 242, 254, 0.08);
+  padding: 4px 10px;
+  border-radius: 980px;
+}
+
+.pub-title {
+  font-size: clamp(22px, 3.2vw, 32px);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.pub-authors {
+  font-size: 14px;
+  color: var(--apple-text-secondary);
+  margin-bottom: 20px;
+}
+
+.pub-authors strong {
+  color: #ffffff;
+}
+
+.pub-authors em {
+  color: var(--apple-amber);
+}
+
+.pub-abstract {
+  font-size: 15px;
+  color: var(--apple-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 28px;
+  max-width: 1000px;
+}
+
+.pub-meta-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--apple-border);
+  border-radius: 14px;
+  padding: 14px 20px;
+  margin-bottom: 30px;
+}
+
+.pub-meta-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.pm-key {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--apple-text-tertiary);
+}
+
+.pm-val {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 2px;
+}
+
+.doi-link {
+  color: var(--apple-blue);
+  text-decoration: none;
+}
+
+.doi-link:hover {
+  text-decoration: underline;
+}
+
+.pub-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   STANDARDIZED BENTO GRID (8 UNIFORM CARDS)
    ========================================================================== */
 .projects-section {
-  padding: 80px 24px 100px;
+  padding: 60px 24px 100px;
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
@@ -636,7 +813,6 @@ body.apple-dark {
   color: #ffffff;
 }
 
-/* Uniform 2-Column Grid */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -756,7 +932,6 @@ body.apple-dark {
   min-height: 58px;
 }
 
-/* Sample Preview Box (Uniform across all 8 projects) */
 .sample-preview-box {
   background: rgba(0, 0, 0, 0.55);
   border: 1px solid var(--apple-border-light);
@@ -813,7 +988,6 @@ body.apple-dark {
   font-weight: 600;
 }
 
-/* Specs Grid */
 .card-specs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -844,7 +1018,6 @@ body.apple-dark {
   margin-top: 2px;
 }
 
-/* Apple Link Button */
 .apple-link-btn {
   display: inline-flex;
   align-items: center;
@@ -864,6 +1037,182 @@ body.apple-dark {
 .apple-link-btn svg {
   width: 12px;
   height: 12px;
+}
+
+/* ==========================================================================
+   CV PREVIEW MODAL (APPLE FROSTED GLASS)
+   ========================================================================== */
+.cv-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.cv-modal-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cv-modal-container {
+  width: 100%;
+  max-width: 820px;
+  max-height: 86vh;
+  background: rgba(18, 18, 24, 0.95);
+  border: 1px solid var(--apple-border-light);
+  border-radius: 24px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: scale(0.96);
+  transition: transform 0.3s var(--ease-apple);
+}
+
+.cv-modal-backdrop.open .cv-modal-container {
+  transform: scale(1);
+}
+
+.cv-modal-header {
+  padding: 22px 28px;
+  border-bottom: 1px solid var(--apple-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(24, 24, 32, 0.9);
+}
+
+.cv-modal-title-group h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.cv-modal-sub {
+  font-size: 12px;
+  color: var(--apple-cyan);
+  font-weight: 500;
+}
+
+.cv-modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cv-download-btn {
+  background: var(--apple-blue);
+  color: #ffffff;
+  padding: 7px 16px;
+  border-radius: 980px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.cv-download-btn:hover {
+  opacity: 0.85;
+}
+
+.cv-modal-close {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #ffffff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.cv-modal-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.cv-modal-body {
+  padding: 28px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cv-block-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--apple-blue);
+  margin-bottom: 12px;
+}
+
+.cv-item {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--apple-border);
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 10px;
+}
+
+.cv-item-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+.cv-date {
+  font-size: 11px;
+  color: var(--apple-text-tertiary);
+  font-family: var(--font-mono);
+}
+
+.cv-tag {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  color: var(--apple-cyan);
+}
+
+.cv-item-desc {
+  font-size: 12px;
+  color: var(--apple-text-secondary);
+  line-height: 1.5;
+}
+
+.cv-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.cv-skill-item {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--apple-border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 11px;
+  color: var(--apple-text-secondary);
+  line-height: 1.4;
+}
+
+.cv-skill-item strong {
+  color: #ffffff;
 }
 
 /* ==========================================================================
@@ -951,6 +1300,7 @@ body.apple-dark {
   display: flex;
   gap: 8px;
   margin: 14px 0 16px;
+  flex-wrap: wrap;
 }
 
 .t-pill {
@@ -997,7 +1347,7 @@ body.apple-dark {
    ========================================================================== */
 .contact-section {
   padding: 80px 24px 100px;
-  max-width: 820px;
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
   position: relative;
@@ -1019,19 +1369,18 @@ body.apple-dark {
 }
 
 .contact-cards {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
 }
 
 .c-card {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
   background: var(--apple-surface-1);
   border: 1px solid var(--apple-border);
-  padding: 18px 26px;
+  padding: 16px 20px;
   border-radius: 18px;
   text-decoration: none;
   color: var(--apple-text-primary);
@@ -1045,8 +1394,19 @@ body.apple-dark {
 }
 
 .c-icon {
-  font-size: 20px;
+  font-size: 18px;
   color: var(--apple-cyan);
+}
+
+.linkedin-brand-icon {
+  color: #0a66c2 !important;
+  font-weight: 700;
+}
+
+.medium-brand-icon {
+  color: #ffffff !important;
+  font-weight: 800;
+  font-family: var(--font-sf);
 }
 
 .c-meta {
@@ -1056,13 +1416,13 @@ body.apple-dark {
 }
 
 .c-label {
-  font-size: 11px;
+  font-size: 10px;
   color: var(--apple-text-secondary);
   font-weight: 500;
 }
 
 .c-val {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
 }
 
@@ -1143,12 +1503,28 @@ body.apple-dark {
     grid-template-columns: 1fr;
   }
 
+  .contact-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cv-skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pub-meta-row {
+    grid-template-columns: 1fr;
+  }
+
   .nav-menu {
     display: none;
   }
 }
 
 @media (max-width: 640px) {
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+
   .ticker-slide {
     flex-direction: column;
     align-items: flex-start;
@@ -1164,7 +1540,7 @@ body.apple-dark {
     width: 100%;
   }
 
-  .apple-btn-primary, .apple-btn-secondary {
+  .apple-btn-primary, .apple-btn-secondary, .apple-btn-ghost {
     width: 100%;
     justify-content: center;
   }

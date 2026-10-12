@@ -1,12 +1,13 @@
 /**
  * FATİH KAYA · INTERACTION ENGINE
- * Authentic Biography · Pure Smooth Fade Ticker · Standardized Bento Grid · Interactive Console
+ * Authentic Biography · Springer Publication · Interactive CV Modal · Pure Fade Ticker
  * Author: Fatih Kaya (fth2745)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   initLanguageEngine();
   initNavbarScroll();
+  initCvModal();
   initHeroTicker();
   initCardSheen();
   initProjectFilters();
@@ -85,7 +86,50 @@ function initNavbarScroll() {
 }
 
 /* ==========================================================================
-   3. DYNAMIC HERO METRICS TICKER (PURE FADE-OUT ➔ FADE-IN TRANSITION)
+   3. APPLE-STYLE CV MODAL INTERACTION
+   ========================================================================== */
+function initCvModal() {
+  const modalBackdrop = document.getElementById('cvModalBackdrop');
+  const navCvBtn = document.getElementById('navCvBtn');
+  const heroCvBtn = document.getElementById('heroCvBtn');
+  const modalClose = document.getElementById('cvModalClose');
+
+  if (!modalBackdrop) return;
+
+  function openCvModal() {
+    modalBackdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCvModal() {
+    modalBackdrop.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  window.openCvModal = openCvModal;
+  window.closeCvModal = closeCvModal;
+
+  if (navCvBtn) navCvBtn.addEventListener('click', openCvModal);
+  if (heroCvBtn) heroCvBtn.addEventListener('click', openCvModal);
+  if (modalClose) modalClose.addEventListener('click', closeCvModal);
+
+  // Close when clicking outside modal box
+  modalBackdrop.addEventListener('click', (e) => {
+    if (e.target === modalBackdrop) {
+      closeCvModal();
+    }
+  });
+
+  // ESC key listener
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalBackdrop.classList.contains('open')) {
+      closeCvModal();
+    }
+  });
+}
+
+/* ==========================================================================
+   4. DYNAMIC HERO METRICS TICKER (PURE FADE-OUT ➔ FADE-IN TRANSITION)
    ========================================================================== */
 function initHeroTicker() {
   const tickerCard = document.getElementById('heroTickerCard');
@@ -167,7 +211,6 @@ function initHeroTicker() {
   let isPaused = false;
   let isFading = false;
 
-  // Build dots
   dotsContainer.innerHTML = '';
   tickerData.forEach((_, i) => {
     const dotBtn = document.createElement('button');
@@ -218,20 +261,15 @@ function initHeroTicker() {
     `;
   }
 
-  // Pure Smooth Fade Transition (Fade-Out ➔ Update ➔ Fade-In)
   function transitionToSlide(targetIndex) {
     if (isFading || targetIndex === currentIndex) return;
     isFading = true;
 
-    // Step 1: Smooth fade out
     tickerCard.style.opacity = '0';
 
     setTimeout(() => {
-      // Step 2: Swap content while invisible
       currentIndex = targetIndex;
       renderSlideContent(currentIndex);
-
-      // Step 3: Smooth fade in
       tickerCard.style.opacity = '1';
 
       setTimeout(() => {
@@ -265,17 +303,16 @@ function initHeroTicker() {
     wrapper.addEventListener('mouseleave', () => { isPaused = false; });
   }
 
-  // Initialize
   renderSlideContent(0);
   tickerCard.style.opacity = '1';
   startTimer();
 }
 
 /* ==========================================================================
-   4. CARD SHEEN (Cursor Light Reflection)
+   5. CARD SHEEN
    ========================================================================== */
 function initCardSheen() {
-  const cards = document.querySelectorAll('.project-card, .hero-ticker-wrapper');
+  const cards = document.querySelectorAll('.project-card, .pub-card, .hero-ticker-wrapper');
 
   cards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
@@ -290,7 +327,7 @@ function initCardSheen() {
 }
 
 /* ==========================================================================
-   5. PROJECT CATEGORY FILTERS
+   6. PROJECT CATEGORY FILTERS
    ========================================================================== */
 function initProjectFilters() {
   const filterBtns = document.querySelectorAll('.filter-btn');
@@ -321,7 +358,7 @@ function initProjectFilters() {
 }
 
 /* ==========================================================================
-   6. INTERACTIVE TERMINAL CONSOLE
+   7. INTERACTIVE TERMINAL CONSOLE
    ========================================================================== */
 function initInteractiveTerminal() {
   const termBody = document.getElementById('termBody');
@@ -335,7 +372,8 @@ function initInteractiveTerminal() {
       'Kullanılabilir komutlar / Available commands:',
       '  <span class="accent-cyan">projects</span>    - 8 Açık kaynaklı yapay zeka & sistem projesi',
       '  <span class="accent-cyan">about</span>       - Fatih Kaya hakkında biyografi ve akademik geçmiş',
-      '  <span class="accent-cyan">stats</span>       - Doğruluk oranları ve sistem gecikme metrikleri',
+      '  <span class="accent-cyan">publication</span> - Springer Nature (The Visual Computer 2026) yayını',
+      '  <span class="accent-cyan">cv</span>          - İnteraktif özgeçmiş penceresini aç',
       '  <span class="accent-cyan">stack</span>       - PyTorch, Transformers, RAG, .NET 8 araçları',
       '  <span class="accent-cyan">contact</span>     - İletişim bilgileri ve linkler',
       '  <span class="accent-cyan">clear</span>       - Ekranı temizle'
@@ -348,6 +386,17 @@ function initInteractiveTerminal() {
       '  TÜBİTAK 2209-A Araştırmacısı & AI Ekip Yöneticisi',
       '  Odak: Türkçe LLM Adaptasyonu, RAG (Sağlık & Tarım), Yüksek Performanslı Sistemler'
     ],
+    publication: () => [
+      'SPRINGER NATURE YAYINI (2026):',
+      '  Başlık  : "Advancing multimodal emotion analysis: a hybrid deep learning approach with intermediate fusion and multi-task learning"',
+      '  Dergi   : The Visual Computer, Springer',
+      '  Yazarlar: Fatih Kaya ve ark. (14 Nisan 2026)',
+      '  DOI     : <a href="https://doi.org/10.1007/s00371-026-04475-1" target="_blank" style="color:#00f2fe">10.1007/s00371-026-04475-1</a>'
+    ],
+    cv: () => {
+      if (window.openCvModal) window.openCvModal();
+      return ['Özgeçmiş penceresi açıldı. ESC ile kapatabilirsiniz.'];
+    },
     projects: () => [
       '1. <a href="https://github.com/fth2745/NLI-Classification" target="_blank" style="color:#00f2fe">NLI-Classification</a> (DeBERTa + SBERT Co-Attention)',
       '2. <a href="https://github.com/fth2745/Squad-V2-QA" target="_blank" style="color:#00f2fe">Squad-V2-QA</a> (DeBERTa Extractive SQuAD v2)',
@@ -358,24 +407,18 @@ function initInteractiveTerminal() {
       '7. <a href="https://github.com/fth2745/Turkish-Hospital-Medicals-Articles-With-RAG-Mistral-7B" target="_blank" style="color:#00f2fe">Medical-RAG-Mistral</a> (Clinical FAISS RAG)',
       '8. <a href="https://github.com/fth2745/TrayHardwareMonitor" target="_blank" style="color:#00f2fe">TrayHardwareMonitor</a> (Native C# .NET 8, 60 FPS)'
     ],
-    stats: () => [
-      'SİSTEM & MODEL METRİKLERİ:',
-      '  EffiToRag Teşhis Hassasiyeti : %99.13 Doğrulanmış',
-      '  NLI Entailment Skoru         : 0.98',
-      '  Turkish NER F1-Skoru         : 0.941',
-      '  TrayHardwareMonitor Latency  : < 0.1ms render, 60 FPS asenkron'
-    ],
     stack: () => [
       'TEKNOLOJİ YIĞINI:',
       '  Yapay Zeka & NLP   : PyTorch, Hugging Face, Transformers, DeBERTa, SBERT, UMT5, Mistral, Qwen',
-      '  Vektör & RAG       : FAISS, Dense Embeddings, Sentence-Transformers, LangChain',
+      '  Vektör & RAG       : FAISS, Dense Embeddings, Sentence-Transformers, Cross-Encoders',
       '  Yerel Sistemler    : C# .NET 8, WinForms, Win32 API, LibreHardwareMonitor'
     ],
     contact: () => [
       'İLETİŞİM:',
       '  E-Posta  : <a href="mailto:kya.fth10@gmail.com" style="color:#2997ff">kya.fth10@gmail.com</a>',
       '  GitHub   : <a href="https://github.com/fth2745" target="_blank" style="color:#2997ff">github.com/fth2745</a>',
-      '  LinkedIn : <a href="https://linkedin.com/in/kya-fth10" target="_blank" style="color:#2997ff">linkedin.com/in/kya-fth10</a>'
+      '  LinkedIn : <a href="https://linkedin.com/in/kya-fth10" target="_blank" style="color:#2997ff">linkedin.com/in/kya-fth10</a>',
+      '  Medium   : <a href="https://medium.com/@kya.fth10" target="_blank" style="color:#2997ff">medium.com/@kya.fth10</a>'
     ],
     clear: () => {
       termBody.querySelectorAll('.term-line:not(:first-child)').forEach(el => el.remove());
