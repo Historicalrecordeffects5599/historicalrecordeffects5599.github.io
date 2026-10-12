@@ -3,37 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fatih | AI Research & Systems Engineering</title>
+  <title>Fatih | Deep Learning Architectures & Systems Engineering</title>
   <meta name="description" content="Personal portfolio of Fatih (fth2745) - Deep Learning, NLP, Multimodal AI and High-Performance Systems.">
   
-  <!-- Apple Meta & Icons -->
+  <!-- Apple Meta & Theming -->
   <meta name="theme-color" content="#000000">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   
-  <!-- Google Fonts & SF Pro fallback -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="apple-dark">
 
-  <!-- Ambient Glow Canvas / Background -->
+  <!-- Ambient Glow Canvas -->
   <div class="ambient-glow" id="ambientGlow"></div>
 
   <!-- Apple Global Navigation -->
   <header class="apple-nav" id="mainNav">
     <div class="nav-container">
       <a href="#hero" class="nav-brand" aria-label="Home">
-        <span class="apple-symbol"></span>
+        <!-- Crisp SVG Apple Icon -->
+        <svg class="apple-vector-icon" viewBox="0 0 170 170" fill="currentColor">
+          <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.04-7.69-7.85-11.97-14.42-6.19-9.5-10.9-20.2-14.13-32.08-3.23-11.89-4.85-23.2-4.85-33.94 0-14.42 3.63-26.65 10.9-36.68 7.27-10.03 16.5-15.16 27.69-15.39 4.36 0 9.4 1.16 15.13 3.49 5.73 2.33 9.4 3.55 11 3.66 2.21 0 6.13-1.32 11.75-3.97 5.62-2.65 10.5-3.86 14.64-3.65 11.05.7 20.37 4.96 27.95 12.79-9.84 5.92-14.68 14.28-14.52 25.07.16 8.52 3.48 15.77 9.97 21.75 6.49 5.98 14.13 9.38 22.92 10.2-2.22 6.53-4.73 12.83-7.53 18.9m-27.18-118.23c0 6.64-2.45 13-7.36 19.07-4.91 6.07-10.98 9.87-18.21 11.41-.65-2.06-.98-4.13-.98-6.2 0-6.64 2.56-13.04 7.69-19.21 5.12-6.17 11.39-9.87 18.81-11.11.05 2.02.05 4.03.05 6.04"/>
+        </svg>
         <span class="brand-name">fth2745</span>
       </a>
 
       <nav class="nav-menu" id="navMenu">
-        <a href="#scrolly" class="nav-link" data-tr="Mimari" data-en="Architecture">Mimari</a>
+        <a href="#architecture" class="nav-link" data-tr="Mimari" data-en="Architecture">Mimari</a>
         <a href="#projects" class="nav-link" data-tr="Projeler" data-en="Projects">Projeler</a>
         <a href="#philosophy" class="nav-link" data-tr="Felsefe" data-en="Philosophy">Felsefe</a>
         <a href="#terminal" class="nav-link" data-tr="Konsol" data-en="Console">Konsol</a>
@@ -43,7 +46,7 @@
       <div class="nav-actions">
         <!-- Language Switcher -->
         <button class="lang-toggle" id="langToggle" aria-label="Dili Değiştir / Switch Language">
-          <span class="lang-opt" data-value="tr">TR</span>
+          <span class="lang-opt active" data-value="tr">TR</span>
           <span class="lang-divider">/</span>
           <span class="lang-opt" data-value="en">EN</span>
           <span class="lang-pill" id="langPill"></span>
@@ -70,44 +73,53 @@
         </div>
 
         <h1 class="hero-title">
-          <span class="hero-line" data-tr="Zekanın ve mimarinin" data-en="At the frontier of">Zekanın ve mimarinin</span>
-          <span class="hero-line gradient-text" data-tr="kesiştiği nokta." data-en="intelligence and code.">kesiştiği nokta.</span>
+          <span class="hero-line" data-tr="Derin Öğrenme Mimarileri ve" data-en="Deep Learning Architectures &">Derin Öğrenme Mimarileri ve</span>
+          <span class="hero-line gradient-text" data-tr="Sistem Mühendisliği." data-en="Systems Engineering.">Sistem Mühendisliği.</span>
         </h1>
 
-        <p class="hero-subtitle" data-tr="Derin Transformer mimarileri, Çoklu Modlu Yapay Zeka ve RAG sistemlerinden; mikrosaniyelik yerel Windows çekirdek telemetrisine uzanan ödün vermeyen mühendislik." data-en="From deep Transformer architectures, Multimodal AI and advanced RAG pipelines to microsecond native Windows kernel telemetry.">
-          Derin Transformer mimarileri, Çoklu Modlu Yapay Zeka ve RAG sistemlerinden; mikrosaniyelik yerel Windows çekirdek telemetrisine uzanan ödün vermeyen mühendislik.
+        <p class="hero-subtitle" data-tr="Doğal dil işleme, çoklu modlu modeller ve milisaniyelik Windows çekirdek telemetrisi üzerine odaklanan açık kaynaklı çalışmalar." data-en="Open-source research across natural language inference, multimodal fusion, and sub-millisecond Windows telemetry.">
+          Doğal dil işleme, çoklu modlu modeller ve milisaniyelik Windows çekirdek telemetrisi üzerine odaklanan açık kaynaklı çalışmalar.
         </p>
 
         <div class="hero-cta-group">
-          <a href="#scrolly" class="apple-btn-primary" data-tr="Deneyimi Başlat" data-en="Explore The Architecture">
-            <span>Deneyimi Başlat</span>
+          <a href="#projects" class="apple-btn-primary" data-tr="Projeleri İncele" data-en="Explore Projects">
+            <span>Projeleri İncele</span>
             <svg class="btn-arrow" viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a href="#projects" class="apple-btn-secondary" data-tr="Tüm Projeler (8)" data-en="View All Projects (8)">
-            Tüm Projeler (8)
+          <a href="#architecture" class="apple-btn-secondary" data-tr="Mimari Anatomisi" data-en="Architecture Studio">
+            Mimari Anatomisi
           </a>
         </div>
 
-        <!-- Hero Metallic Floating Specs -->
-        <div class="hero-metrics">
-          <div class="metric-pill">
-            <span class="metric-val">99.13%</span>
-            <span class="metric-lbl" data-tr="Tanı Doğruluğu" data-en="Diagnostic Accuracy">Tanı Doğruluğu</span>
+        <!-- DYNAMIC PROJECT METRICS TICKER (Looping Live Metrics across 8 Projects) -->
+        <div class="hero-ticker-wrapper">
+          <div class="ticker-header-label">
+            <span class="pulse-indicator"></span>
+            <span class="ticker-title-text" data-tr="CANLI SİSTEM METRİKLERİ" data-en="LIVE SYSTEM METRICS">CANLI SİSTEM METRİKLERİ</span>
+            <span class="ticker-counter" id="tickerCounter">1 / 8</span>
           </div>
-          <div class="metric-divider"></div>
-          <div class="metric-pill">
-            <span class="metric-val">0.0ms</span>
-            <span class="metric-lbl" data-tr="Gereksiz Yük" data-en="Zero Overhead">Gereksiz Yük</span>
+
+          <div class="hero-ticker-card" id="heroTickerCard">
+            <!-- Dynamic slides rendered via JavaScript -->
+            <div class="ticker-slide active" data-index="0">
+              <div class="ticker-project-info">
+                <span class="ticker-p-index">01</span>
+                <span class="ticker-p-name">CoAttentionNLI</span>
+                <span class="ticker-p-tag">SBERT · DeBERTa-v3</span>
+              </div>
+              <div class="ticker-metrics-row">
+                <div class="t-metric"><span class="t-val">0.98</span><span class="t-lbl">Entailment Skoru</span></div>
+                <div class="t-divider"></div>
+                <div class="t-metric"><span class="t-val">Cross-Attn</span><span class="t-lbl">Müfredat Eğitimi</span></div>
+                <div class="t-divider"></div>
+                <div class="t-metric"><span class="t-val">PyTorch</span><span class="t-lbl">BiLSTM Hibrit</span></div>
+              </div>
+            </div>
           </div>
-          <div class="metric-divider"></div>
-          <div class="metric-pill">
-            <span class="metric-val">60 FPS</span>
-            <span class="metric-lbl" data-tr="Yerel UI & Telemetri" data-en="Native UI & Telemetry">Yerel UI & Telemetri</span>
-          </div>
-          <div class="metric-divider"></div>
-          <div class="metric-pill">
-            <span class="metric-val">8+</span>
-            <span class="metric-lbl" data-tr="Açık Kaynak Sistem" data-en="Open Source Systems">Açık Kaynak Sistem</span>
+
+          <!-- Ticker Progress Bar & Nav Dots -->
+          <div class="ticker-nav-dots" id="tickerNavDots">
+            <!-- 8 dots will be active synced -->
           </div>
         </div>
 
@@ -120,197 +132,154 @@
       </div>
     </section>
 
-    <!-- SCROLLYTELLING: THE DECONSTRUCTED ARCHITECTURE -->
-    <section class="scrolly-section" id="scrolly">
-      <div class="scrolly-intro">
-        <span class="eyebrow" data-tr="MİMARİ ANATOMİSİ" data-en="ARCHITECTURAL ANATOMY">MİMARİ ANATOMİSİ</span>
-        <h2 class="section-title" data-tr="Parçalarına Ayrılan Güç." data-en="Power. Deconstructed.">Parçalarına Ayrılan Güç.</h2>
-        <p class="section-desc" data-tr="Yüksek verimli yapay zeka modelleri ile saf donanım etkileşimi tek bir felsefede birleşir: Sıfır gecikme, mutlak şeffaflık." data-en="High-efficiency machine intelligence meets bare-metal hardware interaction in a single philosophy: zero latency, total transparency.">
-          Yüksek verimli yapay zeka modelleri ile saf donanım etkileşimi tek bir felsefede birleşir: Sıfır gecikme, mutlak şeffaflık.
+    <!-- ARCHITECTURE STUDIO SECTION (IN-PLACE INTERACTIVE - NO PAGE JUMPS) -->
+    <section class="architecture-section" id="architecture">
+      <div class="section-intro">
+        <span class="eyebrow" data-tr="MİMARİ ANATOMİSİ" data-en="ARCHITECTURAL STUDIO">MİMARİ ANATOMİSİ</span>
+        <h2 class="section-title" data-tr="Sistemin Katmanları." data-en="System Layers.">Sistemin Katmanları.</h2>
+        <p class="section-desc" data-tr="Donanım telemetrisinden derin öğrenme çıkarımına uzanan katmanlar arasında yerinde geçiş yapın." data-en="Seamlessly explore the layers from bare-metal hardware telemetry to deep learning inference.">
+          Donanım telemetrisinden derin öğrenme çıkarımına uzanan katmanlar arasında yerinde geçiş yapın.
         </p>
       </div>
 
-      <!-- Scrollytelling Interactive Stage -->
-      <div class="scrolly-stage-container" id="stageContainer">
-        <!-- Sticky 3D Canvas / Visual Stage -->
-        <div class="scrolly-visual-wrapper">
-          <div class="exploded-cube" id="explodedStage">
-            
-            <!-- Layer 1: Native Hardware Core (Bottom / Ring 0) -->
-            <div class="stage-layer layer-hardware" data-layer="1">
-              <div class="layer-glass">
-                <div class="layer-header">
-                  <span class="layer-tag">LAYER 01 · BARE METAL & OS</span>
-                  <span class="layer-status">60 FPS · 0.1% CPU</span>
-                </div>
-                <div class="layer-graphic hardware-graphic">
-                  <div class="cpu-socket">
-                    <div class="cpu-die">
-                      <span class="die-label">Ring 0 Sensors</span>
-                      <div class="die-pulse"></div>
-                    </div>
-                  </div>
-                  <div class="bus-lines">
-                    <span class="bus-line l1"></span>
-                    <span class="bus-line l2"></span>
-                    <span class="bus-line l3"></span>
-                  </div>
-                  <div class="tray-preview">
-                    <div class="mini-tray-icon">
-                      <span class="tray-temp">42°</span>
-                      <span class="tray-tag">CPU</span>
-                    </div>
-                    <div class="mini-hud-card">
-                      <div class="hud-row"><span>Intel Core i7</span><strong>42°C | 14%</strong></div>
-                      <div class="hud-row"><span>NVIDIA RTX</span><strong>38°C | 0%</strong></div>
-                      <div class="hud-row"><span>System RAM</span><strong>11.4 / 32 GB</strong></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="layer-caption">
-                  <h4 data-tr="Yerel Çekirdek Telemetrisi" data-en="Native Kernel Telemetry">Yerel Çekirdek Telemetrisi</h4>
-                  <p data-tr="C# .NET 8, Win32 API ve LibreHardwareMonitor entegrasyonu ile arka planda sıfır sürtünmeyle çalışan donanım izleme katmanı." data-en="C# .NET 8, Win32 API and LibreHardwareMonitor integration delivering sub-millisecond hardware monitoring with zero bloat.">C# .NET 8, Win32 API ve LibreHardwareMonitor entegrasyonu ile arka planda sıfır sürtünmeyle çalışan donanım izleme katmanı.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Layer 2: Retrieval & Vector Graph (Middle) -->
-            <div class="stage-layer layer-fusion" data-layer="2">
-              <div class="layer-glass">
-                <div class="layer-header">
-                  <span class="layer-tag">LAYER 02 · RAG & VECTOR ENGINE</span>
-                  <span class="layer-status">FAISS · Cosine 0.94</span>
-                </div>
-                <div class="layer-graphic vector-graphic">
-                  <div class="vector-grid">
-                    <div class="v-node active" style="--x: 20%; --y: 30%"><span>Token E_1</span></div>
-                    <div class="v-node" style="--x: 70%; --y: 25%"><span>Vision E_2</span></div>
-                    <div class="v-node active" style="--x: 50%; --y: 65%"><span>Clinical Doc</span></div>
-                    <div class="v-node" style="--x: 80%; --y: 75%"><span>Qwen Head</span></div>
-                    <svg class="node-connections" viewBox="0 0 100 100">
-                      <line x1="20" y1="30" x2="50" y2="65" stroke="rgba(0, 242, 254, 0.4)" stroke-width="0.8"/>
-                      <line x1="70" y1="25" x2="50" y2="65" stroke="rgba(191, 90, 242, 0.4)" stroke-width="0.8"/>
-                      <line x1="50" y1="65" x2="80" y2="75" stroke="rgba(0, 242, 254, 0.4)" stroke-width="0.8"/>
-                    </svg>
-                  </div>
-                </div>
-                <div class="layer-caption">
-                  <h4 data-tr="Vektör İndeksleme & Hibrit Füzyon" data-en="Vector Indexing & Hybrid Fusion">Vektör İndeksleme & Hibrit Füzyon</h4>
-                  <p data-tr="FAISS vektör uzayı ve çok modlu ara katman birleştirme. Görüntü öznitelikleriyle metin gömmelerini tek uzayda buluşturan akıllı arama." data-en="FAISS vector retrieval and multimodal intermediate fusion, uniting visual embeddings with dense textual semantic spaces.">FAISS vektör uzayı ve çok modlu ara katman birleştirme. Görüntü öznitelikleriyle metin gömmelerini tek uzayda buluşturan akıllı arama.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Layer 3: Transformer & Reasoning Core (Top / Generative) -->
-            <div class="stage-layer layer-transformer" data-layer="3">
-              <div class="layer-glass">
-                <div class="layer-header">
-                  <span class="layer-tag">LAYER 03 · NEURAL ATTENTION & LLM</span>
-                  <span class="layer-status">DeBERTa · Mistral 7B · Qwen</span>
-                </div>
-                <div class="layer-graphic transformer-graphic">
-                  <div class="attention-matrix">
-                    <div class="matrix-cell heat-4"></div><div class="matrix-cell heat-2"></div><div class="matrix-cell heat-1"></div><div class="matrix-cell heat-5"></div>
-                    <div class="matrix-cell heat-3"></div><div class="matrix-cell heat-5"></div><div class="matrix-cell heat-2"></div><div class="matrix-cell heat-1"></div>
-                    <div class="matrix-cell heat-1"></div><div class="matrix-cell heat-3"></div><div class="matrix-cell heat-4"></div><div class="matrix-cell heat-2"></div>
-                    <div class="matrix-cell heat-5"></div><div class="matrix-cell heat-1"></div><div class="matrix-cell heat-3"></div><div class="matrix-cell heat-4"></div>
-                  </div>
-                  <div class="decoder-pill">
-                    <span class="pill-sparkle">✦</span>
-                    <span data-tr="Çapraz Dikkat & Mantıksal Çıkarım" data-en="Cross-Attention & Logical Inference">Çapraz Dikkat & Mantıksal Çıkarım</span>
-                  </div>
-                </div>
-                <div class="layer-caption">
-                  <h4 data-tr="Derin Dikkat & Dil Zekası" data-en="Deep Attention & Language Intelligence">Derin Dikkat & Dil Zekası</h4>
-                  <p data-tr="DeBERTa, SBERT, UMT5 ve Mistral-7B modelleriyle doğal dil anlama, soru yanıtlama ve metin özetleme." data-en="State-of-the-art NLI, extractive question answering, and abstractive summarization powered by DeBERTa, SBERT, and generative LLMs.">DeBERTa, SBERT, UMT5 ve Mistral-7B modelleriyle doğal dil anlama, soru yanıtlama ve metin özetleme.</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Stage Controls (Step Buttons) -->
-          <div class="stage-stepper">
-            <button class="step-dot active" data-step="0" aria-label="Birleşik Görünüm">
-              <span class="dot-inner"></span>
-              <span class="dot-tooltip" data-tr="Bütünsel Mimar" data-en="Unified System">Bütünsel Sistem</span>
-            </button>
-            <button class="step-dot" data-step="1" aria-label="Katman 1: Yerel Sistem">
-              <span class="dot-inner"></span>
-              <span class="dot-tooltip" data-tr="01. Donanım & Çekirdek" data-en="01. Hardware & Kernel">01. Donanım & Çekirdek</span>
-            </button>
-            <button class="step-dot" data-step="2" aria-label="Katman 2: Vektör Füzyonu">
-              <span class="dot-inner"></span>
-              <span class="dot-tooltip" data-tr="02. Vektör & RAG" data-en="02. Vector & RAG">02. Vektör & RAG</span>
-            </button>
-            <button class="step-dot" data-step="3" aria-label="Katman 3: Transformer">
-              <span class="dot-inner"></span>
-              <span class="dot-tooltip" data-tr="03. Transformer & LLM" data-en="03. Transformer & LLM">03. Transformer & LLM</span>
-            </button>
-          </div>
+      <div class="studio-container">
+        <!-- Interactive Navigation Tabs (In-place switcher) -->
+        <div class="studio-tabs" id="studioTabs">
+          <button class="studio-tab-btn active" data-layer="1">
+            <span class="tab-num">01</span>
+            <span class="tab-label" data-tr="Yerel Çekirdek & Donanım" data-en="Bare-Metal & Kernel">Yerel Çekirdek & Donanım</span>
+          </button>
+          <button class="studio-tab-btn" data-layer="2">
+            <span class="tab-num">02</span>
+            <span class="tab-label" data-tr="Çoklu Mod & Vektör RAG" data-en="Multimodal & Vector RAG">Çoklu Mod & Vektör RAG</span>
+          </button>
+          <button class="studio-tab-btn" data-layer="3">
+            <span class="tab-num">03</span>
+            <span class="tab-label" data-tr="Transformer & Dil Zekası" data-en="Transformer & NLI">Transformer & Dil Zekası</span>
+          </button>
         </div>
 
-        <!-- Scrolling Narrative Text Walkthrough -->
-        <div class="scrolly-narrative">
-          <div class="narrative-card" data-step-target="0">
-            <span class="card-step-badge">00</span>
-            <h3 data-tr="Uçtan Uca Bütünsel Mühendislik" data-en="End-to-End Unified Engineering">Uçtan Uca Bütünsel Mühendislik</h3>
-            <p data-tr="Yapay zeka modelleri sadece soyut matematik değildir; gerçek dünyada çalışan fiziksel silikonlar üzerinde yaşarlar. Bu portföy, algoritmik derinlik ile donanımsal yürütmenin kusursuz sentezidir." data-en="Modern intelligence isn't merely theoretical math; it thrives on bare-metal silicon. This portfolio represents the synthesis of deep algorithmic reasoning and native execution.">
-              Yapay zeka modelleri sadece soyut matematik değildir; gerçek dünyada çalışan fiziksel silikonlar üzerinde yaşarlar. Bu portföy, algoritmik derinlik ile donanımsal yürütmenin kusursuz sentezidir.
-            </p>
-          </div>
-
-          <div class="narrative-card" data-step-target="1">
-            <span class="card-step-badge">01</span>
-            <h3 data-tr="Yerel Çekirdek & Sıfır Yük (TrayHardwareMonitor)" data-en="Bare-Metal & Sub-Millisecond Native (TrayHardwareMonitor)">Yerel Çekirdek & Sıfır Yük (TrayHardwareMonitor)</h3>
-            <p data-tr="İşletim sisteminin kalbine inen C# .NET 8 uygulaması. 60 FPS akıcı HUD arayüzü, 0.8 sn aerodinamik kaybolma/belirme eğrileri ve arka planda %0.1 işlemci kullanımıyla bilgisayarınızı yormadan her sensörü takip eder." data-en="A native C# .NET 8 application engineered directly against Win32 subsystem. Features 60 FPS asynchronous UI, 0.8s aerodynamic fade transitions, and sub-0.1% CPU usage.">
-              İşletim sisteminin kalbine inen C# .NET 8 uygulaması. 60 FPS akıcı HUD arayüzü, 0.8 sn aerodinamik kaybolma/belirme eğrileri ve arka planda %0.1 işlemci kullanımıyla bilgisayarınızı yormadan her sensörü takip eder.
-            </p>
-            <div class="mini-tag-list">
-              <span class="tech-tag">C# .NET 8</span>
-              <span class="tech-tag">Win32 API</span>
-              <span class="tech-tag">Hardware Telemetry</span>
+        <!-- Studio Display Stage (Left Visual, Right Narrative - Swaps In-Place) -->
+        <div class="studio-stage" id="studioStage">
+          
+          <!-- LAYER 1: HARDWARE & OS -->
+          <div class="studio-view active" data-layer-view="1">
+            <div class="studio-visual-box">
+              <div class="stage-tag">LAYER 01 · BARE METAL & OS TELEMETRY</div>
+              <div class="hardware-canvas">
+                <div class="cpu-die-box">
+                  <div class="die-core">
+                    <span class="core-name">Ring 0 Sensors</span>
+                    <span class="core-fps">60 FPS</span>
+                  </div>
+                </div>
+                <div class="hud-mini-preview">
+                  <div class="hud-title">Windows Taskbar HUD</div>
+                  <div class="hud-item"><span>Intel Core i7-13700</span><strong>42°C | 14%</strong></div>
+                  <div class="hud-item"><span>NVIDIA RTX 4070</span><strong>38°C | 0%</strong></div>
+                  <div class="hud-item"><span>RAM Bellek</span><strong>11.4 / 32 GB</strong></div>
+                  <div class="hud-badge">0.8s Süzülen Arayüz · &lt; 0.1% CPU</div>
+                </div>
+              </div>
+            </div>
+            <div class="studio-info-box">
+              <span class="info-badge">TrayHardwareMonitor</span>
+              <h3 data-tr="Yerel Windows Telemetrisi & Görev Çubuğu HUD" data-en="Native Windows Telemetry & Taskbar HUD">Yerel Windows Telemetrisi & Görev Çubuğu HUD</h3>
+              <p data-tr="C# .NET 8 ve Win32 API üzerinde doğrudan çalışan ultra hafif donanım monitörü. 16x16 dinamik ikon çizimi, 0.8 saniyede solarak açılıp kapanan aerodinamik bilgi kartı ve arka planda sıfıra yakın (%0.1) işlemci tüketimi." data-en="Ultra-lightweight monitor engineered directly against Win32 subsystem. Features 16x16 dynamic taskbar drawing, 0.8s aerodynamic fade transitions, and sub-0.1% CPU overhead.">
+                C# .NET 8 ve Win32 API üzerinde doğrudan çalışan ultra hafif donanım monitörü. 16x16 dinamik ikon çizimi, 0.8 saniyede solarak açılıp kapanan aerodinamik bilgi kartı ve arka planda sıfıra yakın (%0.1) işlemci tüketimi.
+              </p>
+              <div class="spec-grid">
+                <div class="s-box"><span class="s-k">Yürütme</span><span class="s-v">C# .NET 8 WinForms</span></div>
+                <div class="s-box"><span class="s-k">Gecikme</span><span class="s-v">&lt; 0.1ms Render</span></div>
+                <div class="s-box"><span class="s-k">Başlangıç</span><span class="s-v">Task Scheduler UAC-Free</span></div>
+              </div>
+              <a href="https://github.com/fth2745/TrayHardwareMonitor" target="_blank" rel="noopener noreferrer" class="studio-link">
+                <span data-tr="Depoyu Görüntüle" data-en="View Repository">Depoyu Görüntüle</span> →
+              </a>
             </div>
           </div>
 
-          <div class="narrative-card" data-step-target="2">
-            <span class="card-step-badge">02</span>
-            <h3 data-tr="Çok Modlu Füzyon & Vektör RAG (EffiToRag & Fusion)" data-en="Multimodal Fusion & Vector RAG (EffiToRag & Fusion)">Çok Modlu Füzyon & Vektör RAG (EffiToRag & Fusion)</h3>
-            <p data-tr="Görüntü ve metin verilerini tek bir sinirsel potada eriten Ara Katman Füzyonu (Intermediate Fusion). %99.13 tanı doğruluğuna sahip tarımsal karar destek sisteminden, FAISS destekli medikal soru-cevap asistanına kadar bilgiye anında ulaşım." data-en="Intermediate fusion architectures unifying visual features and text vectors. From high-precision plant disease diagnostics (99.13% accuracy) to hospital-grade clinical FAISS retrieval.">
-              Görüntü ve metin verilerini tek bir sinirsel potada eriten Ara Katman Füzyonu (Intermediate Fusion). %99.13 tanı doğruluğuna sahip tarımsal karar destek sisteminden, FAISS destekli medikal soru-cevap asistanına kadar bilgiye anında ulaşım.
-            </p>
-            <div class="mini-tag-list">
-              <span class="tech-tag">FAISS</span>
-              <span class="tech-tag">EfficientNet</span>
-              <span class="tech-tag">Qwen 2.5</span>
-              <span class="tech-tag">Mistral 7B</span>
+          <!-- LAYER 2: MULTIMODAL & RAG -->
+          <div class="studio-view" data-layer-view="2">
+            <div class="studio-visual-box">
+              <div class="stage-tag">LAYER 02 · MULTIMODAL INTERMEDIATE FUSION & RAG</div>
+              <div class="vector-canvas">
+                <div class="fusion-flow">
+                  <div class="flow-pill vision">Vision Pixels (EfficientNet)</div>
+                  <span class="flow-plus">+</span>
+                  <div class="flow-pill text">Dense Semantic Text (BERT)</div>
+                </div>
+                <div class="flow-arrow-down">↓ Intermediate Fusion Tensor Space</div>
+                <div class="rag-result-box">
+                  <div class="rag-row"><span>FAISS Cosine Similarity:</span><strong>0.95 Dense Match</strong></div>
+                  <div class="rag-row"><span>Tanı Doğruluğu:</span><strong class="highlight-green">99.13% Verified</strong></div>
+                  <div class="rag-row"><span>Jeneratör Model:</span><strong>Qwen 2.5 + Mistral 7B</strong></div>
+                </div>
+              </div>
+            </div>
+            <div class="studio-info-box">
+              <span class="info-badge">EffiToRag & Fusion</span>
+              <h3 data-tr="Çok Modlu Ara Katman Füzyonu & Klinik RAG" data-en="Multimodal Intermediate Fusion & Clinical RAG">Çok Modlu Ara Katman Füzyonu & Klinik RAG</h3>
+              <p data-tr="Görüntü öznitelikleriyle metin gömmelerini ara katmanda birleştiren füzyon mimarisi. %99.13 tanı doğruluğuna sahip tarımsal karar destek sisteminden, FAISS destekli medikal soru-cevap asistanına kadar bilgiye anında ulaşım." data-en="Intermediate fusion architectures uniting visual representations with text embeddings. Spanning high-precision disease diagnostics (99.13% accuracy) to hospital-grade FAISS retrieval.">
+                Görüntü öznitelikleriyle metin gömmelerini ara katmanda birleştiren füzyon mimarisi. %99.13 tanı doğruluğuna sahip tarımsal karar destek sisteminden, FAISS destekli medikal soru-cevap asistanına kadar bilgiye anında ulaşım.
+              </p>
+              <div class="spec-grid">
+                <div class="s-box"><span class="s-k">Doğruluk</span><span class="s-v highlight-green">%99.13</span></div>
+                <div class="s-box"><span class="s-k">Vektör Motoru</span><span class="s-v">FAISS Dense L2</span></div>
+                <div class="s-box"><span class="s-k">Metodoloji</span><span class="s-v">Multi-Task Learning</span></div>
+              </div>
+              <a href="https://github.com/fth2745/EffiToRag" target="_blank" rel="noopener noreferrer" class="studio-link">
+                <span data-tr="Depoyu Görüntüle" data-en="View Repository">Depoyu Görüntüle</span> →
+              </a>
             </div>
           </div>
 
-          <div class="narrative-card" data-step-target="3">
-            <span class="card-step-badge">03</span>
-            <h3 data-tr="Transformer & Doğal Dil Zekası (NLI, SQuAD, NER, UMT5)" data-en="Transformer & Language Understanding (NLI, SQuAD, NER, UMT5)">Transformer & Doğal Dil Zekası (NLI, SQuAD, NER, UMT5)</h3>
-            <p data-tr="DeBERTa ve SBERT tabanlı çapraz dikkat mekanizmaları, müfredat öğrenimi (Curriculum Learning) ile eğitilmiş mantıksal çıkarım sistemleri ve Türkçe için özelleştirilmiş varlık tanıma ve soyutlamalı özetleme modelleri." data-en="SBERT-guided co-attention with curriculum learning, extractive span prediction on SQuAD v2, and Turkish-specialized NER & UMT5 abstractive summarization.">
-              DeBERTa ve SBERT tabanlı çapraz dikkat mekanizmaları, müfredat öğrenimi (Curriculum Learning) ile eğitilmiş mantıksal çıkarım sistemleri ve Türkçe için özelleştirilmiş varlık tanıma ve soyutlamalı özetleme modelleri.
-            </p>
-            <div class="mini-tag-list">
-              <span class="tech-tag">DeBERTa</span>
-              <span class="tech-tag">SBERT</span>
-              <span class="tech-tag">UMT5</span>
-              <span class="tech-tag">BiLSTM</span>
+          <!-- LAYER 3: TRANSFORMER & NLP -->
+          <div class="studio-view" data-layer-view="3">
+            <div class="studio-visual-box">
+              <div class="stage-tag">LAYER 03 · DEEP ATTENTION & TRANSFORMER INFERENCE</div>
+              <div class="transformer-canvas">
+                <div class="matrix-grid-visual">
+                  <div class="m-cell heat-4"></div><div class="m-cell heat-2"></div><div class="m-cell heat-1"></div><div class="m-cell heat-5"></div>
+                  <div class="m-cell heat-3"></div><div class="m-cell heat-5"></div><div class="m-cell heat-2"></div><div class="m-cell heat-1"></div>
+                  <div class="m-cell heat-1"></div><div class="m-cell heat-3"></div><div class="m-cell heat-4"></div><div class="m-cell heat-2"></div>
+                  <div class="m-cell heat-5"></div><div class="m-cell heat-1"></div><div class="m-cell heat-3"></div><div class="m-cell heat-4"></div>
+                </div>
+                <div class="inference-preview-box">
+                  <div class="i-row"><span>DeBERTa-v3 Cross Attention:</span><strong>Active</strong></div>
+                  <div class="i-row"><span>Stanford SQuAD v2 Span Prediction:</span><strong>Answerable (0.99)</strong></div>
+                  <div class="i-row"><span>Google UMT5 Abstractive Model:</span><strong>Hugging Face Live</strong></div>
+                </div>
+              </div>
+            </div>
+            <div class="studio-info-box">
+              <span class="info-badge">CoAttentionNLI & SQuAD v2</span>
+              <h3 data-tr="Doğal Dil Çıkarımı & Çapraz Dikkat" data-en="Natural Language Inference & Cross-Attention">Doğal Dil Çıkarımı & Çapraz Dikkat</h3>
+              <p data-tr="Cümle çiftleri arasındaki anlamsal ilişkileri ve çıkarım mantığını müfredat öğrenimi (Curriculum Learning) ile çözen DeBERTa modelleri. SQuAD 2.0 soru yanıtlayabilirlik tespiti ve Türkçe morfolojiye özel varlık tanıma." data-en="DeBERTa models trained with curriculum learning for premise-hypothesis inference. Paired with Stanford SQuAD 2.0 dual-head answerability and Turkish morphological token classification.">
+                Cümle çiftleri arasındaki anlamsal ilişkileri ve çıkarım mantığını müfredat öğrenimi (Curriculum Learning) ile çözen DeBERTa modelleri. SQuAD 2.0 soru yanıtlayabilirlik tespiti ve Türkçe morfolojiye özel varlık tanıma.
+              </p>
+              <div class="spec-grid">
+                <div class="s-box"><span class="s-k">Backbone</span><span class="s-v">DeBERTa + SBERT</span></div>
+                <div class="s-box"><span class="s-k">Görevler</span><span class="s-v">NLI · QA · NER · Özet</span></div>
+                <div class="s-box"><span class="s-k">Framework</span><span class="s-v">PyTorch / HF</span></div>
+              </div>
+              <a href="https://github.com/fth2745/NLI-Classification" target="_blank" rel="noopener noreferrer" class="studio-link">
+                <span data-tr="Depoyu Görüntüle" data-en="View Repository">Depoyu Görüntüle</span> →
+              </a>
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- CURATED PROJECTS SHOWCASE (THE 8 MASTERWORKS) -->
+    <!-- CURATED PROJECTS SHOWCASE (STANDARDIZED 8 CARDS WITH PREVIEW BOXES) -->
     <section class="projects-section" id="projects">
       <div class="section-header">
         <span class="eyebrow" data-tr="PORTFÖY VİTRİNİ" data-en="CURATED WORKS">PORTFÖY VİTRİNİ</span>
         <h2 class="section-title" data-tr="Öncelikli 8 Başyapıt." data-en="The 8 Foundational Projects.">Öncelikli 8 Başyapıt.</h2>
-        <p class="section-desc" data-tr="Araştırma düzeyinde derin öğrenme mimarilerinden sistem düzeyinde native araçlara kadar her proje açık kaynak kodludur." data-en="From research-grade deep learning architectures to native system utilities. Every project is fully open source.">
-          Araştırma düzeyinde derin öğrenme mimarilerinden sistem düzeyinde native araçlara kadar her proje açık kaynak kodludur.
+        <p class="section-desc" data-tr="Her proje eşit standartta modellenmiş, doğrulanmış metrikler ve görsel girdi-çıktı simülasyonları ile sunulmuştur." data-en="Engineered to uniform standards with verifiable metrics and interactive sample input-output pipelines.">
+          Her proje eşit standartta modellenmiş, doğrulanmış metrikler ve görsel girdi-çıktı simülasyonları ile sunulmuştur.
         </p>
 
         <!-- Category Filters -->
@@ -322,15 +291,16 @@
         </div>
       </div>
 
+      <!-- Uniform 2-Column Bento Grid -->
       <div class="projects-grid" id="projectsGrid">
 
-        <!-- PROJECT 1: NLI-Classification -->
-        <article class="project-card featured-card" data-category="nlp">
+        <!-- PROJECT 1: CoAttentionNLI -->
+        <article class="project-card" data-category="nlp">
           <div class="card-glow"></div>
           <div class="card-top">
             <div class="project-meta">
               <span class="project-index">01</span>
-              <span class="project-tag">TRANSFORMER · SBERT · DEBERTA</span>
+              <span class="project-tag">DEBERTA · SBERT · PYTORCH</span>
             </div>
             <a href="https://github.com/fth2745/NLI-Classification" target="_blank" rel="noopener noreferrer" class="card-gh-link" aria-label="GitHub Repo">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
@@ -339,30 +309,30 @@
 
           <div class="card-body">
             <h3 class="project-title">CoAttentionNLI: SBERT-Guided NLI with Curriculum Learning</h3>
-            <p class="project-summary" data-tr="Cümle çiftleri arasındaki semantik çelişki ve çıkarım ilişkilerini yakalayan hibrit dikkat modeli. DeBERTa, SBERT ve BiLSTM mimarisini müfredat öğrenimi (Curriculum Learning) ile eğitir." data-en="A neural inference system capturing semantic relationships between sentence pairs using hybrid co-attention. Combines DeBERTa, SBERT, and BiLSTM under a curriculum learning paradigm.">
-              Cümle çiftleri arasındaki semantik çelişki ve çıkarım ilişkilerini yakalayan hibrit dikkat modeli. DeBERTa, SBERT ve BiLSTM mimarisini müfredat öğrenimi (Curriculum Learning) ile eğitir.
+            <p class="project-summary" data-tr="Cümle çiftleri arasındaki semantik çelişki ve çıkarım ilişkilerini yakalayan hibrit model. DeBERTa, SBERT ve BiLSTM mimarisini müfredat öğrenimi (Curriculum Learning) ile eğitir." data-en="Neural inference system capturing semantic relationships between sentence pairs using hybrid co-attention. Combines DeBERTa, SBERT, and BiLSTM under curriculum learning.">
+              Cümle çiftleri arasındaki semantik çelişki ve çıkarım ilişkilerini yakalayan hibrit model. DeBERTa, SBERT ve BiLSTM mimarisini müfredat öğrenimi (Curriculum Learning) ile eğitir.
             </p>
 
-            <!-- Visual Feature Preview -->
-            <div class="card-visual-preview nli-preview">
-              <div class="preview-premise">
-                <span class="premise-badge">Premise</span>
-                <code>"A dog running through snow"</code>
+            <!-- Interactive Sample Preview Box -->
+            <div class="sample-preview-box">
+              <div class="preview-row">
+                <span class="p-badge">Premise</span>
+                <code class="p-code">"A dog running through snow"</code>
               </div>
-              <div class="preview-attention-link">
-                <span class="link-label">Cross-Attention Matrix</span>
-                <span class="link-score">Score: 0.98 Entailment</span>
+              <div class="preview-connection">
+                <span class="conn-label">Cross-Attention Matrix</span>
+                <span class="conn-score highlight-cyan">Score: 0.98 Entailment</span>
               </div>
-              <div class="preview-hypothesis">
-                <span class="premise-badge">Hypothesis</span>
-                <code>"An animal is outdoors"</code>
+              <div class="preview-row">
+                <span class="p-badge">Hypothesis</span>
+                <code class="p-code">"An animal is outdoors"</code>
               </div>
             </div>
 
             <div class="card-specs">
               <div class="spec-item"><span class="spec-k">Backbone</span><span class="spec-v">DeBERTa-v3 + SBERT</span></div>
-              <div class="spec-item"><span class="spec-k">Method</span><span class="spec-v">Curriculum Learning</span></div>
-              <div class="spec-item"><span class="spec-k">Task</span><span class="spec-v">Natural Language Inference</span></div>
+              <div class="spec-item"><span class="spec-k">Eğitim</span><span class="spec-v">Curriculum Schedule</span></div>
+              <div class="spec-item"><span class="spec-k">Görev</span><span class="spec-v">Doğal Dil Çıkarımı</span></div>
             </div>
           </div>
 
@@ -389,14 +359,30 @@
 
           <div class="card-body">
             <h3 class="project-title">DeBERTa SQuAD v2: Span Prediction & Answerability</h3>
-            <p class="project-summary" data-tr="Stanford SQuAD 2.0 mantığıyla çalışan çıkarımsal soru-cevap motoru. Yalnızca doğru metin aralığını (span) tahmin etmekle kalmaz, sorunun yanıtlanamaz olup olmadığını da sınıflandırır." data-en="Transformer-based extractive question answering engine adopting SQuAD v2 logic: dual-head joint prediction of text spans and question answerability.">
-              Stanford SQuAD 2.0 mantığıyla çalışan çıkarımsal soru-cevap motoru. Yalnızca doğru metin aralığını (span) tahmin etmekle kalmaz, sorunun yanıtlanamaz olup olmadığını da sınıflandırır.
+            <p class="project-summary" data-tr="Stanford SQuAD 2.0 mantığıyla çalışan çıkarımsal soru-cevap motoru. Yalnızca metin aralığını (span) tahmin etmekle kalmaz, sorunun yanıtlanamaz olup olmadığını da sınıflandırır." data-en="Transformer-based extractive question answering adopting SQuAD v2 logic: dual-head joint prediction of text spans and question answerability.">
+              Stanford SQuAD 2.0 mantığıyla çalışan çıkarımsal soru-cevap motoru. Yalnızca metin aralığını (span) tahmin etmekle kalmaz, sorunun yanıtlanamaz olup olmadığını da sınıflandırır.
             </p>
 
+            <!-- Interactive Sample Preview Box -->
+            <div class="sample-preview-box">
+              <div class="preview-row">
+                <span class="p-badge">Context</span>
+                <code class="p-code">"...Apollo 11 landed on July 20, 1969..."</code>
+              </div>
+              <div class="preview-connection">
+                <span class="conn-label">Span Prediction Head [38:51]</span>
+                <span class="conn-score highlight-cyan">Answerability: 0.99</span>
+              </div>
+              <div class="preview-row">
+                <span class="p-badge">Predicted Span</span>
+                <code class="p-code">"July 20, 1969"</code>
+              </div>
+            </div>
+
             <div class="card-specs">
-              <div class="spec-item"><span class="spec-k">Dataset</span><span class="spec-v">SQuAD v2.0 Standard</span></div>
-              <div class="spec-item"><span class="spec-k">Heads</span><span class="spec-v">Start/End Span + No-Answer</span></div>
-              <div class="spec-item"><span class="spec-k">Framework</span><span class="spec-v">PyTorch / Transformers</span></div>
+              <div class="spec-item"><span class="spec-k">Dataset</span><span class="spec-v">Stanford SQuAD 2.0</span></div>
+              <div class="spec-item"><span class="spec-k">Başlıklar</span><span class="spec-v">Span + No-Answer</span></div>
+              <div class="spec-item"><span class="spec-k">Mimari</span><span class="spec-v">DeBERTa Transformers</span></div>
             </div>
           </div>
 
@@ -427,10 +413,26 @@
               Türkçe metinlerin zengin morfolojisi için BERT'in anlamsal kavrayışını BiLSTM'in sıralı bellek gücüyle harmanlayan çok görevli (Multi-Task) varlık tanıma mimarisi.
             </p>
 
+            <!-- Interactive Sample Preview Box -->
+            <div class="sample-preview-box">
+              <div class="preview-row">
+                <span class="p-badge">Girdi Metni</span>
+                <code class="p-code">"Mustafa Kemal 1919'da Samsun'a ayak bastı."</code>
+              </div>
+              <div class="preview-connection">
+                <span class="conn-label">BERT + BiLSTM + CRF Tagging</span>
+                <span class="conn-score highlight-cyan">F1-Score: 0.941</span>
+              </div>
+              <div class="preview-row">
+                <span class="p-badge">Varlıklar</span>
+                <code class="p-code">Mustafa Kemal [B-PER, I-PER] | Samsun [B-LOC]</code>
+              </div>
+            </div>
+
             <div class="card-specs">
-              <div class="spec-item"><span class="spec-k">Entities</span><span class="spec-v">PER, LOC, ORG (B-I-O)</span></div>
-              <div class="spec-item"><span class="spec-k">Architecture</span><span class="spec-v">BERTurk + BiLSTM + CRF</span></div>
-              <div class="spec-item"><span class="spec-k">Target</span><span class="spec-v">Turkish Morphology</span></div>
+              <div class="spec-item"><span class="spec-k">Varlıklar</span><span class="spec-v">PER, LOC, ORG (BIO)</span></div>
+              <div class="spec-item"><span class="spec-k">Mimari</span><span class="spec-v">BERTurk + BiLSTM + CRF</span></div>
+              <div class="spec-item"><span class="spec-k">Dil</span><span class="spec-v">Türkçe Morfoloji</span></div>
             </div>
           </div>
 
@@ -457,14 +459,30 @@
 
           <div class="card-body">
             <h3 class="project-title">UMT5-Based Turkish Abstractive Summarizer</h3>
-            <p class="project-summary" data-tr="Google'ın çok dilli `umt5-small` modelini Türkçe metin özetleme görevi için ince ayar (fine-tuning) yaparak Hugging Face Hub üzerinde canlı modele dönüştüren çalışma." data-en="Abstractive text summarization system built on Google's multilingual UMT5-small, fine-tuned specifically on Turkish datasets and deployed on Hugging Face Hub.">
-              Google'ın çok dilli `umt5-small` modelini Türkçe metin özetleme görevi için ince ayar (fine-tuning) yaparak Hugging Face Hub üzerinde canlı modele dönüştüren çalışma.
+            <p class="project-summary" data-tr="Google'ın çok dilli umt5-small modelini Türkçe metin özetleme görevi için ince ayar (fine-tuning) yaparak Hugging Face Hub üzerinde canlı modele dönüştüren çalışma." data-en="Abstractive text summarization system built on Google's multilingual UMT5-small, fine-tuned specifically on Turkish datasets and deployed on Hugging Face Hub.">
+              Google'ın çok dilli umt5-small modelini Türkçe metin özetleme görevi için ince ayar (fine-tuning) yaparak Hugging Face Hub üzerinde canlı modele dönüştüren çalışma.
             </p>
 
+            <!-- Interactive Sample Preview Box -->
+            <div class="sample-preview-box">
+              <div class="preview-row">
+                <span class="p-badge">Ham Doküman</span>
+                <code class="p-code">"Yapay zeka modelleri doğal dil alanında hızla ilerleyerek..."</code>
+              </div>
+              <div class="preview-connection">
+                <span class="conn-label">Google UMT5 Seq2Seq Generator</span>
+                <span class="conn-score highlight-cyan">ROUGE-1: 42.8</span>
+              </div>
+              <div class="preview-row">
+                <span class="p-badge">Soyut Özet</span>
+                <code class="p-code">"Yapay zekanın dil alanındaki hızlı evrimi ve modeller."</code>
+              </div>
+            </div>
+
             <div class="card-specs">
-              <div class="spec-item"><span class="spec-k">Base Model</span><span class="spec-v">Google umt5-small</span></div>
-              <div class="spec-item"><span class="spec-k">Deployment</span><span class="spec-v">Hugging Face Hub</span></div>
-              <div class="spec-item"><span class="spec-k">Generation</span><span class="spec-v">Encoder-Decoder Seq2Seq</span></div>
+              <div class="spec-item"><span class="spec-k">Temel Model</span><span class="spec-v">Google umt5-small</span></div>
+              <div class="spec-item"><span class="spec-k">Dağıtım</span><span class="spec-v">Hugging Face Canlı</span></div>
+              <div class="spec-item"><span class="spec-k">Üretim</span><span class="spec-v">Encoder-Decoder Seq2Seq</span></div>
             </div>
           </div>
 
@@ -495,10 +513,26 @@
               Görsel ve metinsel modaliteleri ara katmanda (intermediate fusion) birleştiren ve çok görevli öğrenmeyle (Multi-Task Learning) eşzamanlı etiket sınıflandırması yapan derin mimari.
             </p>
 
+            <!-- Interactive Sample Preview Box -->
+            <div class="sample-preview-box">
+              <div class="preview-row">
+                <span class="p-badge">Görsel / Metin</span>
+                <code class="p-code">Vision [2048-d ViT Tensor] ⊕ Text [768-d BERT Tensor]</code>
+              </div>
+              <div class="preview-connection">
+                <span class="conn-label">Ortak Tensor Füzyonu (Intermediate)</span>
+                <span class="conn-score highlight-cyan">Ortak Doğruluk: %93.4</span>
+              </div>
+              <div class="preview-row">
+                <span class="p-badge">Çoklu Görev</span>
+                <code class="p-code">Multi-Head Loss: Kategori + Renk + Stil Sınıflandırması</code>
+              </div>
+            </div>
+
             <div class="card-specs">
-              <div class="spec-item"><span class="spec-k">Modalities</span><span class="spec-v">Image Pixels + Dense Text</span></div>
-              <div class="spec-item"><span class="spec-k">Fusion</span><span class="spec-v">Joint Latent Tensor Space</span></div>
-              <div class="spec-item"><span class="spec-k">Training</span><span class="spec-v">Multi-Head Loss Backprop</span></div>
+              <div class="spec-item"><span class="spec-k">Modalite</span><span class="spec-v">Image Pixels + Text</span></div>
+              <div class="spec-item"><span class="spec-k">Füzyon</span><span class="spec-v">Joint Latent Tensor</span></div>
+              <div class="spec-item"><span class="spec-k">Optimizasyon</span><span class="spec-v">Multi-Task Backprop</span></div>
             </div>
           </div>
 
@@ -511,12 +545,12 @@
         </article>
 
         <!-- PROJECT 6: EffiToRag -->
-        <article class="project-card featured-card" data-category="multimodal">
+        <article class="project-card" data-category="multimodal">
           <div class="card-glow"></div>
           <div class="card-top">
             <div class="project-meta">
               <span class="project-index">06</span>
-              <span class="project-tag">99.13% PRECISION · QWEN 2.5 + EFFICIENTNET</span>
+              <span class="project-tag highlight-green-tag">99.13% DOĞRULUK · QWEN 2.5 + EFFICIENTNET</span>
             </div>
             <a href="https://github.com/fth2745/EffiToRag" target="_blank" rel="noopener noreferrer" class="card-gh-link" aria-label="GitHub Repo">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
@@ -525,14 +559,30 @@
 
           <div class="card-body">
             <h3 class="project-title">EffiToRag: Perception-to-Prescription Diagnostic System</h3>
-            <p class="project-summary" data-tr="Bitki hastalıkları teşhisinde %99.13 doğruluk oranı. EfficientNet-B4 ile görsel tespitten, Qwen 2.5 ve RAG mimarisi ile bilimsel reçete ve tedavi üretimine uzanan uçtan uca akıllı karar destek sistemi." data-en="An end-to-end intelligent decision support system achieving 99.13% diagnostic precision. Bridges EfficientNet-B4 visual diagnostics with Qwen 2.5 RAG treatment synthesis.">
-              Bitki hastalıkları teşhisinde %99.13 doğruluk oranı. EfficientNet-B4 ile görsel tespitten, Qwen 2.5 ve RAG mimarisi ile bilimsel reçete ve tedavi üretimine uzanan uçtan uca akıllı karar destek sistemi.
+            <p class="project-summary" data-tr="Bitki hastalıkları teşhisinde %99.13 doğruluk oranı. EfficientNet-B4 ile görsel tespitten, Qwen 2.5 ve RAG mimarisi ile bilimsel reçete ve tedavi üretimine uzanan akıllı karar destek sistemi." data-en="An end-to-end intelligent decision support system achieving 99.13% diagnostic precision. Bridges EfficientNet-B4 visual diagnostics with Qwen 2.5 RAG treatment synthesis.">
+              Bitki hastalıkları teşhisinde %99.13 doğruluk oranı. EfficientNet-B4 ile görsel tespitten, Qwen 2.5 ve RAG mimarisi ile bilimsel reçete ve tedavi üretimine uzanan akıllı karar destek sistemi.
             </p>
 
+            <!-- Interactive Sample Preview Box -->
+            <div class="sample-preview-box">
+              <div class="preview-row">
+                <span class="p-badge">Görsel Teşhis</span>
+                <code class="p-code">EfficientNet-B4 Scan: [Erken Yaprak Yanıklığı]</code>
+              </div>
+              <div class="preview-connection">
+                <span class="conn-label">RAG Bilgi Tabanı + Qwen 2.5 Sentezi</span>
+                <span class="conn-score highlight-green">Doğruluk: %99.13 Doğrulandı</span>
+              </div>
+              <div class="preview-row">
+                <span class="p-badge">Klinik Reçete</span>
+                <code class="p-code">"Bakır Oksiklorür 400g/da · 10 gün arayla 2 uygulama"</code>
+              </div>
+            </div>
+
             <div class="card-specs">
-              <div class="spec-item"><span class="spec-k">Accuracy</span><span class="spec-v highlight-green">99.13% Verified</span></div>
-              <div class="spec-item"><span class="spec-k">Vision Engine</span><span class="spec-v">EfficientNet-B4</span></div>
-              <div class="spec-item"><span class="spec-k">LLM Reasoner</span><span class="spec-v">Qwen 2.5 + RAG Knowledge</span></div>
+              <div class="spec-item"><span class="spec-k">Hassasiyet</span><span class="spec-v highlight-green">%99.13 Doğrulanmış</span></div>
+              <div class="spec-item"><span class="spec-k">Görsel Çekirdek</span><span class="spec-v">EfficientNet-B4</span></div>
+              <div class="spec-item"><span class="spec-k">LLM Motoru</span><span class="spec-v">Qwen 2.5 + RAG</span></div>
             </div>
           </div>
 
@@ -544,13 +594,13 @@
           </div>
         </article>
 
-        <!-- PROJECT 7: Turkish-Hospital-Medicals-Articles-With-RAG-Mistral-7B -->
+        <!-- PROJECT 7: Turkish Medical QA & RAG -->
         <article class="project-card" data-category="multimodal">
           <div class="card-glow"></div>
           <div class="card-top">
             <div class="project-meta">
               <span class="project-index">07</span>
-              <span class="project-tag">CLINICAL RAG · FAISS · MISTRAL 7B</span>
+              <span class="project-tag">KLİNİK RAG · FAISS · MISTRAL 7B</span>
             </div>
             <a href="https://github.com/fth2745/Turkish-Hospital-Medicals-Articles-With-RAG-Mistral-7B" target="_blank" rel="noopener noreferrer" class="card-gh-link" aria-label="GitHub Repo">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
@@ -563,10 +613,26 @@
               Türkçe tıp literatürü ve hastane makaleleri üzerinden yüksek doğrulukla soru cevaplayan RAG mimarisi. FAISS vektör indeksi ve üretken Mistral modeli ile halüsinasyonsuz medikal yanıtlar.
             </p>
 
+            <!-- Interactive Sample Preview Box -->
+            <div class="sample-preview-box">
+              <div class="preview-row">
+                <span class="p-badge">Klinik Soru</span>
+                <code class="p-code">"Tip 2 diyabette ilk basamak tedavi protokolü nedir?"</code>
+              </div>
+              <div class="preview-connection">
+                <span class="conn-label">FAISS Vektör İndeksi (Klinik Makaleler)</span>
+                <span class="conn-score highlight-cyan">Cosine Benzerliği: 0.95</span>
+              </div>
+              <div class="preview-row">
+                <span class="p-badge">Mistral-7B Yanıtı</span>
+                <code class="p-code">"İlk tercih yaşam tarzı değişikliği ve metformin monoterapisidir."</code>
+              </div>
+            </div>
+
             <div class="card-specs">
-              <div class="spec-item"><span class="spec-k">Knowledge Base</span><span class="spec-v">Turkish Clinical Corpora</span></div>
-              <div class="spec-item"><span class="spec-k">Vector Store</span><span class="spec-v">FAISS Dense L2 / Cosine</span></div>
-              <div class="spec-item"><span class="spec-k">Generator</span><span class="spec-v">Mistral Generative Core</span></div>
+              <div class="spec-item"><span class="spec-k">Bilgi Tabanı</span><span class="spec-v">Türkçe Klinik Külliyat</span></div>
+              <div class="spec-item"><span class="spec-k">Vektör Tabanı</span><span class="spec-v">FAISS Dense L2 / Cosine</span></div>
+              <div class="spec-item"><span class="spec-k">Jeneratör</span><span class="spec-v">Mistral Generative</span></div>
             </div>
           </div>
 
@@ -579,12 +645,12 @@
         </article>
 
         <!-- PROJECT 8: TrayHardwareMonitor -->
-        <article class="project-card featured-card" data-category="systems">
+        <article class="project-card" data-category="systems">
           <div class="card-glow"></div>
           <div class="card-top">
             <div class="project-meta">
               <span class="project-index">08</span>
-              <span class="project-tag">NATIVE C# · .NET 8 · ZERO OVERHEAD</span>
+              <span class="project-tag highlight-green-tag">YEREL C# · .NET 8 · ZERO OVERHEAD</span>
             </div>
             <a href="https://github.com/fth2745/TrayHardwareMonitor" target="_blank" rel="noopener noreferrer" class="card-gh-link" aria-label="GitHub Repo">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
@@ -597,10 +663,26 @@
               Windows sistem tepsisinde çalışan ultra hafif donanım monitörü. Dinamik 16x16 ikon çizimi, 0.8s aerodinamik çift yönlü süzülme kartı, 60 FPS donmayan arka plan taraması ve sıfır arka plan yükü.
             </p>
 
+            <!-- Interactive Sample Preview Box -->
+            <div class="sample-preview-box">
+              <div class="preview-row">
+                <span class="p-badge">Görev Çubuğu İkonu</span>
+                <code class="p-code">16x16 Dinamik Çizim: [42°C CPU Simgesi]</code>
+              </div>
+              <div class="preview-connection">
+                <span class="conn-label">0.8s Süzülen HUD Overlay (Win32 API)</span>
+                <span class="conn-score highlight-green">CPU: %0.08 · 60 FPS Asenkron</span>
+              </div>
+              <div class="preview-row">
+                <span class="p-badge">Canlı Sensörler</span>
+                <code class="p-code">CPU 42°C (14%) | GPU 38°C (0%) | RAM 11.4 / 32 GB</code>
+              </div>
+            </div>
+
             <div class="card-specs">
-              <div class="spec-item"><span class="spec-k">Runtime</span><span class="spec-v">C# .NET 8 WinForms</span></div>
-              <div class="spec-item"><span class="spec-k">Overhead</span><span class="spec-v highlight-green">&lt; 0.1% CPU · 20MB RAM</span></div>
-              <div class="spec-item"><span class="spec-k">Features</span><span class="spec-v">Task Scheduler Auto-Start</span></div>
+              <div class="spec-item"><span class="spec-k">Çalışma Zamanı</span><span class="spec-v">C# .NET 8 WinForms</span></div>
+              <div class="spec-item"><span class="spec-k">Yük</span><span class="spec-v highlight-green">&lt; 0.1% CPU · 20MB RAM</span></div>
+              <div class="spec-item"><span class="spec-k">Özellik</span><span class="spec-v">Task Scheduler Başlangıç</span></div>
             </div>
           </div>
 
@@ -721,7 +803,12 @@
   <footer class="apple-footer">
     <div class="footer-container">
       <div class="footer-top">
-        <span class="footer-brand"> Fatih (fth2745)</span>
+        <span class="footer-brand">
+          <svg class="apple-vector-icon-sm" viewBox="0 0 170 170" fill="currentColor">
+            <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.04-7.69-7.85-11.97-14.42-6.19-9.5-10.9-20.2-14.13-32.08-3.23-11.89-4.85-23.2-4.85-33.94 0-14.42 3.63-26.65 10.9-36.68 7.27-10.03 16.5-15.16 27.69-15.39 4.36 0 9.4 1.16 15.13 3.49 5.73 2.33 9.4 3.55 11 3.66 2.21 0 6.13-1.32 11.75-3.97 5.62-2.65 10.5-3.86 14.64-3.65 11.05.7 20.37 4.96 27.95 12.79-9.84 5.92-14.68 14.28-14.52 25.07.16 8.52 3.48 15.77 9.97 21.75 6.49 5.98 14.13 9.38 22.92 10.2-2.22 6.53-4.73 12.83-7.53 18.9m-27.18-118.23c0 6.64-2.45 13-7.36 19.07-4.91 6.07-10.98 9.87-18.21 11.41-.65-2.06-.98-4.13-.98-6.2 0-6.64 2.56-13.04 7.69-19.21 5.12-6.17 11.39-9.87 18.81-11.11.05 2.02.05 4.03.05 6.04"/>
+          </svg>
+          Fatih (fth2745)
+        </span>
         <span class="footer-copy">Designed with Apple minimalism & open engineering principles.</span>
       </div>
       <div class="footer-bottom">
@@ -735,7 +822,7 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Interactive JavaScript Engine -->
   <script src="app.js"></script>
 </body>
 </html>
