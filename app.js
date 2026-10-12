@@ -97,13 +97,23 @@ function initCvModal() {
   if (!modalBackdrop) return;
 
   function openCvModal() {
-    modalBackdrop.classList.add('open');
+    modalBackdrop.style.display = 'flex';
+    modalBackdrop.setAttribute('aria-hidden', 'false');
+    requestAnimationFrame(() => {
+      modalBackdrop.classList.add('open');
+    });
     document.body.style.overflow = 'hidden';
   }
 
   function closeCvModal() {
     modalBackdrop.classList.remove('open');
+    modalBackdrop.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    setTimeout(() => {
+      if (!modalBackdrop.classList.contains('open')) {
+        modalBackdrop.style.display = 'none';
+      }
+    }, 300);
   }
 
   window.openCvModal = openCvModal;

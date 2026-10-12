@@ -16,8 +16,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Cache Control -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <!-- Stylesheet (Cache-Busted v2.2.0) -->
+  <link rel="stylesheet" href="style.css?v=2.2.0">
+
+  <!-- Critical Modal Safety Fallback -->
+  <style>
+    .cv-modal-backdrop { display: none !important; position: fixed !important; inset: 0 !important; z-index: 99999 !important; }
+    .cv-modal-backdrop.open { display: flex !important; }
+  </style>
 </head>
 <body class="apple-dark">
 
@@ -677,7 +688,7 @@
   </main>
 
   <!-- APPLE-STYLE CV MODAL PREVIEW -->
-  <div class="cv-modal-backdrop" id="cvModalBackdrop">
+  <div class="cv-modal-backdrop" id="cvModalBackdrop" style="display: none;" aria-hidden="true">
     <div class="cv-modal-container" role="dialog" aria-modal="true" aria-labelledby="cvModalTitle">
       <div class="cv-modal-header">
         <div class="cv-modal-title-group">
@@ -783,7 +794,7 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="app.js"></script>
+  <!-- Scripts (Cache-Busted v2.2.0) -->
+  <script src="app.js?v=2.2.0"></script>
 </body>
 </html>
