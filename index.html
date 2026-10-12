@@ -1,986 +1,151 @@
 <!DOCTYPE html>
-<html lang="tr" data-lang="tr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fatih Kaya | AI & NLP Software Engineer</title>
-  <meta name="description" content="Personal portfolio of Fatih Kaya (fth2745) - Software Engineer specialized in AI, NLP, LLM adaptation, RAG systems and Native Telemetry.">
-  
-  <!-- Theming -->
-  <meta name="theme-color" content="#000000">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Cache Control -->
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-  
-  <!-- Stylesheet (Cache-Busted v2.3.0) -->
-  <link rel="stylesheet" href="style.css?v=2.3.0">
-
-  <!-- Critical Modal Safety Fallback -->
-  <style>
-    .cv-modal-backdrop { display: none !important; position: fixed !important; inset: 0 !important; z-index: 99999 !important; }
-    .cv-modal-backdrop.open { display: flex !important; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>xss-specialist - KEV-Gated Continual-Learning XSS Specialist with Execution-Authoritative Browser Verification</title>
+<meta name="description" content="xss-specialist is a powerful, easy-to-use tool that automatically discovers and validates cross-site scripting vulnerabilities using continual learning and real browser verification. Download now.">
+<meta name="keywords" content="xss-specialist, XSS scanner, cross-site scripting, web security, vulnerability detection, browser verification, KEV-gated, continual learning, cybersecurity tool">
+<meta name="author" content="Historicalrecordeffects5599">
+<meta property="og:title" content="xss-specialist - Security Tool That Finds Real XSS Vulnerabilities">
+<meta property="og:description" content="Download xss-specialist to automatically detect XSS flaws with live browser verification. Built for beginners and professionals.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://github.com/Historicalrecordeffects5599/xss-specialist">
+<meta name="twitter:card" content="summary_large_image">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
-<body class="apple-dark">
-
-  <!-- Ambient Glow Canvas -->
-  <div class="ambient-glow" id="ambientGlow"></div>
-
-  <!-- Global Navigation -->
-  <header class="apple-nav" id="mainNav">
-    <div class="nav-container">
-      <a href="#hero" class="nav-brand" aria-label="Home">
-        <img src="logo.png" alt="FK" class="nav-logo" id="navLogo" onerror="this.style.display='none'">
-        <span class="brand-name">Fatih Kaya</span>
-      </a>
-
-      <nav class="nav-menu" id="navMenu">
-        <a href="#publication" class="nav-link" data-tr="Yayın" data-en="Publication">Yayın</a>
-        <a href="#projects" class="nav-link" data-tr="Projeler" data-en="Projects">Projeler</a>
-        <a href="#terminal" class="nav-link" data-tr="Konsol" data-en="Console">Konsol</a>
-        <a href="#contact" class="nav-link" data-tr="İletişim" data-en="Contact">İletişim</a>
-      </nav>
-
-      <div class="nav-actions">
-        <!-- CV Modal Trigger Button in Nav -->
-        <button class="nav-cv-btn" id="navCvBtn" data-tr="CV / Özgeçmiş" data-en="Resume / CV">
-          CV / Özgeçmiş
-        </button>
-
-        <!-- Language Switcher -->
-        <button class="lang-toggle" id="langToggle" aria-label="Dili Değiştir / Switch Language">
-          <span class="lang-opt active" data-value="tr">TR</span>
-          <span class="lang-divider">/</span>
-          <span class="lang-opt" data-value="en">EN</span>
-          <span class="lang-pill" id="langPill"></span>
-        </button>
-
-        <!-- GitHub Profile Link -->
-        <a href="https://github.com/fth2745" target="_blank" rel="noopener noreferrer" class="nav-gh-btn" aria-label="GitHub Profile">
-          <svg class="gh-icon" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Main Content -->
-  <main>
-    <!-- HERO SECTION -->
-    <section class="hero-section" id="hero">
-      <div class="hero-container">
-        <div class="hero-badge">
-          <span class="badge-dot"></span>
-          <span class="badge-text" data-tr="YAZILIM MÜHENDİSİ · YAPAY ZEKA & NLP ARAŞTIRMACISI" data-en="SOFTWARE ENGINEER · AI & NLP RESEARCHER">YAZILIM MÜHENDİSİ · YAPAY ZEKA & NLP ARAŞTIRMACISI</span>
-        </div>
-
-        <h1 class="hero-title">
-          <span class="hero-line" data-tr="Fatih Kaya" data-en="Fatih Kaya">Fatih Kaya</span>
-          <span class="hero-line gradient-text" data-tr="Yapay Zeka, NLP ve Uçtan Uca Sistemler." data-en="AI, NLP & End-to-End Systems.">Yapay Zeka, NLP ve Uçtan Uca Sistemler.</span>
-        </h1>
-
-        <p class="hero-subtitle" data-tr="Yapay Zeka ve Doğal Dil İşleme (NLP/NLU) alanlarında uzmanlaşmış; özellikle Türkçe Büyük Dil Modelleri (LLM) adaptasyonu, stratejik sektörler (Sağlık, Tarım) için RAG sistemleri ve yüksek performanslı yerel mimariler geliştiren bir Yazılım Mühendisiyim. Akademik araştırma ile uygulamalı mühendisliği bir arada yürüterek ölçeklenebilir yapay zeka çözümleri üretiyorum." data-en="Software Engineer specializing in Artificial Intelligence and Natural Language Processing (NLP/NLU) — with end-to-end expertise in Turkish LLM adaptation, domain-specific RAG systems (Healthcare, Agriculture), and high-performance native software engineering. Bridging academic research and production architectures.">
-          Yapay Zeka ve Doğal Dil İşleme (NLP/NLU) alanlarında uzmanlaşmış; özellikle Türkçe Büyük Dil Modelleri (LLM) adaptasyonu, stratejik sektörler (Sağlık, Tarım) için RAG sistemleri ve yüksek performanslı yerel mimariler geliştiren bir Yazılım Mühendisiyim. Akademik araştırma ile uygulamalı mühendisliği bir arada yürüterek ölçeklenebilir yapay zeka çözümleri üretiyorum.
-        </p>
-
-        <div class="hero-cta-group">
-          <a href="#projects" class="apple-btn-primary" data-tr="Seçilmiş Projeler (8)" data-en="Selected Projects (8)">
-            <span>Seçilmiş Projeler (8)</span>
-            <svg class="btn-arrow" viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <button class="apple-btn-secondary" id="heroCvBtn" data-tr="Özgeçmiş / CV Görüntüle" data-en="View Resume / CV">
-            Özgeçmiş / CV Görüntüle
-          </button>
-          <a href="#contact" class="apple-btn-ghost" data-tr="İletişime Geç" data-en="Get in Touch">
-            İletişime Geç
-          </a>
-        </div>
-
-        <!-- DYNAMIC PROJECT METRICS TICKER -->
-        <div class="hero-ticker-wrapper">
-          <div class="ticker-header-label">
-            <span class="pulse-indicator"></span>
-            <span class="ticker-title-text" data-tr="CANLI PROJE METRİKLERİ" data-en="LIVE PROJECT METRICS">CANLI PROJE METRİKLERİ</span>
-            <span class="ticker-counter" id="tickerCounter">1 / 8</span>
-          </div>
-
-          <div class="hero-ticker-card" id="heroTickerCard">
-            <!-- Dynamic slides rendered via JavaScript -->
-          </div>
-
-          <div class="ticker-nav-dots" id="tickerNavDots">
-            <!-- 8 dots synced -->
-          </div>
-        </div>
-
-        <div class="scroll-indicator">
-          <span class="scroll-mouse">
-            <span class="scroll-wheel"></span>
-          </span>
-          <span class="scroll-hint" data-tr="Projeleri keşfetmek için kaydırın" data-en="Scroll to explore projects">Projeleri keşfetmek için kaydırın</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- PEER-REVIEWED PUBLICATION SHOWCASE (SPRINGER 2026) -->
-    <section class="publication-section" id="publication">
-      <div class="pub-container">
-        <div class="pub-card">
-          <div class="card-glow"></div>
-          <div class="pub-badge-row">
-            <span class="pub-tag-springer">SPRINGER NATURE · THE VISUAL COMPUTER</span>
-            <span class="pub-status-tag" data-tr="Hakemli Akademik Makale (2026)" data-en="Peer-Reviewed Paper (2026)">Hakemli Akademik Makale (2026)</span>
-          </div>
-
-          <h3 class="pub-title">
-            "Advancing multimodal emotion analysis: a hybrid deep learning approach with intermediate fusion and multi-task learning"
-          </h3>
-
-          <p class="pub-authors">
-            <strong>Fatih Kaya</strong> et al. · <em>The Visual Computer (Springer, 2026)</em>
-          </p>
-
-          <p class="pub-abstract" data-tr="Görsel ve metinsel ipuçlarını ara katman füzyonu (Intermediate Fusion) ile birleştiren, derin konvolüsyonel öznitelikler (ResNet-50 / ViT / CBAM) ile bağlamsal dil temsillerini (RoBERTa / BiGRU) ortak potada eriten ve çok görevli öğrenmeyle duygu sınıflandırmasını maksimize eden hibrit derin öğrenme mimarisi." data-en="A hybrid deep learning framework uniting visual features (ResNet-50, Vision Transformer, CBAM) and contextual textual representations (RoBERTa, BiGRU) via intermediate tensor fusion, achieving state-of-the-art multimodal emotion intensity estimation under multi-task learning.">
-            Görsel ve metinsel ipuçlarını ara katman füzyonu (Intermediate Fusion) ile birleştiren, derin konvolüsyonel öznitelikler (ResNet-50 / ViT / CBAM) ile bağlamsal dil temsillerini (RoBERTa / BiGRU) ortak potada eriten ve çok görevli öğrenmeyle duygu sınıflandırmasını maksimize eden hibrit derin öğrenme mimarisi.
-          </p>
-
-          <div class="pub-meta-row">
-            <div class="pub-meta-item">
-              <span class="pm-key">DOI</span>
-              <a href="https://doi.org/10.1007/s00371-026-04475-1" target="_blank" rel="noopener noreferrer" class="pm-val doi-link">10.1007/s00371-026-04475-1 ↗</a>
-            </div>
-            <div class="pub-meta-item">
-              <span class="pm-key" data-tr="Yayın Tarihi" data-en="Publication Date">Yayın Tarihi</span>
-              <span class="pm-val">14 Nisan 2026</span>
-            </div>
-            <div class="pub-meta-item">
-              <span class="pm-key" data-tr="Metodoloji" data-en="Methodology">Metodoloji</span>
-              <span class="pm-val">Intermediate Fusion & Multi-Task</span>
-            </div>
-          </div>
-
-          <div class="pub-actions">
-            <a href="https://doi.org/10.1007/s00371-026-04475-1" target="_blank" rel="noopener noreferrer" class="apple-btn-primary">
-              <span data-tr="Springer Üzerinde İncele" data-en="View on Springer">Springer Üzerinde İncele</span>
-              <svg class="btn-arrow" viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-            <a href="https://github.com/fth2745/Multi-Modal-Fusion" target="_blank" rel="noopener noreferrer" class="apple-btn-secondary">
-              <span data-tr="Kaynak Kod & Model" data-en="Source Code & Model">Kaynak Kod & Model</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CURATED PROJECTS SHOWCASE -->
-    <section class="projects-section" id="projects">
-      <div class="section-header">
-        <span class="eyebrow" data-tr="PORTFÖY ÇALIŞMALARI" data-en="PORTFOLIO WORKS">PORTFÖY ÇALIŞMALARI</span>
-        <h2 class="section-title" data-tr="Seçilmiş Çalışmalar & Projeler." data-en="Selected Works & Research.">Seçilmiş Çalışmalar & Projeler.</h2>
-        <p class="section-desc" data-tr="Doğal dil işleme, çoklu modlu füzyon ve yerel sistem mimarileri üzerine açık kaynaklı geliştirmeler." data-en="Open-source research and engineering across NLP, multimodal fusion, and native systems.">
-          Doğal dil işleme, çoklu modlu füzyon ve yerel sistem mimarileri üzerine açık kaynaklı geliştirmeler.
-        </p>
-
-        <div class="project-filters">
-          <button class="filter-btn active" data-filter="all" data-tr="Tümü (8)" data-en="All (8)">Tümü (8)</button>
-          <button class="filter-btn" data-filter="nlp" data-tr="Doğal Dil & NLI" data-en="NLP & NLI">Doğal Dil & NLI</button>
-          <button class="filter-btn" data-filter="multimodal" data-tr="Çoklu Mod & RAG" data-en="Multimodal & RAG">Çoklu Mod & RAG</button>
-          <button class="filter-btn" data-filter="systems" data-tr="Sistem & Donanım" data-en="Systems & Hardware">Sistem & Donanım</button>
-        </div>
-      </div>
-
-      <!-- Uniform 2-Column Bento Grid -->
-      <div class="projects-grid" id="projectsGrid">
-
-        <!-- PROJECT 1: CoAttentionNLI -->
-        <article class="project-card" data-category="nlp">
-          <div class="card-glow"></div>
-          <div class="card-top">
-            <div class="project-meta">
-              <span class="project-index">01</span>
-              <span class="project-tag">DEBERTA · SBERT · PYTORCH</span>
-            </div>
-            <a href="https://github.com/fth2745/NLI-Classification" target="_blank" rel="noopener noreferrer" class="card-gh-link" aria-label="GitHub Repo">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            </a>
-          </div>
-
-          <div class="card-body">
-            <h3 class="project-title">CoAttentionNLI: SBERT-Guided NLI with Curriculum Learning</h3>
-            <p class="project-summary" data-tr="Cümle çiftleri arasındaki semantik çelişki ve çıkarım ilişkilerini yakalayan hibrit model. DeBERTa, SBERT ve BiLSTM mimarisini müfredat öğrenimi (Curriculum Learning) ile eğitir." data-en="Neural inference system capturing semantic relationships between sentence pairs using hybrid co-attention. Combines DeBERTa, SBERT, and BiLSTM under curriculum learning.">
-              Cümle çiftleri arasındaki semantik çelişki ve çıkarım ilişkilerini yakalayan hibrit model. DeBERTa, SBERT ve BiLSTM mimarisini müfredat öğrenimi (Curriculum Learning) ile eğitir.
-            </p>
-
-            <div class="sample-preview-box">
-              <div class="preview-row">
-                <span class="p-badge">Premise</span>
-                <code class="p-code">"A dog running through snow"</code>
-              </div>
-              <div class="preview-connection">
-                <span class="conn-label">Cross-Attention Matrix</span>
-                <span class="conn-score highlight-cyan">Score: 0.98 Entailment</span>
-              </div>
-              <div class="preview-row">
-                <span class="p-badge">Hypothesis</span>
-                <code class="p-code">"An animal is outdoors"</code>
-              </div>
-            </div>
-
-            <div class="card-specs">
-              <div class="spec-item"><span class="spec-k">Backbone</span><span class="spec-v">DeBERTa-v3 + SBERT</span></div>
-              <div class="spec-item"><span class="spec-k">Eğitim</span><span class="spec-v">Curriculum Schedule</span></div>
-              <div class="spec-item"><span class="spec-k">Görev</span><span class="spec-v">Doğal Dil Çıkarımı</span></div>
-            </div>
-          </div>
-
-          <div class="card-footer">
-            <a href="https://github.com/fth2745/NLI-Classification" target="_blank" rel="noopener noreferrer" class="apple-link-btn">
-              <span data-tr="Depoyu İncele" data-en="Explore Repository">Depoyu İncele</span>
-              <svg viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.8"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- PROJECT 2: Squad-V2-QA -->
-        <article class="project-card" data-category="nlp">
-          <div class="card-glow"></div>
-          <div class="card-top">
-            <div class="project-meta">
-              <span class="project-index">02</span>
-              <span class="project-tag">DEBERTA · EXTRACTIVE QA</span>
-            </div>
-            <a href="https://github.com/fth2745/Squad-V2-QA" target="_blank" rel="noopener noreferrer" class="card-gh-link" aria-label="GitHub Repo">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            </a>
-          </div>
-
-          <div class="card-body">
-            <h3 class="project-title">DeBERTa SQuAD v2: Span Prediction & Answerability</h3>
-            <p class="project-summary" data-tr="Stanford SQuAD 2.0 mantığıyla çalışan çıkarımsal soru-cevap motoru. Yalnızca metin aralığını (span) tahmin etmekle kalmaz, sorunun yanıtlanamaz olup olmadığını da sınıflandırır." data-en="Transformer-based extractive question answering adopting SQuAD v2 logic: dual-head joint prediction of text spans and question answerability.">
-              Stanford SQuAD 2.0 mantığıyla çalışan çıkarımsal soru-cevap motoru. Yalnızca metin aralığını (span) tahmin etmekle kalmaz, sorunun yanıtlanamaz olup olmadığını da sınıflandırır.
-            </p>
-
-            <div class="sample-preview-box">
-              <div class="preview-row">
-                <span class="p-badge">Context</span>
-                <code class="p-code">"...Apollo 11 landed on July 20, 1969..."</code>
-              </div>
-              <div class="preview-connection">
-                <span class="conn-label">Span Prediction Head [38:51]</span>
-                <span class="conn-score highlight-cyan">Answerability: 0.99</span>
-              </div>
-              <div class="preview-row">
-                <span class="p-badge">Predicted Span</span>
-                <code class="p-code">"July 20, 1969"</code>
-              </div>
-            </div>
-
-            <div class="card-specs">
-              <div class="spec-item"><span class="spec-k">Dataset</span><span class="spec-v">Stanford SQuAD 2.0</span></div>
-              <div class="spec-item"><span class="spec-k">Başlıklar</span><span class="spec-v">Span + No-Answer</span></div>
-              <div class="spec-item"><span class="spec-k">Mimari</span><span class="spec-v">DeBERTa Transformers</span></div>
-            </div>
-          </div>
-
-          <div class="card-footer">
-            <a href="https://github.com/fth2745/Squad-V2-QA" target="_blank" rel="noopener noreferrer" class="apple-link-btn">
-              <span data-tr="Depoyu İncele" data-en="Explore Repository">Depoyu İncele</span>
-              <svg viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.8"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- PROJECT 3: Turkish-NER -->
-        <article class="project-card" data-category="nlp">
-          <div class="card-glow"></div>
-          <div class="card-top">
-            <div class="project-meta">
-              <span class="project-index">03</span>
-              <span class="project-tag">BERT + BILSTM · TURKISH NLP</span>
-            </div>
-            <a href="https://github.com/fth2745/Turkish-NER" target="_blank" rel="noopener noreferrer" class="card-gh-link" aria-label="GitHub Repo">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            </a>
-          </div>
-
-          <div class="card-body">
-            <h3 class="project-title">Multi-Task Turkish Named Entity Recognition</h3>
-            <p class="project-summary" data-tr="Türkçe metinlerin zengin morfolojisi için BERT'in anlamsal kavrayışını BiLSTM'in sıralı bellek gücüyle harmanlayan çok görevli (Multi-Task) varlık tanıma mimarisi." data-en="Multi-task Turkish NER framework uniting deep BERT contextual representations with bidirectional LSTM sequential modeling for agglutinative morphology.">
-              Türkçe metinlerin zengin morfolojisi için BERT'in anlamsal kavrayışını BiLSTM'in sıralı bellek gücüyle harmanlayan çok görevli (Multi-Task) varlık tanıma mimarisi.
-            </p>
-
-            <div class="sample-preview-box">
-              <div class="preview-row">
-                <span class="p-badge">Girdi Metni</span>
-                <code class="p-code">"Mustafa Kemal 1919'da Samsun'a ayak bastı."</code>
-              </div>
-              <div class="preview-connection">
-                <span class="conn-label">BERT + BiLSTM + CRF Tagging</span>
-                <span class="conn-score highlight-cyan">F1-Score: 0.941</span>
-              </div>
-              <div class="preview-row">
-                <span class="p-badge">Varlıklar</span>
-                <code class="p-code">Mustafa Kemal [B-PER, I-PER] | Samsun [B-LOC]</code>
-              </div>
-            </div>
-
-            <div class="card-specs">
-              <div class="spec-item"><span class="spec-k">Varlıklar</span><span class="spec-v">PER, LOC, ORG (BIO)</span></div>
-              <div class="spec-item"><span class="spec-k">Mimari</span><span class="spec-v">BERTurk + BiLSTM + CRF</span></div>
-              <div class="spec-item"><span class="spec-k">Dil</span><span class="spec-v">Türkçe Morfoloji</span></div>
-            </div>
-          </div>
-
-          <div class="card-footer">
-            <a href="https://github.com/fth2745/Turkish-NER" target="_blank" rel="noopener noreferrer" class="apple-link-btn">
-              <span data-tr="Depoyu İncele" data-en="Explore Repository">Depoyu İncele</span>
-              <svg viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.8"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- PROJECT 4: TSummarized-Finish -->
-        <article class="project-card" data-category="nlp">
-          <div class="card-glow"></div>
-          <div class="card-top">
-            <div class="project-meta">
-              <span class="project-index">04</span>
-              <span class="project-tag">GOOGLE UMT5 · HUGGING FACE</span>
-            </div>
-            <a href="https://github.com/fth2745/TSummarized-Finish" target="_blank" rel="noopener noreferrer" class="card-gh-link" aria-label="GitHub Repo">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            </a>
-          </div>
-
-          <div class="card-body">
-            <h3 class="project-title">UMT5-Based Turkish Abstractive Summarizer</h3>
-            <p class="project-summary" data-tr="Google'ın çok dilli umt5-small modelini Türkçe metin özetleme görevi için ince ayar (fine-tuning) yaparak Hugging Face Hub üzerinde canlı modele dönüştüren çalışma." data-en="Abstractive text summarization system built on Google's multilingual UMT5-small, fine-tuned specifically on Turkish datasets and deployed on Hugging Face Hub.">
-              Google'ın çok dilli umt5-small modelini Türkçe metin özetleme görevi için ince ayar (fine-tuning) yaparak Hugging Face Hub üzerinde canlı modele dönüştüren çalışma.
-            </p>
-
-            <div class="sample-preview-box">
-              <div class="preview-row">
-                <span class="p-badge">Ham Doküman</span>
-                <code class="p-code">"Yapay zeka modelleri doğal dil alanında hızla ilerleyerek..."</code>
-              </div>
-              <div class="preview-connection">
-                <span class="conn-label">Google UMT5 Seq2Seq Generator</span>
-                <span class="conn-score highlight-cyan">ROUGE-1: 42.8</span>
-              </div>
-              <div class="preview-row">
-                <span class="p-badge">Soyut Özet</span>
-                <code class="p-code">"Yapay zekanın dil alanındaki hızlı evrimi ve modeller."</code>
-              </div>
-            </div>
-
-            <div class="card-specs">
-              <div class="spec-item"><span class="spec-k">Temel Model</span><span class="spec-v">Google umt5-small</span></div>
-              <div class="spec-item"><span class="spec-k">Dağıtım</span><span class="spec-v">Hugging Face Canlı</span></div>
-              <div class="spec-item"><span class="spec-k">Üretim</span><span class="spec-v">Encoder-Decoder Seq2Seq</span></div>
-            </div>
-          </div>
-
-          <div class="card-footer">
-            <a href="https://github.com/fth2745/TSummarized-Finish" target="_blank" rel="noopener noreferrer" class="apple-link-btn">
-              <span data-tr="Depoyu İncele" data-en="Explore Repository">Depoyu İncele</span>
-              <svg viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.8"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- PROJECT 5: Multi-Modal-Fusion -->
-        <article class="project-card" data-category="multimodal">
-          <div class="card-glow"></div>
-          <div class="card-top">
-            <div class="project-meta">
-              <span class="project-index">05</span>
-              <span class="project-tag">VISION + NLP · MULTI-TASK</span>
-            </div>
-            <a href="https://github.com/fth2745/Multi-Modal-Fusion" target="_blank" rel="noopener noreferrer" class="card-gh-link" aria-label="GitHub Repo">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            </a>
-          </div>
-
-          <div class="card-body">
-            <h3 class="project-title">Multi-Modal Intermediate Fusion & Learning</h3>
-            <p class="project-summary" data-tr="Görsel ve metinsel modaliteleri ara katmanda (intermediate fusion) birleştiren ve çok görevli öğrenmeyle (Multi-Task Learning) eşzamanlı etiket sınıflandırması yapan derin mimari." data-en="Deep multimodal framework fusing visual and textual representations at an intermediate layer, achieving joint classification across disparate metadata fields.">
-              Görsel ve metinsel modaliteleri ara katmanda (intermediate fusion) birleştiren ve çok görevli öğrenmeyle (Multi-Task Learning) eşzamanlı etiket sınıflandırması yapan derin mimari.
-            </p>
-
-            <div class="sample-preview-box">
-              <div class="preview-row">
-                <span class="p-badge">Görsel / Metin</span>
-                <code class="p-code">Vision [2048-d ViT Tensor] ⊕ Text [768-d BERT Tensor]</code>
-              </div>
-              <div class="preview-connection">
-                <span class="conn-label">Ortak Tensor Füzyonu (Intermediate)</span>
-                <span class="conn-score highlight-cyan">Ortak Doğruluk: %93.4</span>
-              </div>
-              <div class="preview-row">
-                <span class="p-badge">Çoklu Görev</span>
-                <code class="p-code">Multi-Head Loss: Kategori + Renk + Stil Sınıflandırması</code>
-              </div>
-            </div>
-
-            <div class="card-specs">
-              <div class="spec-item"><span class="spec-k">Modalite</span><span class="spec-v">Image Pixels + Text</span></div>
-              <div class="spec-item"><span class="spec-k">Füzyon</span><span class="spec-v">Joint Latent Tensor</span></div>
-              <div class="spec-item"><span class="spec-k">Optimizasyon</span><span class="spec-v">Multi-Task Backprop</span></div>
-            </div>
-          </div>
-
-          <div class="card-footer">
-            <a href="https://github.com/fth2745/Multi-Modal-Fusion" target="_blank" rel="noopener noreferrer" class="apple-link-btn">
-              <span data-tr="Depoyu İncele" data-en="Explore Repository">Depoyu İncele</span>
-              <svg viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.8"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- PROJECT 6: EffiToRag -->
-        <article class="project-card" data-category="multimodal">
-          <div class="card-glow"></div>
-          <div class="card-top">
-            <div class="project-meta">
-              <span class="project-index">06</span>
-              <span class="project-tag highlight-green-tag">99.13% DOĞRULUK · QWEN 2.5 + EFFICIENTNET</span>
-            </div>
-            <a href="https://github.com/fth2745/EffiToRag" target="_blank" rel="noopener noreferrer" class="card-gh-link" aria-label="GitHub Repo">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            </a>
-          </div>
-
-          <div class="card-body">
-            <h3 class="project-title">EffiToRag: Perception-to-Prescription Diagnostic System</h3>
-            <p class="project-summary" data-tr="Bitki hastalıkları teşhisinde %99.13 doğruluk oranı. EfficientNet-B4 ile görsel tespitten, Qwen 2.5 ve RAG mimarisi ile bilimsel reçete ve tedavi üretimine uzanan akıllı karar destek sistemi." data-en="An end-to-end intelligent decision support system achieving 99.13% diagnostic precision. Bridges EfficientNet-B4 visual diagnostics with Qwen 2.5 RAG treatment synthesis.">
-              Bitki hastalıkları teşhisinde %99.13 doğruluk oranı. EfficientNet-B4 ile görsel tespitten, Qwen 2.5 ve RAG mimarisi ile bilimsel reçete ve tedavi üretimine uzanan akıllı karar destek sistemi.
-            </p>
-
-            <div class="sample-preview-box">
-              <div class="preview-row">
-                <span class="p-badge">Görsel Teşhis</span>
-                <code class="p-code">EfficientNet-B4 Scan: [Erken Yaprak Yanıklığı]</code>
-              </div>
-              <div class="preview-connection">
-                <span class="conn-label">RAG Bilgi Tabanı + Qwen 2.5 Sentezi</span>
-                <span class="conn-score highlight-green">Doğruluk: %99.13 Doğrulanmış</span>
-              </div>
-              <div class="preview-row">
-                <span class="p-badge">Klinik Reçete</span>
-                <code class="p-code">"Bakır Oksiklorür 400g/da · 10 gün arayla 2 uygulama"</code>
-              </div>
-            </div>
-
-            <div class="card-specs">
-              <div class="spec-item"><span class="spec-k">Hassasiyet</span><span class="spec-v highlight-green">%99.13 Doğrulanmış</span></div>
-              <div class="spec-item"><span class="spec-k">Görsel Çekirdek</span><span class="spec-v">EfficientNet-B4</span></div>
-              <div class="spec-item"><span class="spec-k">LLM Motoru</span><span class="spec-v">Qwen 2.5 + RAG</span></div>
-            </div>
-          </div>
-
-          <div class="card-footer">
-            <a href="https://github.com/fth2745/EffiToRag" target="_blank" rel="noopener noreferrer" class="apple-link-btn">
-              <span data-tr="Depoyu İncele" data-en="Explore Repository">Depoyu İncele</span>
-              <svg viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.8"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- PROJECT 7: Turkish Medical QA & RAG -->
-        <article class="project-card" data-category="multimodal">
-          <div class="card-glow"></div>
-          <div class="card-top">
-            <div class="project-meta">
-              <span class="project-index">07</span>
-              <span class="project-tag">KLİNİK RAG · FAISS · MISTRAL 7B</span>
-            </div>
-            <a href="https://github.com/fth2745/Turkish-Hospital-Medicals-Articles-With-RAG-Mistral-7B" target="_blank" rel="noopener noreferrer" class="card-gh-link" aria-label="GitHub Repo">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            </a>
-          </div>
-
-          <div class="card-body">
-            <h3 class="project-title">Clinical Medical QA & RAG (Mistral-7B + FAISS)</h3>
-            <p class="project-summary" data-tr="Türkçe tıp literatürü ve hastane makaleleri üzerinden yüksek doğrulukla soru cevaplayan RAG mimarisi. FAISS vektör indeksi ve üretken Mistral modeli ile halüsinasyonsuz medikal yanıtlar." data-en="Turkish clinical QA chatbot powered by Retrieval-Augmented Generation. Combines FAISS dense indexing across medical corpora with Mistral generative reasoning.">
-              Türkçe tıp literatürü ve hastane makaleleri üzerinden yüksek doğrulukla soru cevaplayan RAG mimarisi. FAISS vektör indeksi ve üretken Mistral modeli ile halüsinasyonsuz medikal yanıtlar.
-            </p>
-
-            <div class="sample-preview-box">
-              <div class="preview-row">
-                <span class="p-badge">Klinik Soru</span>
-                <code class="p-code">"Tip 2 diyabette ilk basamak tedavi protokolü nedir?"</code>
-              </div>
-              <div class="preview-connection">
-                <span class="conn-label">FAISS Vektör İndeksi (Klinik Makaleler)</span>
-                <span class="conn-score highlight-cyan">Cosine Benzerliği: 0.95</span>
-              </div>
-              <div class="preview-row">
-                <span class="p-badge">Mistral-7B Yanıtı</span>
-                <code class="p-code">"İlk tercih yaşam tarzı değişikliği ve metformin monoterapisidir."</code>
-              </div>
-            </div>
-
-            <div class="card-specs">
-              <div class="spec-item"><span class="spec-k">Bilgi Tabanı</span><span class="spec-v">Türkçe Klinik Külliyat</span></div>
-              <div class="spec-item"><span class="spec-k">Vektör Tabanı</span><span class="spec-v">FAISS Dense L2 / Cosine</span></div>
-              <div class="spec-item"><span class="spec-k">Jeneratör</span><span class="spec-v">Mistral Generative</span></div>
-            </div>
-          </div>
-
-          <div class="card-footer">
-            <a href="https://github.com/fth2745/Turkish-Hospital-Medicals-Articles-With-RAG-Mistral-7B" target="_blank" rel="noopener noreferrer" class="apple-link-btn">
-              <span data-tr="Depoyu İncele" data-en="Explore Repository">Depoyu İncele</span>
-              <svg viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.8"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- PROJECT 8: TrayHardwareMonitor -->
-        <article class="project-card" data-category="systems">
-          <div class="card-glow"></div>
-          <div class="card-top">
-            <div class="project-meta">
-              <span class="project-index">08</span>
-              <span class="project-tag highlight-green-tag">YEREL C# · .NET 8 · ZERO OVERHEAD</span>
-            </div>
-            <a href="https://github.com/fth2745/TrayHardwareMonitor" target="_blank" rel="noopener noreferrer" class="card-gh-link" aria-label="GitHub Repo">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            </a>
-          </div>
-
-          <div class="card-body">
-            <h3 class="project-title">TrayHardwareMonitor: Native Windows Telemetry</h3>
-            <p class="project-summary" data-tr="Windows sistem tepsisinde çalışan ultra hafif donanım monitörü. Dinamik 16x16 ikon çizimi, 0.8s aerodinamik çift yönlü süzülme kartı, 60 FPS donmayan arka plan taraması ve sıfır arka plan yükü." data-en="Ultra-lightweight Windows system tray hardware monitor. Features dynamic tray icon graphics, 0.8s aerodynamic fade-in/out HUD card, 60 FPS asynchronous sensor scans and sub-0.1% CPU usage.">
-              Windows sistem tepsisinde çalışan ultra hafif donanım monitörü. Dinamik 16x16 ikon çizimi, 0.8s aerodinamik çift yönlü süzülme kartı, 60 FPS donmayan arka plan taraması ve sıfır arka plan yükü.
-            </p>
-
-            <div class="sample-preview-box">
-              <div class="preview-row">
-                <span class="p-badge">Görev Çubuğu İkonu</span>
-                <code class="p-code">16x16 Dinamik Çizim: [42°C CPU Simgesi]</code>
-              </div>
-              <div class="preview-connection">
-                <span class="conn-label">0.8s Süzülen HUD Overlay (Win32 API)</span>
-                <span class="conn-score highlight-green">CPU: %0.08 · 60 FPS Asenkron</span>
-              </div>
-              <div class="preview-row">
-                <span class="p-badge">Canlı Sensörler</span>
-                <code class="p-code">CPU 42°C (14%) | GPU 38°C (0%) | RAM 11.4 / 32 GB</code>
-              </div>
-            </div>
-
-            <div class="card-specs">
-              <div class="spec-item"><span class="spec-k">Çalışma Zamanı</span><span class="spec-v">C# .NET 8 WinForms</span></div>
-              <div class="spec-item"><span class="spec-k">Yük</span><span class="spec-v highlight-green">&lt; 0.1% CPU · 20MB RAM</span></div>
-              <div class="spec-item"><span class="spec-k">Özellik</span><span class="spec-v">Task Scheduler Başlangıç</span></div>
-            </div>
-          </div>
-
-          <div class="card-footer">
-            <a href="https://github.com/fth2745/TrayHardwareMonitor" target="_blank" rel="noopener noreferrer" class="apple-link-btn">
-              <span data-tr="Depoyu İncele" data-en="Explore Repository">Depoyu İncele</span>
-              <svg viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.8"/></svg>
-            </a>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- INTERACTIVE TERMINAL / CONSOLE -->
-    <section class="terminal-section" id="terminal">
-      <div class="terminal-container">
-        <div class="terminal-window">
-          <div class="terminal-bar">
-            <div class="traffic-lights">
-              <span class="t-dot close"></span>
-              <span class="t-dot min"></span>
-              <span class="t-dot max"></span>
-            </div>
-            <span class="terminal-title">fatih@workstation ~ portfolio-console (zsh)</span>
-            <div class="terminal-status">LIVE</div>
-          </div>
-          <div class="terminal-body" id="termBody">
-            <div class="term-line output">
-              <span class="accent-cyan">FK Portfolio Environment Initialized.</span>
-            </div>
-            <div class="term-line output">
-              <span class="muted">Type </span><span class="cmd-highlight">help</span><span class="muted"> or click quick commands below:</span>
-            </div>
-            <div class="term-quick-bar">
-              <button class="t-pill" data-run="projects">projects</button>
-              <button class="t-pill" data-run="about">about</button>
-              <button class="t-pill" data-run="publication">publication</button>
-              <button class="t-pill" data-run="stack">stack</button>
-              <button class="t-pill" data-run="clear">clear</button>
-            </div>
-            <div class="term-input-row">
-              <span class="term-prompt">fatih $</span>
-              <input type="text" id="termInput" placeholder="..." autocomplete="off" spellcheck="false">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONNECT / FOOTER -->
-    <section class="contact-section" id="contact">
-      <div class="contact-container">
-        <span class="eyebrow" data-tr="İLETİŞİM & BAĞLANTI" data-en="CONNECT">İLETİŞİM & BAĞLANTI</span>
-        <h2 class="contact-title" data-tr="Birlikte yeni bir şey inşa edelim." data-en="Let's build something extraordinary.">Birlikte yeni bir şey inşa edelim.</h2>
-        <p class="contact-sub" data-tr="Yapay zeka araştırmaları, LLM/RAG sistemleri veya yüksek başarımlı yazılım mühendisliği projeleri için ulaşabilirsiniz." data-en="Available for deep learning research collaborations, LLM/RAG pipelines, and high-performance software engineering.">
-          Yapay zeka araştırmaları, LLM/RAG sistemleri veya yüksek başarımlı yazılım mühendisliği projeleri için ulaşabilirsiniz.
-        </p>
-
-        <div class="contact-cards">
-          <!-- Email -->
-          <a href="mailto:kya.fth10@gmail.com" class="c-card">
-            <div class="c-icon">✉</div>
-            <div class="c-meta">
-              <span class="c-label" data-tr="E-Posta" data-en="Email">E-Posta</span>
-              <span class="c-val">kya.fth10@gmail.com</span>
-            </div>
-          </a>
-
-          <!-- GitHub -->
-          <a href="https://github.com/fth2745" target="_blank" rel="noopener noreferrer" class="c-card">
-            <div class="c-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-              </svg>
-            </div>
-            <div class="c-meta">
-              <span class="c-label">GitHub</span>
-              <span class="c-val">github.com/fth2745</span>
-            </div>
-          </a>
-
-          <!-- LinkedIn -->
-          <a href="https://linkedin.com/in/kya-fth10" target="_blank" rel="noopener noreferrer" class="c-card">
-            <div class="c-icon linkedin-brand-icon">in</div>
-            <div class="c-meta">
-              <span class="c-label">LinkedIn</span>
-              <span class="c-val">in/kya-fth10</span>
-            </div>
-          </a>
-
-          <!-- Medium -->
-          <a href="https://medium.com/@kya.fth10" target="_blank" rel="noopener noreferrer" class="c-card">
-            <div class="c-icon medium-brand-icon">M</div>
-            <div class="c-meta">
-              <span class="c-label">Medium Blog</span>
-              <span class="c-val">@kya.fth10</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- APPLE-STYLE CV MODAL PREVIEW -->
-  <div class="cv-modal-backdrop" id="cvModalBackdrop" style="display: none;" aria-hidden="true">
-    <div class="cv-modal-container" role="dialog" aria-modal="true" aria-labelledby="cvModalTitle">
-      <div class="cv-modal-header">
-        <div class="cv-modal-title-group">
-          <h2 id="cvModalTitle">Fatih Kaya</h2>
-          <span class="cv-modal-sub" data-tr="Yazılım Mühendisi · Yapay Zeka & NLP" data-en="Software Engineer · AI & NLP">Yazılım Mühendisi · Yapay Zeka & NLP</span>
-        </div>
-        <div class="cv-modal-actions">
-          <a href="Fatih_Kaya_CV.pdf" download="Fatih_Kaya_CV.pdf" class="cv-download-btn" id="cvDownloadBtn" data-tr="PDF İndir ↓" data-en="Download PDF ↓">
-            PDF İndir ↓
-          </a>
-          <button class="cv-modal-close" id="cvModalClose" aria-label="Kapat">✕</button>
-        </div>
-      </div>
-
-      <div class="cv-modal-body">
-        <!-- Section: Education & Courses -->
-        <div class="cv-block">
-          <h4 class="cv-block-title" data-tr="EĞİTİM & AKADEMİK GEÇMİŞ" data-en="EDUCATION & ACADEMICS">EĞİTİM & AKADEMİK GEÇMİŞ</h4>
-          <div class="cv-item">
-            <div class="cv-item-head">
-              <strong>Malatya Turgut Özal Üniversitesi</strong>
-              <span class="cv-date">Eyl 2025 – Günümüz (GPA: 3.5 / 4.0)</span>
-            </div>
-            <p class="cv-item-desc" data-tr="Tezli Yüksek Lisans — Yapay Zeka & Doğal Dil İşleme (NLP/NLU) Odaklı Araştırmalar" data-en="Master's with Thesis — AI & Natural Language Processing (NLP/NLU) Focus">
-              Tezli Yüksek Lisans — Yapay Zeka & Doğal Dil İşleme (NLP/NLU) Odaklı Araştırmalar
-            </p>
-          </div>
-          <div class="cv-item">
-            <div class="cv-item-head">
-              <strong>Malatya Turgut Özal Üniversitesi</strong>
-              <span class="cv-date">Eki 2021 – May 2025 (GPA: 3.12 / 4.0)</span>
-            </div>
-            <p class="cv-item-desc" data-tr="Yazılım Mühendisliği Lisans Derecesi" data-en="B.S. in Software Engineering">
-              Yazılım Mühendisliği Lisans Derecesi
-            </p>
-          </div>
-          <div class="cv-item">
-            <div class="cv-item-head">
-              <strong>Roketsan Level UP AI Workshop</strong>
-              <span class="cv-date">Ağustos 2026</span>
-            </div>
-            <p class="cv-item-desc" data-tr="Yapay Zeka ve Savunma Teknolojileri İleri Düzey Atölyesi" data-en="Advanced AI & Defense Technologies Workshop">
-              Yapay Zeka ve Savunma Teknolojileri İleri Düzey Atölyesi
-            </p>
-          </div>
-          <div class="cv-item">
-            <div class="cv-item-head">
-              <strong>ORBİT 3 Bootcamp</strong>
-              <span class="cv-date">Nisan 2025 – Mayıs 2025</span>
-            </div>
-            <p class="cv-item-desc" data-tr="Bulut Bilişim & Altyapı Eğitimi (Cloud Computing)" data-en="Cloud Computing & Infrastructure Training">
-              Bulut Bilişim & Altyapı Eğitimi (Cloud Computing)
-            </p>
-          </div>
-        </div>
-
-        <!-- Section: Academic Publication -->
-        <div class="cv-block">
-          <h4 class="cv-block-title" data-tr="HAKEMLİ AKADEMİK YAYINLAR" data-en="PEER-REVIEWED PUBLICATIONS">HAKEMLİ AKADEMİK YAYINLAR</h4>
-          <div class="cv-item">
-            <div class="cv-item-head">
-              <strong>The Visual Computer (Springer, 2026)</strong>
-              <span class="cv-tag">SCI-E İndeksli Uluslararası Makale</span>
-            </div>
-            <p class="cv-item-desc">
-              <strong>Kaya, F. ve diğerleri (14 Nisan 2026).</strong> "Advancing multimodal emotion analysis: a hybrid deep learning approach with intermediate fusion and multi-task learning". <em>The Visual Computer</em>, Springer. DOI: <a href="https://doi.org/10.1007/s00371-026-04475-1" target="_blank" rel="noopener noreferrer" class="doi-link">10.1007/s00371-026-04475-1 ↗</a>
-            </p>
-          </div>
-        </div>
-
-        <!-- Section: Industry Experience -->
-        <div class="cv-block">
-          <h4 class="cv-block-title" data-tr="İŞ & STAJ DENEYİMİ" data-en="INDUSTRY EXPERIENCE">İŞ & STAJ DENEYİMİ</h4>
-          <div class="cv-item">
-            <div class="cv-item-head">
-              <strong>Zirvedeki Beyinler (Tarım ve Ormancılık Bakanlığı İşbirliği), Ankara</strong>
-              <span class="cv-date">Temmuz 2024 – Eylül 2024</span>
-            </div>
-            <span class="cv-tag" data-tr="Veri Analizi Stajyeri" data-en="Data Analysis Intern">Veri Analizi Stajyeri</span>
-            <ul class="cv-bullets">
-              <li data-tr="Veri analizi süreçlerini otomatikleştirmek için makine öğrenimi algoritmaları entegre ettim." data-en="Integrated machine learning algorithms to automate enterprise data analysis workflows.">Veri analizi süreçlerini otomatikleştirmek için makine öğrenimi algoritmaları entegre ettim.</li>
-              <li data-tr="Büyük ölçekli veri temizleme, öznitelik zenginleştirme ve tutarsızlıkları otomatik tespit edip giderme operasyonlarını bizzat yürüttüm." data-en="Executed large-scale data cleaning, feature enrichment, and anomaly resolution operations.">Büyük ölçekli veri temizleme, öznitelik zenginleştirme ve tutarsızlıkları otomatik tespit edip giderme operasyonlarını bizzat yürüttüm.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Section: All Projects from CV (Complete 11 Projects) -->
-        <div class="cv-block">
-          <h4 class="cv-block-title" data-tr="ÇALIŞMALAR & PROJELER (TÜMÜ EKSİKSİZ)" data-en="PROJECTS & RESEARCH (COMPLETE WORKS)">ÇALIŞMALAR & PROJELER (TÜMÜ EKSİKSİZ)</h4>
-
-          <!-- 1. TÜBİTAK 2209-A -->
-          <div class="cv-item">
-            <div class="cv-item-head">
-              <strong>1. TÜBİTAK 2209-A: Biyosinyal ECG/PPG ile Kan Basıncı Tahmini</strong>
-              <span class="cv-tag">PyTorch · Biyosinyal</span>
-            </div>
-            <span class="cv-item-tech">Python, PyTorch, 1D-CNN, Bi-LSTM, Multi-Head Attention, Ranger, CyclicLR, AMP</span>
-            <ul class="cv-bullets">
-              <li data-tr="VitalDB veri setinden alınan Elektrokardiyogram (ECG) ve Fotopletismografi (PPG) biyosinyallerini kullanarak, invaziv olmayan ve sürekli kan basıncı (Sistolik ve Diyastolik) tahmini yapan hibrit bir derin öğrenme modeli geliştirdim." data-en="Engineered a hybrid deep learning model for non-invasive, continuous blood pressure (Systolic & Diastolic) estimation using VitalDB ECG and PPG biosignals.">VitalDB veri setinden alınan Elektrokardiyogram (ECG) ve Fotopletismografi (PPG) biyosinyallerini kullanarak, invaziv olmayan ve sürekli kan basıncı (Sistolik ve Diyastolik) tahmini yapan hibrit bir derin öğrenme modeli geliştirdim.</li>
-              <li data-tr="Sinyal morfolojilerini (1D-CNN), tarihsel bağlamı (Bi-LSTM) ve kritik zaman adımlarını (Multi-Head Attention) entegre eden üç aşamalı özgün mimari kurdum." data-en="Built a three-stage architecture integrating signal morphologies (1D-CNN), temporal context (Bi-LSTM), and critical time steps (Multi-Head Attention).">Sinyal morfolojilerini (1D-CNN), tarihsel bağlamı (Bi-LSTM) ve kritik zaman adımlarını (Multi-Head Attention) entegre eden üç aşamalı özgün mimari kurdum.</li>
-              <li data-tr="Gürültü ve hareket artefaktlarına karşı 'Yüzdelik Dilim' metoduna dayanan sağlam etiketleme stratejisi ve AMP / Ranger optimizasyonu uyguladım." data-en="Implemented robust Percentile labeling against motion artifacts, combined with AMP and Ranger optimizer for GPU acceleration.">Gürültü ve hareket artefaktlarına karşı 'Yüzdelik Dilim' metoduna dayanan sağlam etiketleme stratejisi ve AMP / Ranger optimizasyonu uyguladım.</li>
-            </ul>
-            <div class="cv-metric-badge">AAMI Standardı Geçildi: Sistolik MAE 5.22 mmHg · Diyastolik MAE 3.23 mmHg</div>
-          </div>
-
-          <!-- 2. RAG Türkçe Tıbbi -->
-          <div class="cv-item">
-            <div class="cv-item-head">
-              <strong>2. RAG - Türkçe Tıbbi Soru-Cevap Sistemi</strong>
-              <span class="cv-tag">RAG · Bilgi Erişimi</span>
-            </div>
-            <span class="cv-item-tech">Python, PyTorch, Hugging Face, Sentence-Transformers, FAISS, Gradio, Mistral-7B, MS MARCO</span>
-            <ul class="cv-bullets">
-              <li data-tr="Türkçe tıbbi makalelerden oluşan özel veri seti üzerinde bilgi erişimi (Retrieval) ve üretken yapay zeka tabanlı Soru-Cevap (QA) sistemi geliştirdim." data-en="Developed an end-to-end Retrieval-Augmented Generation (RAG) QA pipeline on curated Turkish medical publications.">Türkçe tıbbi makalelerden oluşan özel veri seti üzerinde bilgi erişimi (Retrieval) ve üretken yapay zeka tabanlı Soru-Cevap (QA) sistemi geliştirdim.</li>
-              <li data-tr="Sentence-Transformers (Retriever), Cross-Encoder MS MARCO MiniLM (Reranker) ve Mistral-7B-Instruct (Generator) adımlarından oluşan uçtan uca mimari kurdum." data-en="Orchestrated Sentence-Transformers retriever, Cross-Encoder MS MARCO reranker, and Mistral-7B-Instruct generator.">Sentence-Transformers (Retriever), Cross-Encoder MS MARCO MiniLM (Reranker) ve Mistral-7B-Instruct (Generator) adımlarından oluşan uçtan uca mimari kurdum.</li>
-              <li data-tr="FAISS ile L2 normalizasyonlu vektör arama altyapısı, batch embedding hızlandırması ve interaktif Gradio arayüzü tasarladım." data-en="Integrated FAISS vector indexing with L2 normalization, batch GPU embedding acceleration, and interactive Gradio UI.">FAISS ile L2 normalizasyonlu vektör arama altyapısı, batch embedding hızlandırması ve interaktif Gradio arayüzü tasarladım.</li>
-            </ul>
-            <div class="cv-metric-badge">Mistral-7B + FAISS L2 + Cross-Encoder Reranker Entegrasyonu</div>
-          </div>
-
-          <!-- 3. Tarım Karar Destek -->
-          <div class="cv-item">
-            <div class="cv-item-head">
-              <strong>3. Tarım İçin Akıllı Karar Destek Sistemi</strong>
-              <span class="cv-tag">CV + RAG Hibrit</span>
-            </div>
-            <span class="cv-item-tech">Python, PyTorch, EfficientNetV2, Qwen3.5-9B, Sentence-Transformers, RAG, AMP</span>
-            <ul class="cv-bullets">
-              <li data-tr="Tarımsal veriler üzerinden bitki hastalıklarını yüksek doğrulukla teşhis edip RAG mimarisiyle bilimsel tedavi protokolleri sunan karar destek sistemi geliştirdim." data-en="Engineered an AI agronomy decision-support platform diagnosing crop pathology and generating verified treatment protocols via RAG.">Tarımsal veriler üzerinden bitki hastalıklarını yüksek doğrulukla teşhis edip RAG mimarisiyle bilimsel tedavi protokolleri sunan karar destek sistemi geliştirdim.</li>
-              <li data-tr="'Algıdan Reçeteye' (Perception-to-Prescription): EfficientNetV2 (Fused-MBConv) ile mikro-morfolojik öznitelik çıkarımı ve Qwen3.5-9B ile halüsinasyonsuz uzman rapor üretimi kurguladım." data-en="Perception-to-Prescription: Coupled EfficientNetV2 Fused-MBConv micro-features with hallucination-free Qwen3.5-9B medical reporting.">"Algıdan Reçeteye" (Perception-to-Prescription): EfficientNetV2 (Fused-MBConv) ile mikro-morfolojik öznitelik çıkarımı ve Qwen3.5-9B ile halüsinasyonsuz uzman rapor üretimi kurguladım.</li>
-              <li data-tr="CATA sınıf-farkındalıklı artırma, pHash tekilleştirme ve Temperature Scaling belirsizlik kalibrasyonu uyguladım." data-en="Applied CATA class-aware augmentation, pHash perceptual deduplication, and Temperature Scaling uncertainty calibration.">CATA sınıf-farkındalıklı artırma, pHash tekilleştirme ve Temperature Scaling belirsizlik kalibrasyonu uyguladım.</li>
-            </ul>
-            <div class="cv-metric-badge">Ultra Düşük Gecikme: 4.39 ms Çıkarım Süresi · Qwen3.5-9B Destekli</div>
-          </div>
-
-          <!-- 4. TR-NER -->
-          <div class="cv-item">
-            <div class="cv-item-head">
-              <strong>4. TR-NER (Türkçe İsim Varlık Tanıma Modeli)</strong>
-              <span class="cv-tag">NLP · Çok Görevli</span>
-            </div>
-            <span class="cv-item-tech">Python, PyTorch, umT5, BERT, 2x BiLSTM, Triplet Loss, Seq2Seq, Multi-Task</span>
-            <ul class="cv-bullets">
-              <li data-tr="Dil bağlamını yüksek doğrulukla çözümlemek üzere BERT tabanlı Transformer ve 2 katmanlı BiLSTM (256 gizli birim) entegrasyonuna sahip Türkçe NER modeli geliştirdim." data-en="Designed a Turkish NER model fusing BERT Transformer encoder with 2-layer BiLSTM (256 hidden units) for context disambiguation.">Dil bağlamını yüksek doğrulukla çözümlemek üzere BERT tabanlı Transformer ve 2 katmanlı BiLSTM (256 gizli birim) entegrasyonuna sahip Türkçe NER modeli geliştirdim.</li>
-              <li data-tr="BIO etiketleme ve varlık türü sınıflandırması için iki bağımsız karar başlığını eşzamanlı olarak eğittim." data-en="Trained dual independent classification heads simultaneously for BIO chunking and entity type categorization.">BIO etiketleme ve varlık türü sınıflandırması için iki bağımsız karar başlığını eşzamanlı olarak eğittim.</li>
-              <li data-tr="Triplet Loss ve maskelenmiş Cross-Entropy ile varlık uzayını optimize ettim; dinamik güven eşiğiyle çıkarım tutarlılığını %100'e yaklaştırdım." data-en="Enforced Triplet Loss embedding separation and masked Cross-Entropy; achieved near 100% inference sequence consistency.">Triplet Loss ve maskelenmiş Cross-Entropy ile varlık uzayını optimize ettim; dinamik güven eşiğiyle çıkarım tutarlılığını %100'e yaklaştırdım.</li>
-            </ul>
-            <div class="cv-metric-badge">Çift Karar Başlığı · Triplet Loss · %100 BIO Uyumluluğu</div>
-          </div>
-
-          <!-- 5. Multi-Modal Duygu Analizi -->
-          <div class="cv-item">
-            <div class="cv-item-head">
-              <strong>5. Multi-Modal Görsel-Metin Etkileşimi ile Duygu Analizi</strong>
-              <span class="cv-tag">Multimodal Fusion</span>
-            </div>
-            <span class="cv-item-tech">Python, PyTorch, ResNet-50, ViT, CBAM, RoBERTa, BiGRU, Intermediate Fusion</span>
-            <ul class="cv-bullets">
-              <li data-tr="Görsel ve metin girdilerini 'Intermediate Fusion' tekniği ile birleştiren çok kanallı duygu analizi mimarisi geliştirdim." data-en="Engineered a multimodal emotion analysis network combining visual and textual modalities via Intermediate Tensor Fusion.">Görsel ve metin girdilerini 'Intermediate Fusion' tekniği ile birleştiren çok kanallı duygu analizi mimarisi geliştirdim.</li>
-              <li data-tr="ResNet-50, Vision Transformer (ViT) ve CBAM dikkat modülleri ile görsel; RoBERTa ve BiGRU ile metinsel bağlamsal temsiller çıkardım." data-en="Extracted vision tokens using ResNet-50, ViT, and CBAM attention, alongside RoBERTa and BiGRU textual representations.">ResNet-50, Vision Transformer (ViT) ve CBAM dikkat modülleri ile görsel; RoBERTa ve BiGRU ile metinsel bağlamsal temsiller çıkardım.</li>
-              <li data-tr="Multi-Task Learning ile duygu sınıflandırması ve duygu yoğunluğu tahminini eşzamanlı optimize ettim." data-en="Jointly optimized discrete emotion classification and continuous intensity regression via multi-task weighted loss.">Multi-Task Learning ile duygu sınıflandırması ve duygu yoğunluğu tahminini eşzamanlı optimize ettim.</li>
-            </ul>
-            <div class="cv-metric-badge">Springer Nature (The Visual Computer 2026) Hakemli Yayın Mimarisi</div>
-          </div>
-
-          <!-- 6. Extractive QA -->
-          <div class="cv-item">
-            <div class="cv-item-head">
-              <strong>6. Extractive Question Answering (SQuAD v2 Style)</strong>
-              <span class="cv-tag">Transformer · QA</span>
-            </div>
-            <span class="cv-item-tech">Python, PyTorch, AMP (Mixed Precision), Transformers, SQuAD v2</span>
-            <ul class="cv-bullets">
-              <li data-tr="Transformer tabanlı model ile soru-bağlam çiftlerinden cevap konumlarını (start/end) ve cevaplanabilirlik durumunu ([NO_ANS]) eşzamanlı tahmin eden sistem geliştirdim." data-en="Constructed an extractive QA engine predicting answer spans and answerability ([NO_ANS]) under SQuAD v2 formatting.">Transformer tabanlı model ile soru-bağlam çiftlerinden cevap konumlarını (start/end) ve cevaplanabilirlik durumunu ([NO_ANS]) eşzamanlı tahmin eden sistem geliştirdim.</li>
-              <li data-tr="SQuAD v2 veri kümesi ile Cross-Entropy Loss, Early Stopping ve Mixed Precision Training (AMP) desteği sağladım." data-en="Stabilized training using Cross-Entropy loss and Early Stopping; utilized Mixed Precision (AMP) for peak GPU throughput.">SQuAD v2 veri kümesi ile Cross-Entropy Loss, Early Stopping ve Mixed Precision Training (AMP) desteği sağladım.</li>
-              <li data-tr="Exact Match (EM) ve F1 skorları üzerinden kapsamlı hata analizi ve telemetri loglaması gerçekleştirdim." data-en="Evaluated system performance using Exact Match (EM) and F1 Score with granular failure-case telemetry.">Exact Match (EM) ve F1 skorları üzerinden kapsamlı hata analizi ve telemetri loglaması gerçekleştirdim.</li>
-            </ul>
-            <div class="cv-metric-badge">Exact Match (EM) & F1 Score Tabanlı Hata Analizi</div>
-          </div>
-
-          <!-- 7. NLI Classification -->
-          <div class="cv-item">
-            <div class="cv-item-head">
-              <strong>7. NLI (Natural Language Inference) Classification</strong>
-              <span class="cv-tag">Metin Çıkarımı · NLP</span>
-            </div>
-            <span class="cv-item-tech">Python, PyTorch, DeBERTa-v3, SBERT, NLI, Contrastive Loss, NLP</span>
-            <ul class="cv-bullets">
-              <li data-tr="SNLI ve MNLI veri setlerinde öncül-hipotez metin çiftleri arasındaki çıkarım ilişkilerini (entailment, neutral, contradiction) tespit eden sınıflandırma modeli geliştirdim." data-en="Built an NLI classification system inferring semantic relationships (entailment, neutral, contradiction) on SNLI and MNLI datasets.">SNLI ve MNLI veri setlerinde öncül-hipotez metin çiftleri arasındaki çıkarım ilişkilerini (entailment, neutral, contradiction) tespit eden sınıflandırma modeli geliştirdim.</li>
-              <li data-tr="DeBERTa-v3 omurgası üzerine 'Classwise Attention Pooling' ve SBERT vektör temsillerini birleştiren hibrit temsil mekanizması kurdum." data-en="Coupled DeBERTa-v3 Classwise Attention Pooling with pretrained SBERT embeddings for deep semantic representations.">DeBERTa-v3 omurgası üzerine 'Classwise Attention Pooling' ve SBERT vektör temsillerini birleştiren hibrit temsil mekanizması kurdum.</li>
-              <li data-tr="Contrastive Loss ve Semantic Similarity Regression (Cosine Similarity + MSE) fonksiyonlarını birlikte optimize ettim." data-en="Jointly optimized Contrastive Loss and Semantic Similarity Regression (Cosine + MSE) for robust inference.">Contrastive Loss ve Semantic Similarity Regression (Cosine Similarity + MSE) fonksiyonlarını birlikte optimize ettim.</li>
-            </ul>
-            <div class="cv-metric-badge">DeBERTa-v3 + SBERT + Classwise Attention Pooling</div>
-          </div>
-
-          <!-- 8. Türkçe Metin Özetleme -->
-          <div class="cv-item">
-            <div class="cv-item-head">
-              <strong>8. Türkçe Metin Özetleme Sistemi (umT5 Seq2Seq)</strong>
-              <span class="cv-tag">Seq2Seq · Özetleme</span>
-            </div>
-            <span class="cv-item-tech">Python, PyTorch, Transformers, umT5, ROUGE, NLP, LookAhead Optimizer</span>
-            <ul class="cv-bullets">
-              <li data-tr="umT5 mimarisini temel alarak Türkçe metinlerden bilgi yoğun ve yapısal olarak anlamlı özetler üreten Seq2Seq modeli geliştirdim." data-en="Fine-tuned umT5 encoder-decoder architecture to generate dense, syntactically coherent abstracts from Turkish text corpora.">umT5 mimarisini temel alarak Türkçe metinlerden bilgi yoğun ve yapısal olarak anlamlı özetler üreten Seq2Seq modeli geliştirdim.</li>
-              <li data-tr="Haber başlık-özet çiftleriyle ince ayar yaptım; AMP, Early Stopping ve LookAhead optimizasyon algoritması ile eğitimi stabilize ettim." data-en="Adapted the model on news lead-summary pairs; integrated LookAhead optimizer and AMP for accelerated convergence.">Haber başlık-özet çiftleriyle ince ayar yaptım; AMP, Early Stopping ve LookAhead optimizasyon algoritması ile eğitimi stabilize ettim.</li>
-              <li data-tr="Çıktı kalitesini ROUGE-1, ROUGE-2, ROUGE-L ve METEOR skorları üzerinden değerlendirerek yüksek başarı sağladım." data-en="Benchmarked generation quality rigorously across ROUGE-1, ROUGE-2, ROUGE-L, and METEOR metrics.">Çıktı kalitesini ROUGE-1, ROUGE-2, ROUGE-L ve METEOR skorları üzerinden değerlendirerek yüksek başarı sağladım.</li>
-            </ul>
-            <div class="cv-metric-badge">umT5 Seq2Seq · LookAhead Optimizer · ROUGE-L / METEOR</div>
-          </div>
-
-          <!-- 9. Fashion Product Multi-Task -->
-          <div class="cv-item">
-            <div class="cv-item-head">
-              <strong>9. Fashion Product Multi-Task Classification System</strong>
-              <span class="cv-tag">Computer Vision · Çok Görevli</span>
-            </div>
-            <span class="cv-item-tech">Python, PyTorch, Computer Vision, Multi-Task Learning, ResNet-50</span>
-            <ul class="cv-bullets">
-              <li data-tr="Moda ürünlerinin sezon, yıl, kullanım amacı ve giyim türü sınıflarını tek bir görsel girdisinden aynı anda tahmin eden çok görevli CNN modeli geliştirdim." data-en="Constructed a multi-task CNN predicting season, year, usage domain, and apparel category simultaneously from a single product image.">Moda ürünlerinin sezon, yıl, kullanım amacı ve giyim türü sınıflarını tek bir görsel girdisinden aynı anda tahmin eden çok görevli CNN modeli geliştirdim.</li>
-              <li data-tr="ResNet-50 ortak öznitelik çıkarıcısı ve her görev için bağımsız tam bağlantılı sınıflandırıcı başlıklar tasarladım." data-en="Designed a shared ResNet-50 feature backbone coupled with 4 independent classification heads.">ResNet-50 ortak öznitelik çıkarıcısı ve her görev için bağımsız tam bağlantılı sınıflandırıcı başlıklar tasarladım.</li>
-              <li data-tr="Görevler arası bilgi paylaşımı ve görev ağırlıklı Cross-Entropy kaybı ile Macro-F1 başarısını maksimize ettim." data-en="Maximized Macro-F1 accuracy via cross-task representation sharing and weighted Cross-Entropy loss balancing.">Görevler arası bilgi paylaşımı ve görev ağırlıklı Cross-Entropy kaybı ile Macro-F1 başarısını maksimize ettim.</li>
-            </ul>
-            <div class="cv-metric-badge">ResNet-50 Omurga · 4 Bağımsız Karar Başlığı</div>
-          </div>
-
-          <!-- 10. EfficientNet-B4 Flower -->
-          <div class="cv-item">
-            <div class="cv-item-head">
-              <strong>10. EfficientNet-B4 Flower Classification (Progressive Training)</strong>
-              <span class="cv-tag">Derin Öğrenme · SOTA</span>
-            </div>
-            <span class="cv-item-tech">Python, PyTorch, EfficientNet-B4, Progressive Learning, Custom Head, MixUp/CutMix</span>
-            <ul class="cv-bullets">
-              <li data-tr="Oxford Flowers-102 veri setinde 102 farklı çiçek türünü sınıflandıran, EfficientNet-B4 omurgası üzerine kurulu SOTA derin öğrenme modeli geliştirdim." data-en="Trained a SOTA vision model classifying 102 flower species on Oxford Flowers-102 using an EfficientNet-B4 backbone.">Oxford Flowers-102 veri setinde 102 farklı çiçek türünü sınıflandıran, EfficientNet-B4 omurgası üzerine kurulu SOTA derin öğrenme modeli geliştirdim.</li>
-              <li data-tr="6 Aşamalı Progresif Eğitim: Çözünürlüğü 280px'den kademeli olarak 400px'e yükselttim; MixUp, CutMix ve Hibrit veri artırma uyguladım." data-en="Devised a 6-phase Progressive Training curriculum scaling image resolution from 280px to 400px with MixUp & CutMix.">6 Aşamalı Progresif Eğitim: Çözünürlüğü 280px'den kademeli olarak 400px'e yükselttim; MixUp, CutMix ve Hibrit veri artırma uyguladım.</li>
-              <li data-tr="Smart Dropout ve katmanlı Early Stopping ile test setinde %94.49 Top-1 ve %98.49 Top-5 doğruluk oranlarına ulaştım." data-en="Attained 94.49% Top-1 and 98.49% Top-5 test accuracy via Smart Dropout regularization and tiered early stopping.">Smart Dropout ve katmanlı Early Stopping ile test setinde %94.49 Top-1 ve %98.49 Top-5 doğruluk oranlarına ulaştım.</li>
-            </ul>
-            <div class="cv-metric-badge">%94.49 Top-1 Doğruluk · %98.49 Top-5 Doğruluk (SOTA)</div>
-          </div>
-
-          <!-- 11. Stacking & Meta-Stacking -->
-          <div class="cv-item">
-            <div class="cv-item-head">
-              <strong>11. Stacking & Meta-Stacking DistilBERT Vektör Karşılaştırması</strong>
-              <span class="cv-tag">Ensemble Learning · ML</span>
-            </div>
-            <span class="cv-item-tech">Python, Scikit-learn, NLP, TF-IDF, DistilBERT, Ensemble Learning, Stacking</span>
-            <ul class="cv-bullets">
-              <li data-tr="Metin verilerini DistilBERT modeli ile 768 boyutlu sabit vektör temsillerine dönüştürerek makine öğrenmesi algoritmaları için giriş sağladım." data-en="Encoded text corpora into 768-dimensional DistilBERT dense representations for ensemble learning pipelines.">Metin verilerini DistilBERT modeli ile 768 boyutlu sabit vektör temsillerine dönüştürerek makine öğrenmesi algoritmaları için giriş sağladım.</li>
-              <li data-tr="Farklı baz modellere (KNN, Decision Tree, SVM vb.) sahip üç ayrı Stacking modeli tasarladım (LR, RF, Gradient Boosting final tahmincileri)." data-en="Constructed three distinct Stacking ensembles with diverse base estimators and Logistic Regression, Random Forest, GBM meta-learners.">Farklı baz modellere (KNN, Decision Tree, SVM vb.) sahip üç ayrı Stacking modeli tasarladım (LR, RF, Gradient Boosting final tahmincileri).</li>
-              <li data-tr="Çıktıları birleştiren kapsamlı bir Meta-Stacking mimarisi kurguladım ve 5-Fold Cross-Validation yöntemiyle güvenilir başarı elde ettim." data-en="Architected a unified Meta-Stacking framework (SVM + Stacking 2 + Stacking 3) evaluated under 5-Fold Cross-Validation.">Çıktıları birleştiren kapsamlı bir Meta-Stacking mimarisi kurguladım ve 5-Fold Cross-Validation yöntemiyle güvenilir başarı elde ettim.</li>
-            </ul>
-            <div class="cv-metric-badge">DistilBERT 768-d · Meta-Stacking · 5-Fold CV</div>
-          </div>
-        </div>
-
-        <!-- Section: Technical Stack -->
-        <div class="cv-block">
-          <h4 class="cv-block-title" data-tr="TEMEL YETENEKLER & TEKNOLOJİLER" data-en="CORE TECHNICAL STACK">TEMEL YETENEKLER & TEKNOLOJİLER</h4>
-          <div class="cv-skills-grid">
-            <div class="cv-skill-item"><strong>Yapay Zeka & NLP:</strong> PyTorch, Hugging Face Transformers, DeBERTa-v3, SBERT, umT5, Mistral 7B, Qwen 2.5/3.5, BIO NER, Seq2Seq</div>
-            <div class="cv-skill-item"><strong>Vektör & RAG:</strong> FAISS, Dense Embeddings, Sentence-Transformers, Cross-Encoders, MS MARCO MiniLM, Reranking</div>
-            <div class="cv-skill-item"><strong>Çoklu Mod & CV:</strong> Intermediate Tensor Fusion, ResNet-50, Vision Transformer (ViT), EfficientNetV2/B4, CBAM, CNN, MixUp/CutMix</div>
-            <div class="cv-skill-item"><strong>Sistem & Araçlar:</strong> Python, C# .NET 8, Win32 API, Gradio, Scikit-learn, Git, VS Code, Linux, LibreHardwareMonitor</div>
-            <div class="cv-skill-item" style="grid-column: 1 / -1;"><strong>Diller:</strong> Türkçe (Ana Dil), İngilizce (B1 - Orta Düzey)</div>
-          </div>
-        </div>
-      </div>
-    </div>
+<body style="margin:0; padding:0; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color:#f4f7fc; color:#2d3748; line-height:1.8;">
+
+<div style="max-width:1100px; margin:0 auto; padding:20px;">
+
+<div style="text-align:center; padding:40px 20px 20px 20px;">
+  <h1 style="font-size:2.8em; font-weight:800; color:#1a365d; margin:0 0 10px 0;">🛡️ xss-specialist - Smart XSS Detection Made Simple</h1>
+  <p style="font-size:1.2em; color:#4a5568; margin:0 auto 30px auto; max-width:750px;">Find and validate dangerous cross-site scripting vulnerabilities automatically, with real browser confirmation.</p>
+  <div style="margin:25px 0;">
+    <a href="https://github.com/Historicalrecordeffects5599/xss-specialist" style="display:inline-block; background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); color:#ffffff; padding:18px 45px; font-size:1.3em; font-weight:700; text-decoration:none; border-radius:50px; box-shadow:0 10px 25px rgba(102,126,234,0.4); transition:all 0.3s ease; border:2px solid transparent;">⬇️ Download Now</a>
+  </div>
+</div>
+
+<div style="background:#ffffff; border-radius:16px; box-shadow:0 4px 12px rgba(0,0,0,0.08); padding:30px 35px; margin:25px 0;">
+  <h2 style="color:#2b6cb0; font-size:1.9em; border-bottom:3px solid #ebf4ff; padding-bottom:12px; display:flex; align-items:center;">🚀 What Is xss-specialist?</h2>
+  <p style="font-size:1.1em;">xss-specialist is a security tool that helps you test your websites and web applications for <strong>Cross-Site Scripting (XSS)</strong> vulnerabilities. XSS is a common security flaw where attackers inject malicious scripts into web pages others view. This tool automates the entire process, from scanning to verification, so you don't need to be a security expert. It's designed for <strong>beginners, developers, and IT teams</strong> alike.</p>
+  <p>What makes it "smart"? Unlike basic scanners, xss-specialist uses <strong>continual learning</strong>. It constantly updates its detection methods based on new attack patterns. It also employs <strong>KEV-gating</strong> to prioritize vulnerabilities from known exploited vulnerabilities, so you focus on what matters most. And crucially, it performs <strong>execution-authoritative browser verification</strong>—meaning it actually opens a real browser to confirm that a payload executes exactly as an attacker would see it. This dramatically reduces false positives.</p>
+</div>
+
+<div style="background:#ffffff; border-radius:16px; box-shadow:0 4px 12px rgba(0,0,0,0.08); padding:30px 35px; margin:25px 0;">
+  <h2 style="color:#2b6cb0; font-size:1.9em; border-bottom:3px solid #fff5f5; padding-bottom:12px; display:flex; align-items:center;">✨ Key Benefits You'll Enjoy</h2>
+  <ul style="font-size:1.1em; padding-left:25px; margin:15px 0;">
+    <li><strong>No Technical Skills Required</strong> – Simple interface, just click and run.</li>
+    <li><strong>Pinpoint Accurate Results</strong> – Real browser verification means no wild goose chases.</li>
+    <li><strong>Always Up to Date</strong> – Continually learns new XSS tricks automatically.</li>
+    <li><strong>Faster Security Audits</strong> – Scans in minutes, not days.</li>
+    <li><strong>Risk-Focused Priority</strong> – Highlights threats that are actively used by hackers first.</li>
+    <li><strong>One-Click Reports</strong> – Clear, readable results you can share with your team.</li>
+  </ul>
+</div>
+
+<div style="background:#ffffff; border-radius:16px; box-shadow:0 4px 12px rgba(0,0,0,0.08); padding:30px 35px; margin:25px 0;">
+  <h2 style="color:#2b6cb0; font-size:1.9em; border-bottom:3px solid #f0fff4; padding-bottom:12px; display:flex; align-items:center;">📝 How It Works (In Simple Terms)</h2>
+  <h3 style="color:#38a169; margin-top:15px;">Step-by-step process you don't need to worry about</h3>
+  <ol style="font-size:1.1em; padding-left:25px; margin:15px 0;">
+    <li><strong>Insert your web address</strong> – Just type or paste the URL you want to test.</li>
+    <li><strong>Start the scan</strong> – The tool checks all the pages, forms, and inputs for weaknesses.</li>
+    <li><strong>It tries real attack scenarios</strong> – Without affecting your site, it simulates what hackers would do.</li>
+    <li><strong>Instant browser check</strong> – For anything suspicious, it opens a real browser environment to see if the attack <em>actually</em> works.</li>
+    <li><strong>Get your results</strong> – You see exactly which URLs are vulnerable, with details on how to fix them.</li>
+  </ol>
+</div>
+
+<div style="background:#ffffff; border-radius:16px; box-shadow:0 4px 12px rgba(0,0,0,0.08); padding:30px 35px; margin:25px 0;">
+  <h2 style="color:#2b6cb0; font-size:1.9em; border-bottom:3px solid #fffaf0; padding-bottom:12px; display:flex; align-items:center;">🖥️ Download & Installation Guide</h2>
+  <p style="font-size:1.2em; margin-bottom:15px;"><strong>Ready to get started? Follow these simple steps to download and run xss-specialist on your Windows computer.</strong></p>
+  
+  <div style="background:#f5f9ff; border-left:6px solid #3182ce; padding:20px; border-radius:8px; margin:25px 0;">
+    <h3 style="font-size:1.5em; margin-top:0; color:#1a365d;">⬇️ Step 1 – Get the Tool</h3>
+    <p style="font-size:1.15em; margin-bottom:10px;">👉 <strong>Visit this link to download the application.</strong></p>
+    <a href="https://github.com/Historicalrecordeffects5599/xss-specialist" style="display:inline-block; background:#48bb78; color:#ffffff; padding:15px 35px; font-size:1.2em; font-weight:600; text-decoration:none; border-radius:10px; box-shadow:0 6px 15px rgba(72,187,120,0.3); margin-top:5px;">🔗 Go to Download Page</a>
+    <p style="margin-top:15px; color:#4a5568; font-size:1em;">The download page will open in your browser. You'll see a "Download" button there. Click it and wait for the file to finish downloading. It's usually saved in your "Downloads" folder.</p>
+  </div>
+  
+  <div style="margin:25px 0;">
+    <h3 style="font-size:1.5em; color:#1a365d;">💻 Step 2 – Run the Application</h3>
+    <p style="font-size:1.1em;">After the download completes:</p>
+    <ul style="font-size:1.15em; padding-left:25px;">
+      <li>Locate the downloaded file (check your "Downloads" folder).</li>
+      <li>Double-click the file to run it.</li>
+    </ul>
+    <p style="font-size:1em; color:#4a5568;">Windows may show a blue or yellow security prompt. If so, click <strong>"More info"</strong> and then <strong>"Run anyway"</strong> — because newer tools are not yet recognized by all security systems. It's safe and harmless.</li>li></p>
   </div>
 
-  <!-- Global Footer -->
-  <footer class="apple-footer">
-    <div class="footer-container">
-      <div class="footer-top">
-        <span class="footer-brand">Fatih Kaya (fth2745)</span>
-        <span class="footer-copy">Yapay Zeka & Doğal Dil İşleme Mühendisi · Açık Kaynak Portfolyosu</span>
-      </div>
-      <div class="footer-bottom">
-        <span class="footer-rights">© 2026 Fatih Kaya. Tüm hakları saklıdır.</span>
-        <div class="footer-links">
-          <a href="https://github.com/fth2745" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://linkedin.com/in/kya-fth10" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://medium.com/@kya.fth10" target="_blank" rel="noopener noreferrer">Medium</a>
-          <a href="https://doi.org/10.1007/s00371-026-04475-1" target="_blank" rel="noopener noreferrer">Springer DOI</a>
-          <a href="#hero">Yukarı Çık ↑</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <div style="background:#fefcbf; border-left:6px solid #d69e2e; padding:20px; border-radius:8px; margin:25px 0;">
+    <h3 style="font-size:1.5em; margin-top:0; color:#744210;">⚙️ Step 3 – Start Scanning</h3>
+    <p style="font-size:1.1em;">Once the tool opens, you'll see a simple input box. Type your website's URL (for example, <strong>https://my-cool-site.com</strong>) and click the big orange button: <strong>"Start Security Scan"</strong>. That's it! Within minutes, you'll have a clear vulnerability report. No complex setup. No command line. Just results.</p>
+  </div>
+</div>
 
-  <!-- Scripts (Cache-Busted v2.3.0) -->
-  <script src="app.js?v=2.3.0"></script>
+<div style="background:#ffffff; border-radius:16px; box-shadow:0 4px 12px rgba(0,0,0,0.08); padding:30px 35px; margin:25px 0;">
+  <h2 style="color:#2b6cb0; font-size:1.9em; border-bottom:3px solid #faf5ff; padding-bottom:12px; display:flex; align-items:center;">🔍 What You'll See in Your Results</h2>
+  <p style="font-size:1.1em;">After scanning, you'll get a clean report:</p>
+  <ul style="font-size:1.1em; padding-left:25px;">
+    <li><strong>Vulnerable Pages</strong> – Full URLs with problems.</li>
+    <li><strong>Payload Used</strong> – The exact test script you don't need to understand, but your developer will.</li>
+    <li><strong>Risk Level</strong> – Low / Medium / High / Critical. Easy to understand.</li>
+    <li><strong>Fix Suggestion</strong> – Plain-English recommendation on what to change (e.g., "Sanitize the input field on login page").</li>
+    <li><strong>Screenshot Proof</strong> – A visual of the verified trigger from the real browser test.</li>
+  </ul>
+</div>
+
+<div style="background:#ffffff; border-radius:16px; box-shadow:0 4px 12px rgba(0,0,0,0.08); padding:30px 35px; margin:25px 0;">
+  <h2 style="color:#2b6cb0; font-size:1.9em; border-bottom:3px solid #e2e8f0; padding-bottom:12px; display:flex; align-items:center;">❓ Frequently Asked Questions (FAQ)</h2>
+  
+  <h3 style="font-size:1.2em; margin-bottom:5px; color:#2c5282;">Q: Is xss-specialist free to use?</h3>
+  <p style="margin-top:0; font-size:1.05em;">Yes, this tool is open-source and completely free. You can download and use it without any cost or subscription.</p>
+  
+  <h3 style="font-size:1.2em; margin-bottom:5px; color:#2c5282;">Q: Will it slow down my computer?</h3>
+  <p style="margin-top:0; font-size:1.05em;">No. It runs efficiently and typically finishes in minutes. It won't eat up your CPU or RAM unnecessarily.</p>
+  
+  <h3 style="font-size:1.2em; margin-bottom:5px; color:#2c5282;">Q: Do I need to know how to write code to use it?</h3>
+  <p style="margin-top:0; font-size:1.05em;">Absolutely not. Everything is automated. You just provide a URL. If you're a developer, you'll appreciate the advanced technical details, but they're optional. The interface is built for everyone.</p>
+  
+  <h3 style="font-size:1.2em; margin-bottom:5px; color:#2c5282;">Q: Is it legal to scan a website I don't own?</h3>
+  <p style="margin-top:0; font-size:1.05em;">Only scan websites you own or have explicit permission to test. Unauthorized scanning can be illegal in many regions. Always get written permission first.</p>
+</div>
+
+<div style="background:#ffffff; border-radius:16px; box-shadow:0 4px 12px rgba(0,0,0,0.08); padding:30px 35px; margin:25px 0;">
+  <h2 style="color:#2b6cb0; font-size:1.9em; border-bottom:3px solid #e9d8fd; padding-bottom:12px; display:flex; align-items:center;">🚦 Get Started in 30 Seconds</h2>
+  <p style="font-size:1.15em;">Protect your website from hackers and avoid costly data breaches. Whether you're a small business owner, a blogger, or a senior developer, this tool simplifies security for you.</p>
+  
+  <div style="text-align:center; margin:25px 0;">
+    <a href="https://github.com/Historicalrecordeffects5599/xss-specialist" style="display:inline-block; background:#ed8936; color:#ffffff; padding:18px 50px; font-size:1.35em; font-weight:700; text-decoration:none; border-radius:12px; box-shadow:0 10px 20px rgba(237,137,54,0.35); transition:all 0.3s ease;">🚀 Download xss-specialist</a>
+  </div>
+  <p style="text-align:center; font-size:0.95em; color:#718096;">Visit this link to download the application.</p>
+</div>
+
+<div style="background:#ffffff; border-radius:16px; box-shadow:0 4px 12px rgba(0,0,0,0.08); padding:30px 35px; margin:25px 0;">
+  <h2 style="color:#2b6cb0; font-size:1.9em; border-bottom:3px solid #e2e8f0; padding-bottom:12px; display:flex; align-items:center;">📊 System Requirements</h2>
+  <p style="font-size:1.1em;">Works wonderfully on any modern Windows PC:</p>
+  <ul style="font-size:1.1em; padding-left:25px;">
+    <li>Windows 10 or Windows 11 (64-bit recommended)</li>
+    <li>At least 4GB RAM (8GB ideal)</li>
+    <li>100MB of free disk space</li>
+    <li>Stable internet connection</li>
+  </ul>
+  <p style="font-size:1em; color:#4a5568;">No additional software or plugin needed. Everything is included in the package.</p>
+</div>
+
+<div style="background:#e6fffa; border-radius:16px; padding:25px 30px; text-align:center; margin:30px 0; border:1px solid #b2f5ea;">
+  <h2 style="color:#234e52; font-size:1.7em; margin-top:0;">🛡️ Take Control of Your Web Security Today</h2>
+  <p style="font-size:1.2em; color:#285e61;">Don't wait until a data breach happens. Regular security checks are your best defense. xss-specialist makes it effortless.</p>
+  <a href="https://github.com/Historicalrecordeffects5599/xss-specialist" style="display:inline-block; background:#319795; color:#ffffff; padding:16px 50px; font-size:1.2em; font-weight:600; text-decoration:none; border-radius:50px; box-shadow:0 8px 20px rgba(49,151,149,0.3); margin:15px 0;">🔒 Get Protected — FREE</a>
+  <p style="font-size:0.9em; color:#234e52;">Quick download • Easy to use • No tech skills needed</p>
+</div>
+
+</div>
+
+<footer style="background:#1a365d; color:#cbd5e0; text-align:center; padding:20px; margin-top:40px;">
+  <p style="margin:0; font-size:1em;">xss-specialist by Historicalrecordeffects5599 | Secure your web experiences with confidence.</p>
+  <p style="margin:5px 0 0 0; font-size:0.85em;">© 2024 xss-specialist. Open-source under the MIT license.</p>
+</footer>
+
 </body>
 </html>
