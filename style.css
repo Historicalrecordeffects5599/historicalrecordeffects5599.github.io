@@ -1,6 +1,6 @@
 /* ==========================================================================
-   APPLE DESIGN SYSTEM · PORTFOLIO (fth2745)
-   Refined Edition · Balanced Poise · Dynamic Metrics Ticker · Uniform Bento Grid
+   FATİH KAYA · PERSONAL PORTFOLIO DESIGN SYSTEM
+   Clean · Poised · Pure Fade Metrics Ticker · Uniform Bento Grid
    ========================================================================== */
 
 :root {
@@ -72,7 +72,7 @@ body.apple-dark {
 }
 
 /* ==========================================================================
-   NAVIGATION BAR (Apple Frosted Glass)
+   NAVIGATION BAR
    ========================================================================== */
 .apple-nav {
   position: fixed;
@@ -106,7 +106,7 @@ body.apple-dark {
 .nav-brand {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   color: var(--apple-text-primary);
   text-decoration: none;
   font-size: 15px;
@@ -119,22 +119,17 @@ body.apple-dark {
   opacity: 0.8;
 }
 
-.apple-vector-icon {
-  width: 16px;
-  height: 16px;
-  fill: currentColor;
-}
-
-.apple-vector-icon-sm {
-  width: 13px;
-  height: 13px;
-  fill: currentColor;
-  margin-right: 6px;
-  vertical-align: middle;
+.nav-logo {
+  height: 26px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 4px;
 }
 
 .brand-name {
   color: #ffffff;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .nav-menu {
@@ -246,15 +241,15 @@ body.apple-dark {
 }
 
 /* ==========================================================================
-   HERO SECTION (Balanced, Mature Poise & Wide Layout)
+   HERO SECTION (PORTFOLIO BIOGRAPHY FROM CV)
    ========================================================================== */
 .hero-section {
   position: relative;
-  min-height: 96vh;
+  min-height: 94vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: calc(var(--nav-height) + 50px) 24px 70px;
+  padding: calc(var(--nav-height) + 50px) 24px 60px;
   text-align: center;
   overflow: hidden;
   z-index: 1;
@@ -273,7 +268,7 @@ body.apple-dark {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 14px;
+  padding: 6px 16px;
   border-radius: 980px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--apple-border);
@@ -290,16 +285,15 @@ body.apple-dark {
 }
 
 .badge-text {
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--apple-text-secondary);
 }
 
-/* Poised, Wider Headline */
 .hero-title {
-  font-size: clamp(38px, 6vw, 70px);
+  font-size: clamp(38px, 5.5vw, 68px);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.03em;
@@ -318,12 +312,12 @@ body.apple-dark {
 }
 
 .hero-subtitle {
-  font-size: clamp(16px, 2vw, 20px);
+  font-size: clamp(16px, 1.8vw, 19px);
   font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: -0.015em;
+  line-height: 1.6;
+  letter-spacing: -0.012em;
   color: var(--apple-text-secondary);
-  max-width: 820px;
+  max-width: 860px;
   margin-bottom: 36px;
 }
 
@@ -385,7 +379,7 @@ body.apple-dark {
 }
 
 /* ==========================================================================
-   DYNAMIC PROJECT METRICS TICKER (Looping Live Metrics across 8 Projects)
+   DYNAMIC METRICS TICKER (PURE FADE-OUT / FADE-IN · ZERO JUMPS)
    ========================================================================== */
 .hero-ticker-wrapper {
   width: 100%;
@@ -436,31 +430,21 @@ body.apple-dark {
   font-weight: 600;
 }
 
+/* Container with pure smooth opacity fade */
 .hero-ticker-card {
   position: relative;
-  min-height: 64px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.32s ease-in-out;
 }
 
 .ticker-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  opacity: 0;
-  transform: translateY(8px);
-  pointer-events: none;
-  transition: opacity 0.4s var(--ease-apple), transform 0.4s var(--ease-apple);
-}
-
-.ticker-slide.active {
-  position: relative;
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
 }
 
 .ticker-project-info {
@@ -584,20 +568,20 @@ body.apple-dark {
 }
 
 /* ==========================================================================
-   ARCHITECTURE STUDIO (In-Place Interactive Tabs · No Scroll Jumps)
+   STANDARDIZED BENTO GRID (8 UNIFORM CARDS WITH PREVIEW BOXES)
    ========================================================================== */
-.architecture-section {
-  padding: 100px 24px;
-  max-width: 1180px;
+.projects-section {
+  padding: 80px 24px 100px;
+  max-width: 1200px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
 }
 
-.section-intro {
+.section-header {
   text-align: center;
   max-width: 760px;
-  margin: 0 auto 50px;
+  margin: 0 auto 40px;
 }
 
 .eyebrow {
@@ -611,347 +595,16 @@ body.apple-dark {
 }
 
 .section-title {
-  font-size: clamp(34px, 5vw, 54px);
+  font-size: clamp(32px, 4.5vw, 50px);
   font-weight: 700;
   letter-spacing: -0.03em;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .section-desc {
-  font-size: 17px;
+  font-size: 16px;
   color: var(--apple-text-secondary);
   line-height: 1.55;
-}
-
-/* Studio Tabs */
-.studio-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 36px;
-  flex-wrap: wrap;
-}
-
-.studio-tab-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--apple-border);
-  padding: 10px 20px;
-  border-radius: 980px;
-  color: var(--apple-text-secondary);
-  font-family: var(--font-sf);
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.25s var(--ease-apple);
-}
-
-.studio-tab-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-}
-
-.studio-tab-btn.active {
-  background: #ffffff;
-  color: #000000;
-  border-color: #ffffff;
-  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.2);
-}
-
-.tab-num {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  opacity: 0.6;
-}
-
-/* Studio Stage */
-.studio-stage {
-  background: var(--apple-surface-1);
-  border: 1px solid var(--apple-border);
-  border-radius: 28px;
-  padding: 40px;
-  min-height: 480px;
-  backdrop-filter: blur(20px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-  position: relative;
-}
-
-.studio-view {
-  display: none;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 40px;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.35s ease;
-}
-
-.studio-view.active {
-  display: grid;
-  opacity: 1;
-}
-
-/* Left Visual Box */
-.studio-visual-box {
-  background: rgba(0, 0, 0, 0.6);
-  border: 1px solid var(--apple-border-light);
-  border-radius: 20px;
-  padding: 24px;
-  position: relative;
-  overflow: hidden;
-  min-height: 360px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.stage-tag {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  color: var(--apple-text-tertiary);
-  margin-bottom: 20px;
-}
-
-/* Layer 1 Visual Graphic */
-.hardware-canvas {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.cpu-die-box {
-  display: flex;
-  justify-content: center;
-}
-
-.die-core {
-  width: 140px;
-  height: 70px;
-  background: linear-gradient(135deg, #1c1c24, #0b0b0e);
-  border: 1px solid var(--apple-cyan);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 20px rgba(0, 242, 254, 0.2);
-}
-
-.core-name {
-  font-size: 11px;
-  font-family: var(--font-mono);
-  color: var(--apple-cyan);
-}
-
-.core-fps {
-  font-size: 9px;
-  color: var(--apple-green);
-  margin-top: 3px;
-}
-
-.hud-mini-preview {
-  background: rgba(18, 18, 22, 0.85);
-  border: 1px solid var(--apple-border-light);
-  border-radius: 12px;
-  padding: 14px 18px;
-  font-family: var(--font-mono);
-  font-size: 11px;
-}
-
-.hud-title {
-  color: var(--apple-text-tertiary);
-  font-size: 10px;
-  margin-bottom: 8px;
-}
-
-.hud-item {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 4px;
-}
-
-.hud-badge {
-  margin-top: 8px;
-  padding-top: 8px;
-  border-top: 1px solid var(--apple-border);
-  color: var(--apple-cyan);
-  font-size: 10px;
-}
-
-/* Layer 2 Visual Graphic */
-.vector-canvas {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  font-family: var(--font-mono);
-}
-
-.fusion-flow {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-}
-
-.flow-pill {
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-size: 11px;
-  border: 1px solid var(--apple-border-light);
-}
-
-.flow-pill.vision { background: rgba(0, 242, 254, 0.1); color: var(--apple-cyan); }
-.flow-pill.text { background: rgba(191, 90, 242, 0.1); color: var(--apple-purple); }
-.flow-plus { font-size: 16px; color: var(--apple-text-tertiary); }
-
-.flow-arrow-down {
-  text-align: center;
-  color: var(--apple-text-secondary);
-  font-size: 11px;
-  padding: 4px 0;
-}
-
-.rag-result-box {
-  background: rgba(18, 18, 22, 0.85);
-  border: 1px solid var(--apple-border-light);
-  border-radius: 12px;
-  padding: 14px;
-  font-size: 11px;
-}
-
-.rag-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 4px;
-}
-
-/* Layer 3 Visual Graphic */
-.transformer-canvas {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px;
-}
-
-.matrix-grid-visual {
-  display: grid;
-  grid-template-columns: repeat(4, 28px);
-  gap: 4px;
-}
-
-.m-cell {
-  width: 28px;
-  height: 28px;
-  border-radius: 6px;
-}
-
-.heat-1 { background: rgba(191, 90, 242, 0.15); }
-.heat-2 { background: rgba(191, 90, 242, 0.35); }
-.heat-3 { background: rgba(0, 242, 254, 0.5); }
-.heat-4 { background: rgba(0, 242, 254, 0.75); }
-.heat-5 { background: #00f2fe; box-shadow: 0 0 10px rgba(0, 242, 254, 0.8); }
-
-.inference-preview-box {
-  width: 100%;
-  background: rgba(18, 18, 22, 0.85);
-  border: 1px solid var(--apple-border-light);
-  border-radius: 12px;
-  padding: 14px;
-  font-family: var(--font-mono);
-  font-size: 11px;
-}
-
-.i-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 4px;
-}
-
-/* Right Info Box */
-.studio-info-box {
-  text-align: left;
-}
-
-.info-badge {
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--apple-cyan);
-  background: rgba(0, 242, 254, 0.08);
-  padding: 4px 10px;
-  border-radius: 6px;
-  margin-bottom: 16px;
-}
-
-.studio-info-box h3 {
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 14px;
-  line-height: 1.25;
-}
-
-.studio-info-box p {
-  font-size: 15px;
-  color: var(--apple-text-secondary);
-  line-height: 1.6;
-  margin-bottom: 24px;
-}
-
-.spec-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--apple-border);
-  border-radius: 12px;
-  padding: 12px 16px;
-  margin-bottom: 24px;
-}
-
-.s-box {
-  display: flex;
-  flex-direction: column;
-}
-
-.s-k {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  color: var(--apple-text-tertiary);
-  text-transform: uppercase;
-}
-
-.s-v {
-  font-size: 12px;
-  font-weight: 600;
-  color: #ffffff;
-  margin-top: 2px;
-}
-
-.studio-link {
-  color: var(--apple-blue);
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: opacity 0.2s ease;
-}
-
-.studio-link:hover {
-  opacity: 0.8;
-}
-
-/* ==========================================================================
-   STANDARDIZED BENTO GRID (8 UNIFORM CARDS WITH INTERACTIVE PREVIEWS)
-   ========================================================================== */
-.projects-section {
-  padding: 100px 24px;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
 }
 
 .project-filters {
@@ -961,7 +614,7 @@ body.apple-dark {
   border: 1px solid var(--apple-border);
   border-radius: 980px;
   padding: 4px;
-  margin-top: 28px;
+  margin-top: 24px;
 }
 
 .filter-btn {
@@ -983,12 +636,12 @@ body.apple-dark {
   color: #ffffff;
 }
 
-/* Uniform 2-Column Grid: ALL CARDS ARE EQUAL */
+/* Uniform 2-Column Grid */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 28px;
-  margin-top: 40px;
+  margin-top: 36px;
 }
 
 .project-card {
@@ -1103,9 +756,7 @@ body.apple-dark {
   min-height: 58px;
 }
 
-/* ==========================================================================
-   SAMPLE PREVIEW BOX (Uniform across all 8 projects - Image 5 Style)
-   ========================================================================== */
+/* Sample Preview Box (Uniform across all 8 projects) */
 .sample-preview-box {
   background: rgba(0, 0, 0, 0.55);
   border: 1px solid var(--apple-border-light);
@@ -1216,86 +867,10 @@ body.apple-dark {
 }
 
 /* ==========================================================================
-   PHILOSOPHY SECTION
-   ========================================================================== */
-.philosophy-section {
-  padding: 100px 24px;
-  max-width: 1100px;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-.manifesto-quote {
-  margin: 36px auto 60px;
-  max-width: 820px;
-}
-
-.quote-text {
-  display: block;
-  font-size: clamp(26px, 4vw, 44px);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.18;
-  background: linear-gradient(135deg, #ffffff 40%, #888891 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 14px;
-}
-
-.quote-author {
-  font-style: normal;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--apple-text-tertiary);
-}
-
-.philosophy-bento {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  text-align: left;
-}
-
-.bento-box {
-  background: var(--apple-surface-1);
-  border: 1px solid var(--apple-border);
-  border-radius: 22px;
-  padding: 30px 26px;
-  transition: all 0.3s ease;
-}
-
-.bento-box:hover {
-  border-color: var(--apple-border-light);
-  transform: translateY(-3px);
-}
-
-.bento-icon {
-  font-size: 22px;
-  color: var(--apple-cyan);
-  margin-bottom: 14px;
-}
-
-.bento-box h4 {
-  font-size: 17px;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.bento-box p {
-  font-size: 13px;
-  color: var(--apple-text-secondary);
-  line-height: 1.55;
-}
-
-/* ==========================================================================
    TERMINAL CONSOLE
    ========================================================================== */
 .terminal-section {
-  padding: 70px 24px;
+  padding: 60px 24px 80px;
   max-width: 900px;
   margin: 0 auto;
   position: relative;
@@ -1421,7 +996,7 @@ body.apple-dark {
    CONTACT SECTION
    ========================================================================== */
 .contact-section {
-  padding: 100px 24px 120px;
+  padding: 80px 24px 100px;
   max-width: 820px;
   margin: 0 auto;
   text-align: center;
@@ -1430,7 +1005,7 @@ body.apple-dark {
 }
 
 .contact-title {
-  font-size: clamp(30px, 5vw, 50px);
+  font-size: clamp(30px, 4.5vw, 48px);
   font-weight: 700;
   letter-spacing: -0.03em;
   margin: 12px 0 16px;
@@ -1492,12 +1067,12 @@ body.apple-dark {
 }
 
 /* ==========================================================================
-   APPLE FOOTER
+   FOOTER
    ========================================================================== */
 .apple-footer {
   border-top: 1px solid var(--apple-border);
   background: #020203;
-  padding: 40px 24px 50px;
+  padding: 36px 24px 44px;
   font-size: 12px;
   color: var(--apple-text-secondary);
   position: relative;
@@ -1513,9 +1088,9 @@ body.apple-dark {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 18px;
+  padding-bottom: 16px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   flex-wrap: wrap;
   gap: 12px;
 }
@@ -1523,8 +1098,6 @@ body.apple-dark {
 .footer-brand {
   font-weight: 600;
   color: var(--apple-text-primary);
-  display: flex;
-  align-items: center;
 }
 
 .footer-bottom {
@@ -1566,15 +1139,7 @@ body.apple-dark {
 
 /* Responsive */
 @media (max-width: 960px) {
-  .studio-view.active {
-    grid-template-columns: 1fr;
-  }
-  
   .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .philosophy-bento {
     grid-template-columns: 1fr;
   }
 

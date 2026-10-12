@@ -1,14 +1,13 @@
 /**
- * APPLE DESIGN SYSTEM · INTERACTION ENGINE
- * Refined Edition · Poised Hero · Dynamic Looping Ticker · In-Place Studio · Bento Grid
- * Author: Fatih (fth2745)
+ * FATİH KAYA · INTERACTION ENGINE
+ * Authentic Biography · Pure Smooth Fade Ticker · Standardized Bento Grid · Interactive Console
+ * Author: Fatih Kaya (fth2745)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   initLanguageEngine();
   initNavbarScroll();
   initHeroTicker();
-  initArchitectureStudio();
   initCardSheen();
   initProjectFilters();
   initInteractiveTerminal();
@@ -24,7 +23,6 @@ function initLanguageEngine() {
   const langOpts = document.querySelectorAll('.lang-opt');
   const htmlTag = document.documentElement;
 
-  // Read saved preference or detect system language
   currentLang = localStorage.getItem('fth_portfolio_lang') || 'tr';
   applyLanguage(currentLang);
 
@@ -41,7 +39,6 @@ function initLanguageEngine() {
     htmlTag.setAttribute('lang', lang);
     localStorage.setItem('fth_portfolio_lang', lang);
 
-    // Update Pill state
     langOpts.forEach(opt => {
       if (opt.getAttribute('data-value') === lang) {
         opt.classList.add('active');
@@ -50,7 +47,6 @@ function initLanguageEngine() {
       }
     });
 
-    // Translate all elements with data-tr / data-en
     const translatableElements = document.querySelectorAll('[data-tr][data-en]');
     translatableElements.forEach(el => {
       const text = el.getAttribute(`data-${lang}`);
@@ -66,7 +62,6 @@ function initLanguageEngine() {
       }
     });
 
-    // Update current ticker slide content for language
     if (window.renderTickerSlide) {
       window.renderTickerSlide();
     }
@@ -90,7 +85,7 @@ function initNavbarScroll() {
 }
 
 /* ==========================================================================
-   3. DYNAMIC HERO METRICS TICKER (Looping across 8 Projects with Fade)
+   3. DYNAMIC HERO METRICS TICKER (PURE FADE-OUT ➔ FADE-IN TRANSITION)
    ========================================================================== */
 function initHeroTicker() {
   const tickerCard = document.getElementById('heroTickerCard');
@@ -170,6 +165,7 @@ function initHeroTicker() {
   let currentIndex = 0;
   let intervalTimer = null;
   let isPaused = false;
+  let isFading = false;
 
   // Build dots
   dotsContainer.innerHTML = '';
@@ -178,18 +174,17 @@ function initHeroTicker() {
     dotBtn.className = `t-dot-btn ${i === 0 ? 'active' : ''}`;
     dotBtn.setAttribute('aria-label', `Project ${i + 1}`);
     dotBtn.addEventListener('click', () => {
-      goToSlide(i);
+      transitionToSlide(i);
     });
     dotsContainer.appendChild(dotBtn);
   });
 
-  function renderSlide(index) {
+  function renderSlideContent(index) {
     const item = tickerData[index];
     const isEn = currentLang === 'en';
 
     tickerCounter.textContent = `${index + 1} / ${tickerData.length}`;
 
-    // Update dots
     const dots = dotsContainer.querySelectorAll('.t-dot-btn');
     dots.forEach((d, i) => {
       if (i === index) d.classList.add('active');
@@ -197,7 +192,7 @@ function initHeroTicker() {
     });
 
     tickerCard.innerHTML = `
-      <div class="ticker-slide active">
+      <div class="ticker-slide">
         <div class="ticker-project-info">
           <span class="ticker-p-index">${item.index}</span>
           <span class="ticker-p-name">${item.name}</span>
@@ -223,80 +218,64 @@ function initHeroTicker() {
     `;
   }
 
-  window.renderTickerSlide = () => renderSlide(currentIndex);
+  // Pure Smooth Fade Transition (Fade-Out ➔ Update ➔ Fade-In)
+  function transitionToSlide(targetIndex) {
+    if (isFading || targetIndex === currentIndex) return;
+    isFading = true;
 
-  function goToSlide(index) {
-    currentIndex = index;
-    renderSlide(currentIndex);
+    // Step 1: Smooth fade out
+    tickerCard.style.opacity = '0';
+
+    setTimeout(() => {
+      // Step 2: Swap content while invisible
+      currentIndex = targetIndex;
+      renderSlideContent(currentIndex);
+
+      // Step 3: Smooth fade in
+      tickerCard.style.opacity = '1';
+
+      setTimeout(() => {
+        isFading = false;
+      }, 320);
+    }, 320);
   }
 
+  window.renderTickerSlide = () => renderSlideContent(currentIndex);
+
   function nextSlide() {
-    currentIndex = (currentIndex + 1) % tickerData.length;
-    renderSlide(currentIndex);
+    const nextIdx = (currentIndex + 1) % tickerData.length;
+    transitionToSlide(nextIdx);
   }
 
   function startTimer() {
     stopTimer();
     intervalTimer = setInterval(() => {
-      if (!isPaused) {
+      if (!isPaused && !isFading) {
         nextSlide();
       }
-    }, 3500); // 3.5 seconds smooth rotation
+    }, 3800);
   }
 
   function stopTimer() {
     if (intervalTimer) clearInterval(intervalTimer);
   }
 
-  // Pause on hover so user can inspect metrics calmly
   if (wrapper) {
     wrapper.addEventListener('mouseenter', () => { isPaused = true; });
     wrapper.addEventListener('mouseleave', () => { isPaused = false; });
   }
 
-  // Initial render & start
-  renderSlide(0);
+  // Initialize
+  renderSlideContent(0);
+  tickerCard.style.opacity = '1';
   startTimer();
 }
 
 /* ==========================================================================
-   4. IN-PLACE ARCHITECTURE STUDIO (NO PAGE JUMPING · SMOOTH TAB SWITCHING)
-   ========================================================================== */
-function initArchitectureStudio() {
-  const tabBtns = document.querySelectorAll('.studio-tab-btn');
-  const views = document.querySelectorAll('.studio-view');
-
-  if (tabBtns.length === 0 || views.length === 0) return;
-
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      // Prevent any unwanted scroll jump
-      e.preventDefault();
-
-      const layerTarget = btn.getAttribute('data-layer');
-
-      // Update button active state
-      tabBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      // Switch active view in-place with smooth opacity fade
-      views.forEach(view => {
-        const vLayer = view.getAttribute('data-layer-view');
-        if (vLayer === layerTarget) {
-          view.classList.add('active');
-        } else {
-          view.classList.remove('active');
-        }
-      });
-    });
-  });
-}
-
-/* ==========================================================================
-   5. APPLE CARD SHEEN (Cursor Light Reflection)
+   4. CARD SHEEN (Cursor Light Reflection)
    ========================================================================== */
 function initCardSheen() {
-  const cards = document.querySelectorAll('.project-card, .bento-box, .studio-stage, .hero-ticker-wrapper');
+  const cards = document.querySelectorAll('.project-card, .hero-ticker-wrapper');
 
   cards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
@@ -311,7 +290,7 @@ function initCardSheen() {
 }
 
 /* ==========================================================================
-   6. PROJECT CATEGORY FILTERS
+   5. PROJECT CATEGORY FILTERS
    ========================================================================== */
 function initProjectFilters() {
   const filterBtns = document.querySelectorAll('.filter-btn');
@@ -342,7 +321,7 @@ function initProjectFilters() {
 }
 
 /* ==========================================================================
-   7. INTERACTIVE TERMINAL CONSOLE
+   6. INTERACTIVE TERMINAL CONSOLE
    ========================================================================== */
 function initInteractiveTerminal() {
   const termBody = document.getElementById('termBody');
@@ -353,12 +332,21 @@ function initInteractiveTerminal() {
 
   const commands = {
     help: () => [
-      'Available commands:',
-      '  <span class="accent-cyan">projects</span>    - List prioritized open-source systems',
-      '  <span class="accent-cyan">stats</span>       - Display system precision & telemetry stats',
-      '  <span class="accent-cyan">stack</span>       - Neural architectures & native toolsets',
-      '  <span class="accent-cyan">contact</span>     - Reach out via email or GitHub',
-      '  <span class="accent-cyan">clear</span>       - Clear console screen'
+      'Kullanılabilir komutlar / Available commands:',
+      '  <span class="accent-cyan">projects</span>    - 8 Açık kaynaklı yapay zeka & sistem projesi',
+      '  <span class="accent-cyan">about</span>       - Fatih Kaya hakkında biyografi ve akademik geçmiş',
+      '  <span class="accent-cyan">stats</span>       - Doğruluk oranları ve sistem gecikme metrikleri',
+      '  <span class="accent-cyan">stack</span>       - PyTorch, Transformers, RAG, .NET 8 araçları',
+      '  <span class="accent-cyan">contact</span>     - İletişim bilgileri ve linkler',
+      '  <span class="accent-cyan">clear</span>       - Ekranı temizle'
+    ],
+    about: () => [
+      'FATİH KAYA:',
+      '  Yazılım Mühendisi & Yapay Zeka / NLP Araştırmacısı',
+      '  Yüksek Lisans: Malatya Turgut Özal Üniversitesi',
+      '  Akademik Yayın: The Visual Computer (Springer, 2026)',
+      '  TÜBİTAK 2209-A Araştırmacısı & AI Ekip Yöneticisi',
+      '  Odak: Türkçe LLM Adaptasyonu, RAG (Sağlık & Tarım), Yüksek Performanslı Sistemler'
     ],
     projects: () => [
       '1. <a href="https://github.com/fth2745/NLI-Classification" target="_blank" style="color:#00f2fe">NLI-Classification</a> (DeBERTa + SBERT Co-Attention)',
@@ -371,22 +359,23 @@ function initInteractiveTerminal() {
       '8. <a href="https://github.com/fth2745/TrayHardwareMonitor" target="_blank" style="color:#00f2fe">TrayHardwareMonitor</a> (Native C# .NET 8, 60 FPS)'
     ],
     stats: () => [
-      'SYSTEM TELEMETRY:',
-      '  EffiToRag Precision        : 99.13% verified',
-      '  TrayHardwareMonitor Latency: < 0.1ms render cycle',
-      '  CPU Overhead               : ~0.08% idle, 60 FPS UI',
-      '  Open Source Systems        : 8 Active repositories'
+      'SİSTEM & MODEL METRİKLERİ:',
+      '  EffiToRag Teşhis Hassasiyeti : %99.13 Doğrulanmış',
+      '  NLI Entailment Skoru         : 0.98',
+      '  Turkish NER F1-Skoru         : 0.941',
+      '  TrayHardwareMonitor Latency  : < 0.1ms render, 60 FPS asenkron'
     ],
     stack: () => [
-      'TECHNOLOGY STACK:',
-      '  AI & Deep Learning : PyTorch, Hugging Face, Transformers, DeBERTa, SBERT, UMT5, Mistral, Qwen',
-      '  Vector & RAG       : FAISS, Cosine Similarity, Dense Embeddings, LangChain',
-      '  Systems & Native   : C# .NET 8, WinForms, Win32 API, LibreHardwareMonitor, Multi-threading'
+      'TEKNOLOJİ YIĞINI:',
+      '  Yapay Zeka & NLP   : PyTorch, Hugging Face, Transformers, DeBERTa, SBERT, UMT5, Mistral, Qwen',
+      '  Vektör & RAG       : FAISS, Dense Embeddings, Sentence-Transformers, LangChain',
+      '  Yerel Sistemler    : C# .NET 8, WinForms, Win32 API, LibreHardwareMonitor'
     ],
     contact: () => [
-      'GET IN TOUCH:',
-      '  Email  : <a href="mailto:kya.fth10@gmail.com" style="color:#2997ff">kya.fth10@gmail.com</a>',
-      '  GitHub : <a href="https://github.com/fth2745" target="_blank" style="color:#2997ff">github.com/fth2745</a>'
+      'İLETİŞİM:',
+      '  E-Posta  : <a href="mailto:kya.fth10@gmail.com" style="color:#2997ff">kya.fth10@gmail.com</a>',
+      '  GitHub   : <a href="https://github.com/fth2745" target="_blank" style="color:#2997ff">github.com/fth2745</a>',
+      '  LinkedIn : <a href="https://linkedin.com/in/kya-fth10" target="_blank" style="color:#2997ff">linkedin.com/in/kya-fth10</a>'
     ],
     clear: () => {
       termBody.querySelectorAll('.term-line:not(:first-child)').forEach(el => el.remove());
@@ -400,7 +389,7 @@ function initInteractiveTerminal() {
 
     const cmdEcho = document.createElement('div');
     cmdEcho.className = 'term-line';
-    cmdEcho.innerHTML = `<span class="term-prompt">fth2745 $</span> <span style="color:#ffffff">${escapeHtml(raw)}</span>`;
+    cmdEcho.innerHTML = `<span class="term-prompt">fatih $</span> <span style="color:#ffffff">${escapeHtml(raw)}</span>`;
     
     const inputRow = document.querySelector('.term-input-row');
     termBody.insertBefore(cmdEcho, inputRow);
@@ -418,7 +407,7 @@ function initInteractiveTerminal() {
     } else {
       const errEl = document.createElement('div');
       errEl.className = 'term-line output';
-      errEl.innerHTML = `<span style="color:#ff5f56">zsh: command not found: ${escapeHtml(raw)}</span>. Type <span class="cmd-highlight">help</span> for available commands.`;
+      errEl.innerHTML = `<span style="color:#ff5f56">zsh: command not found: ${escapeHtml(raw)}</span>. Yardım için <span class="cmd-highlight">help</span> yazabilirsiniz.`;
       termBody.insertBefore(errEl, inputRow);
     }
 
